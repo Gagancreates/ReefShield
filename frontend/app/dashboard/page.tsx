@@ -1,0 +1,463 @@
+"use client"
+
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Progress } from "@/components/ui/progress"
+import { Button } from "@/components/ui/button"
+import { Line, LineChart, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from "recharts"
+import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
+import { useState } from "react"
+import { ZoomIn, ZoomOut, RotateCcw, Layers } from "lucide-react"
+
+export default function DashboardPage() {
+  const [selectedLocation, setSelectedLocation] = useState<string | null>(null)
+
+  const locations = [
+    {
+      id: "north-andaman",
+      name: "North Andaman",
+      temperature: 28.5,
+      coordinates: { lat: 13.2389, lng: 93.0317 },
+      temperatureData: [
+        { day: "Day 1", temp: 27.8 },
+        { day: "Day 2", temp: 28.1 },
+        { day: "Day 3", temp: 28.3 },
+        { day: "Day 4", temp: 28.5 },
+        { day: "Day 5", temp: 28.7 },
+        { day: "Day 6", temp: 28.9 },
+        { day: "Day 7", temp: 28.5 },
+      ],
+      dhwAnalysis: {
+        current: 2.3,
+        trend: "increasing",
+        riskLevel: "moderate",
+      },
+    },
+    {
+      id: "neel-islands",
+      name: "Neel Islands",
+      temperature: 27.9,
+      coordinates: { lat: 11.8333, lng: 93.0333 },
+      temperatureData: [
+        { day: "Day 1", temp: 27.2 },
+        { day: "Day 2", temp: 27.5 },
+        { day: "Day 3", temp: 27.8 },
+        { day: "Day 4", temp: 27.9 },
+        { day: "Day 5", temp: 28.1 },
+        { day: "Day 6", temp: 28.0 },
+        { day: "Day 7", temp: 27.9 },
+      ],
+      dhwAnalysis: {
+        current: 1.8,
+        trend: "stable",
+        riskLevel: "low",
+      },
+    },
+    {
+      id: "mahatma-gandhi",
+      name: "Mahatma Gandhi Marine National Park",
+      temperature: 29.2,
+      coordinates: { lat: 11.5833, lng: 92.6167 },
+      temperatureData: [
+        { day: "Day 1", temp: 28.8 },
+        { day: "Day 2", temp: 29.0 },
+        { day: "Day 3", temp: 29.1 },
+        { day: "Day 4", temp: 29.2 },
+        { day: "Day 5", temp: 29.4 },
+        { day: "Day 6", temp: 29.3 },
+        { day: "Day 7", temp: 29.2 },
+      ],
+      dhwAnalysis: {
+        current: 3.1,
+        trend: "increasing",
+        riskLevel: "high",
+      },
+    },
+    {
+      id: "havelock",
+      name: "Havelock",
+      temperature: 28.1,
+      coordinates: { lat: 12.0167, lng: 92.9833 },
+      temperatureData: [
+        { day: "Day 1", temp: 27.6 },
+        { day: "Day 2", temp: 27.8 },
+        { day: "Day 3", temp: 28.0 },
+        { day: "Day 4", temp: 28.1 },
+        { day: "Day 5", temp: 28.2 },
+        { day: "Day 6", temp: 28.0 },
+        { day: "Day 7", temp: 28.1 },
+      ],
+      dhwAnalysis: {
+        current: 2.0,
+        trend: "stable",
+        riskLevel: "moderate",
+      },
+    },
+  ]
+
+  const temperatureData = [
+    { day: "Day 1", temp: 26.8, threshold: 29.0 },
+    { day: "Day 2", temp: 27.1, threshold: 29.0 },
+    { day: "Day 3", temp: 27.5, threshold: 29.0 },
+    { day: "Day 4", temp: 28.2, threshold: 29.0 },
+    { day: "Day 5", temp: 28.9, threshold: 29.0 },
+    { day: "Day 6", temp: 29.3, threshold: 29.0 },
+    { day: "Day 7", temp: 29.1, threshold: 29.0 },
+    { day: "Day 8", temp: 28.7, threshold: 29.0 },
+    { day: "Day 9", temp: 28.4, threshold: 29.0 },
+    { day: "Day 10", temp: 27.9, threshold: 29.0 },
+    { day: "Day 11", temp: 27.6, threshold: 29.0 },
+    { day: "Day 12", temp: 27.3, threshold: 29.0 },
+    { day: "Day 13", temp: 27.8, threshold: 29.0 },
+    { day: "Day 14", temp: 28.1, threshold: 29.0 },
+  ]
+
+  const reefSites = [
+    { id: 1, name: "Great Barrier Reef - North", health: 87, status: "healthy", temperature: 26.8, alerts: 0 },
+    { id: 2, name: "Great Barrier Reef - Central", health: 72, status: "at-risk", temperature: 28.9, alerts: 2 },
+    { id: 3, name: "Coral Triangle - Indonesia", health: 91, status: "healthy", temperature: 27.2, alerts: 0 },
+    { id: 4, name: "Caribbean Reef - Belize", health: 65, status: "critical", temperature: 29.5, alerts: 3 },
+    { id: 5, name: "Red Sea Coral - Egypt", health: 78, status: "at-risk", temperature: 28.1, alerts: 1 },
+    { id: 6, name: "Maldives Reef System", health: 94, status: "healthy", temperature: 26.5, alerts: 0 },
+  ]
+
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case "healthy":
+        return "bg-emerald-500"
+      case "at-risk":
+        return "bg-amber-500"
+      case "critical":
+        return "bg-red-500"
+      default:
+        return "bg-gray-500"
+    }
+  }
+
+  return (
+    <div className="space-y-3">
+      <div className="grid gap-3 lg:grid-cols-5">
+        <div className="lg:col-span-3 space-y-3">
+          <Card className="bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-gray-800 shadow-lg">
+            <CardHeader className="pb-2">
+              <div className="flex items-center justify-between">
+                <div>
+                  <CardTitle className="font-serif text-2xl text-blue-900">Global Reef Monitoring</CardTitle>
+                  <CardDescription>Real-time status of monitored coral reef sites worldwide</CardDescription>
+                </div>
+                <div className="flex gap-2">
+                  <Button variant="outline" size="sm" className="bg-white">
+                    <Layers className="h-4 w-4 mr-2" />
+                    Layers
+                  </Button>
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent className="pt-0">
+              <div className="relative h-80 bg-gradient-to-br from-blue-200 to-cyan-300 rounded-lg overflow-hidden">
+                <div className="absolute top-4 right-4 flex flex-col gap-2 z-10">
+                  <Button size="sm" variant="outline" className="bg-white shadow-md">
+                    <ZoomIn className="h-4 w-4" />
+                  </Button>
+                  <Button size="sm" variant="outline" className="bg-white shadow-md">
+                    <ZoomOut className="h-4 w-4" />
+                  </Button>
+                  <Button size="sm" variant="outline" className="bg-white shadow-md">
+                    <RotateCcw className="h-4 w-4" />
+                  </Button>
+                </div>
+
+                <div className="absolute inset-0 bg-gradient-to-b from-blue-300 to-blue-400">
+                  <div className="absolute top-16 left-20 w-32 h-20 bg-emerald-200 rounded-lg opacity-70"></div>
+                  <div className="absolute top-24 right-16 w-28 h-24 bg-emerald-200 rounded-lg opacity-70"></div>
+                  <div className="absolute bottom-20 left-32 w-24 h-16 bg-emerald-200 rounded-lg opacity-70"></div>
+
+                  {reefSites.map((site, index) => (
+                    <div
+                      key={site.id}
+                      className={`absolute w-5 h-5 rounded-full border-2 border-white cursor-pointer transform -translate-x-1/2 -translate-y-1/2 ${getStatusColor(site.status)} hover:scale-125 transition-all duration-200 shadow-lg`}
+                      style={{
+                        left: `${20 + index * 12}%`,
+                        top: `${25 + index * 10}%`,
+                      }}
+                      title={`${site.name} - ${site.health}% Health`}
+                    />
+                  ))}
+                </div>
+
+                <div className="absolute bottom-4 left-4 bg-white p-3 rounded-lg shadow-lg border">
+                  <div className="text-sm font-semibold mb-2 text-gray-800">Site Status</div>
+                  <div className="space-y-1">
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 rounded-full bg-emerald-500 border border-white shadow-sm"></div>
+                      <span className="text-xs font-medium">Healthy</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 rounded-full bg-amber-500 border border-white shadow-sm"></div>
+                      <span className="text-xs font-medium">At Risk</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 rounded-full bg-red-500 border border-white shadow-sm"></div>
+                      <span className="text-xs font-medium">Critical</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-to-br from-orange-50 to-red-50 border-2 border-gray-800 shadow-lg">
+            <CardHeader className="pb-2">
+              <CardTitle className="font-serif text-2xl text-orange-900">14 Day Temperature Analysis</CardTitle>
+              <CardDescription>Recent temperature trends with bleaching threshold monitoring</CardDescription>
+            </CardHeader>
+            <CardContent className="pt-0">
+              <ChartContainer
+                config={{
+                  temp: {
+                    label: "Temperature (°C)",
+                    color: "hsl(var(--chart-1))",
+                  },
+                  threshold: {
+                    label: "Bleaching Threshold",
+                    color: "hsl(var(--chart-5))",
+                  },
+                }}
+                className="h-64"
+              >
+                <ResponsiveContainer width="100%" height="100%">
+                  <LineChart data={temperatureData}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="day" />
+                    <YAxis domain={[26, 30]} />
+                    <ChartTooltip content={<ChartTooltipContent />} />
+                    <Line type="monotone" dataKey="temp" stroke="var(--color-temp)" strokeWidth={2} />
+                    <Line
+                      type="monotone"
+                      dataKey="threshold"
+                      stroke="var(--color-threshold)"
+                      strokeWidth={2}
+                      strokeDasharray="5 5"
+                    />
+                  </LineChart>
+                </ResponsiveContainer>
+              </ChartContainer>
+            </CardContent>
+          </Card>
+
+          <div className="grid gap-3 md:grid-cols-2">
+            <Card className="bg-gradient-to-br from-emerald-50 to-green-50 border-2 border-gray-800 shadow-lg">
+              <CardHeader className="pb-2">
+                <CardTitle className="font-serif text-xl text-emerald-900">System Status</CardTitle>
+              </CardHeader>
+              <CardContent className="pt-0 space-y-2">
+                <div className="flex items-center justify-between p-2 bg-white rounded-lg border-2 border-gray-700">
+                  <span className="text-sm font-medium">Satellite Data Feed</span>
+                  <Badge className="bg-emerald-100 text-emerald-800 border-emerald-200">Online</Badge>
+                </div>
+                <div className="flex items-center justify-between p-2 bg-white rounded-lg border-2 border-gray-700">
+                  <span className="text-sm font-medium">AI Processing Engine</span>
+                  <Badge className="bg-emerald-100 text-emerald-800 border-emerald-200">Active</Badge>
+                </div>
+                <div className="flex items-center justify-between p-2 bg-white rounded-lg border-2 border-gray-700">
+                  <span className="text-sm font-medium">Alert System</span>
+                  <Badge className="bg-emerald-100 text-emerald-800 border-emerald-200">Operational</Badge>
+                </div>
+                <div className="flex items-center justify-between p-2 bg-white rounded-lg border-2 border-gray-700">
+                  <span className="text-sm font-medium">Data Sync</span>
+                  <Badge className="bg-amber-100 text-amber-800 border-amber-200">Syncing</Badge>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-purple-50 to-indigo-50 border-2 border-gray-800 shadow-lg">
+              <CardHeader className="pb-2">
+                <CardTitle className="font-serif text-xl text-purple-900">Quick Actions</CardTitle>
+              </CardHeader>
+              <CardContent className="pt-0 space-y-2">
+                <Button className="w-full justify-start bg-white text-gray-900 border-2 border-gray-700 hover:bg-purple-50 transition-colors">
+                  <div className="text-left">
+                    <div className="font-medium text-sm">Generate Report</div>
+                    <div className="text-xs text-muted-foreground">Create weekly reef health summary</div>
+                  </div>
+                </Button>
+                <Button className="w-full justify-start bg-white text-gray-900 border-2 border-gray-700 hover:bg-purple-50 transition-colors">
+                  <div className="text-left">
+                    <div className="font-medium text-sm">Configure Alerts</div>
+                    <div className="text-xs text-muted-foreground">Adjust monitoring thresholds</div>
+                  </div>
+                </Button>
+                <Button className="w-full justify-start bg-white text-gray-900 border-2 border-gray-700 hover:bg-purple-50 transition-colors">
+                  <div className="text-left">
+                    <div className="font-medium text-sm">Export Data</div>
+                    <div className="text-xs text-muted-foreground">Download monitoring datasets</div>
+                  </div>
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
+        <div className="lg:col-span-2 space-y-3">
+          <Card className="bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-gray-800 shadow-lg">
+            <CardHeader className="pb-2">
+              <CardTitle className="font-serif text-xl text-blue-900">Monitoring Locations</CardTitle>
+              <CardDescription>Current temperatures at key reef sites</CardDescription>
+            </CardHeader>
+            <CardContent className="pt-0 space-y-2">
+              {locations.map((location) => (
+                <Dialog key={location.id}>
+                  <DialogTrigger asChild>
+                    <Card className="cursor-pointer hover:shadow-md transition-shadow border-2 border-gray-700 bg-white">
+                      <CardContent className="p-3">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <div className="font-medium text-sm text-gray-900">{location.name}</div>
+                            <div className="text-xs text-gray-600">
+                              Lat: {location.coordinates.lat}, Lng: {location.coordinates.lng}
+                            </div>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-lg font-bold text-blue-600">{location.temperature}°C</div>
+                            <Badge
+                              variant={
+                                location.dhwAnalysis.riskLevel === "high"
+                                  ? "destructive"
+                                  : location.dhwAnalysis.riskLevel === "moderate"
+                                    ? "default"
+                                    : "secondary"
+                              }
+                              className="text-xs"
+                            >
+                              {location.dhwAnalysis.riskLevel}
+                            </Badge>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+                    <DialogHeader>
+                      <DialogTitle className="text-2xl font-semibold">{location.name}</DialogTitle>
+                    </DialogHeader>
+                    <div className="grid gap-4 lg:grid-cols-3">
+                      {/* Map View */}
+                      <div className="lg:col-span-2">
+                        <Card className="border-2 border-gray-800 shadow-lg">
+                          <CardHeader className="pb-2">
+                            <CardTitle className="text-lg">Location Map</CardTitle>
+                          </CardHeader>
+                          <CardContent>
+                            <div className="h-64 bg-gradient-to-br from-blue-200 to-cyan-300 rounded-lg relative overflow-hidden">
+                              <div className="absolute inset-0 bg-gradient-to-b from-blue-300 to-blue-400">
+                                <div className="absolute top-1/2 left-1/2 w-4 h-4 bg-red-500 rounded-full border-2 border-white transform -translate-x-1/2 -translate-y-1/2 shadow-lg"></div>
+                                <div className="absolute bottom-4 left-4 bg-white p-2 rounded-lg shadow-lg">
+                                  <div className="text-xs font-semibold">{location.name}</div>
+                                  <div className="text-xs text-gray-600">
+                                    {location.coordinates.lat}°N, {location.coordinates.lng}°E
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </CardContent>
+                        </Card>
+
+                        {/* Temperature Chart */}
+                        <Card className="border-2 border-gray-800 shadow-lg mt-4">
+                          <CardHeader className="pb-2">
+                            <CardTitle className="text-lg">7-Day Temperature Trend</CardTitle>
+                          </CardHeader>
+                          <CardContent>
+                            <ChartContainer
+                              config={{
+                                temp: {
+                                  label: "Temperature (°C)",
+                                  color: "hsl(var(--chart-1))",
+                                },
+                              }}
+                              className="h-48"
+                            >
+                              <ResponsiveContainer width="100%" height="100%">
+                                <LineChart data={location.temperatureData}>
+                                  <CartesianGrid strokeDasharray="3 3" />
+                                  <XAxis dataKey="day" />
+                                  <YAxis domain={[26, 30]} />
+                                  <ChartTooltip content={<ChartTooltipContent />} />
+                                  <Line type="monotone" dataKey="temp" stroke="var(--color-temp)" strokeWidth={2} />
+                                </LineChart>
+                              </ResponsiveContainer>
+                            </ChartContainer>
+                          </CardContent>
+                        </Card>
+                      </div>
+
+                      {/* DHW Analysis */}
+                      <div>
+                        <Card className="border-2 border-gray-800 shadow-lg h-full">
+                          <CardHeader className="pb-2">
+                            <CardTitle className="text-lg">DHW Analysis</CardTitle>
+                            <CardDescription>Degree Heating Weeks Assessment</CardDescription>
+                          </CardHeader>
+                          <CardContent className="space-y-4">
+                            <div className="text-center">
+                              <div className="text-3xl font-bold text-blue-600">{location.dhwAnalysis.current}</div>
+                              <div className="text-sm text-gray-600">Current DHW</div>
+                            </div>
+
+                            <div className="space-y-3">
+                              <div className="flex items-center justify-between p-2 bg-gray-50 rounded-lg">
+                                <span className="text-sm font-medium">Trend</span>
+                                <Badge
+                                  variant={location.dhwAnalysis.trend === "increasing" ? "destructive" : "secondary"}
+                                >
+                                  {location.dhwAnalysis.trend}
+                                </Badge>
+                              </div>
+
+                              <div className="flex items-center justify-between p-2 bg-gray-50 rounded-lg">
+                                <span className="text-sm font-medium">Risk Level</span>
+                                <Badge
+                                  variant={
+                                    location.dhwAnalysis.riskLevel === "high"
+                                      ? "destructive"
+                                      : location.dhwAnalysis.riskLevel === "moderate"
+                                        ? "default"
+                                        : "secondary"
+                                  }
+                                >
+                                  {location.dhwAnalysis.riskLevel}
+                                </Badge>
+                              </div>
+
+                              <div className="p-2 bg-gray-50 rounded-lg">
+                                <div className="text-sm font-medium mb-1">Temperature</div>
+                                <div className="text-lg font-bold text-blue-600">{location.temperature}°C</div>
+                              </div>
+
+                              <div className="p-2 bg-gray-50 rounded-lg">
+                                <div className="text-sm font-medium mb-1">Bleaching Risk</div>
+                                <Progress value={location.dhwAnalysis.current * 20} className="h-2" />
+                                <div className="text-xs text-gray-600 mt-1">
+                                  {location.dhwAnalysis.current > 4
+                                    ? "High Risk"
+                                    : location.dhwAnalysis.current > 2
+                                      ? "Moderate Risk"
+                                      : "Low Risk"}
+                                </div>
+                              </div>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </div>
+                    </div>
+                  </DialogContent>
+                </Dialog>
+              ))}
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </div>
+  )
+}
