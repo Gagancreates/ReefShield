@@ -18,7 +18,8 @@ import {
   BarChart,
   Bar,
 } from "recharts"
-import { Thermometer, TrendingUp, TrendingDown, AlertTriangle, Download } from "lucide-react"
+import { Thermometer, TrendingUp, TrendingDown, AlertTriangle, Download, RefreshCw } from "lucide-react"
+import { useRealtimeLocations, useTemperatureAnalysis } from "@/lib/hooks/useRealtimeData"
 
 // Dummy temperature data for 14 days
 const temperatureData = [
@@ -64,12 +65,37 @@ const sites = [
 ]
 
 export default function TemperaturePage() {
-  const currentTemp = temperatureData[temperatureData.length - 1]?.temp || 0
-  const previousTemp = temperatureData[temperatureData.length - 2]?.temp || 0
-  const tempChange = currentTemp - previousTemp
-  const avgTemp = temperatureData.reduce((sum, data) => sum + data.temp, 0) / temperatureData.length
-  const maxTemp = Math.max(...temperatureData.map((d) => d.temp))
-  const minTemp = Math.min(...temperatureData.map((d) => d.temp))
+  // Real-time data hooks
+  const { locations: realtimeLocations, loading, lastUpdated } = useRealtimeLocations()
+  const { data: temperatureAnalysisData } = useTemperatureAnalysis()
+
+  // Calculate real-time statistics
+  const currentTemps = realtimeLocations.map(loc => loc.currentTemperature)
+  const currentTemp = currentTemps.length > 0 ? currentTemps.reduce((a, b) => a + b) / currentTemps.length : 0
+  const maxTemp = currentTemps.length > 0 ? Math.max(...currentTemps) : 0
+  const minTemp = currentTemps.length > 0 ? Math.min(...currentTemps) : 0
+  
+  // Use real temperature analysis data
+  const temperatureData = temperatureAnalysisData.map((item, index) => ({
+    date: `2025-03-${String(index + 1).padStart(2, '0')}`,
+    temp: item.temp,
+    threshold: item.threshold,
+    site: "Andaman Islands"
+  }))
+
+  const avgTemp = temperatureData.length > 0 ? 
+    temperatureData.reduce((sum, data) => sum + data.temp, 0) / temperatureData.length : 0
+  const tempChange = temperatureData.length >= 2 ? 
+    temperatureData[temperatureData.length - 1].temp - temperatureData[temperatureData.length - 2].temp : 0
+
+  // Convert locations to sites format
+  const sites = realtimeLocations.map(loc => ({
+    id: loc.id,
+    name: loc.name,
+    avgTemp: loc.currentTemperature,
+    trend: loc.trend === 'increasing' ? 'up' : loc.trend === 'decreasing' ? 'down' : 'stable',
+    status: loc.riskLevel === 'high' ? 'critical' : loc.riskLevel === 'moderate' ? 'warning' : 'normal'
+  }))
 
   return (
     <div className="space-y-6">
@@ -77,7 +103,14 @@ export default function TemperaturePage() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="font-serif text-4xl font-bold text-gray-900">Temperature Analysis</h1>
-          <p className="text-muted-foreground">14-day water temperature trends and monitoring</p>
+          <p className="text-muted-foreground">
+            Real-time water temperature trends for Andaman Islands
+            {lastUpdated && (
+              <span className="ml-2 text-xs text-green-600">
+                • Live (Updated {lastUpdated.toLocaleTimeString()})
+              </span>
+            )}
+          </p>
         </div>
         <div className="flex gap-2">
           <Select defaultValue="14d">
@@ -99,6 +132,10 @@ export default function TemperaturePage() {
               </SelectItem>
             </SelectContent>
           </Select>
+          <Button variant="outline" size="sm">
+            <RefreshCw className={`h-4 w-4 mr-2 ${loading ? 'animate-spin' : ''}`} />
+            {loading ? 'Updating...' : 'Live Data'}
+          </Button>
           <Button variant="outline" size="sm">
             <Download className="h-4 w-4 mr-2" />
             Export
@@ -199,7 +236,7 @@ export default function TemperaturePage() {
                   y={28.5}
                   stroke="#ef4444"
                   strokeDasharray="5 5"
-                  label={{ value: "Bleaching Threshold", position: "topRight" }}
+                  label={{ value: "Bleaching Threshold", position: "top" }}
                 />
                 <Line
                   type="monotone"

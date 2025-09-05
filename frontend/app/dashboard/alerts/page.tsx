@@ -20,7 +20,9 @@ import {
   Settings,
   CheckCircle,
   XCircle,
+  RefreshCw,
 } from "lucide-react"
+import { useRealtimeAlerts } from "@/lib/hooks/useRealtimeData"
 
 // Dummy alerts data
 const alerts = [
@@ -115,6 +117,42 @@ export default function AlertsPage() {
   const [severityFilter, setSeverityFilter] = useState("all")
   const [statusFilter, setStatusFilter] = useState("all")
 
+  // Real-time alerts data
+  const { alerts: realtimeAlerts } = useRealtimeAlerts()
+
+  // Convert real-time alerts to component format
+  const alerts = [
+    ...realtimeAlerts.map((alert, index) => ({
+      id: index + 1,
+      type: alert.title.toLowerCase().includes('temperature') ? 'temperature' : 
+            alert.title.toLowerCase().includes('bleaching') ? 'bleaching' : 
+            alert.title.toLowerCase().includes('water') ? 'water_quality' : 'biodiversity',
+      severity: alert.severity.toLowerCase() as 'high' | 'medium' | 'low',
+      title: alert.title,
+      description: alert.description,
+      location: alert.location,
+      timestamp: new Date(Date.now() - Math.random() * 3600000).toISOString(), // Random time within last hour
+      status: 'active' as const,
+      value: 'Current',
+      threshold: 'Threshold',
+      impact: alert.description,
+    })),
+    // Keep some static alerts for demo
+    {
+      id: 100,
+      type: "water_quality",
+      severity: "medium" as const,
+      title: "pH Level Alert",
+      description: "pH levels have dropped below optimal range for coral health",
+      location: "Andaman Islands - General Area",
+      timestamp: "2024-01-14T16:45:00Z",
+      status: "acknowledged" as const,
+      value: "7.9",
+      threshold: "8.1-8.4",
+      impact: "Acidification stress",
+    }
+  ]
+
   const filteredAlerts = alerts.filter((alert) => {
     const matchesSearch =
       alert.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -190,7 +228,10 @@ export default function AlertsPage() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="font-serif text-4xl font-bold text-gray-900">Alert System</h1>
-          <p className="text-muted-foreground">Real-time monitoring and threat detection</p>
+          <p className="text-muted-foreground">
+            Real-time monitoring and threat detection for Andaman Islands
+            <span className="ml-2 text-xs text-green-600">• Live Monitoring Active</span>
+          </p>
         </div>
         <div className="flex gap-2">
           <Button variant="outline" size="sm">

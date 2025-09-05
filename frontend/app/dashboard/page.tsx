@@ -8,119 +8,48 @@ import { Line, LineChart, XAxis, YAxis, CartesianGrid, ResponsiveContainer } fro
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { useState } from "react"
-import { ZoomIn, ZoomOut, RotateCcw, Layers } from "lucide-react"
+import { ZoomIn, ZoomOut, RotateCcw, Layers, RefreshCw } from "lucide-react"
 import { GlobalMap } from "@/components/global-map"
 import { Map } from "@/components/map"
+import { useRealtimeLocations, useTemperatureAnalysis, useRealtimeAlerts, useSystemStatus } from "@/lib/hooks/useRealtimeData"
 
 export default function DashboardPage() {
   const [selectedLocation, setSelectedLocation] = useState<string | null>(null)
+  
+  // Real-time data hooks
+  const { locations: realtimeLocations, loading: locationsLoading, lastUpdated } = useRealtimeLocations()
+  const { data: temperatureAnalysisData } = useTemperatureAnalysis()
+  const { alerts: realtimeAlerts } = useRealtimeAlerts()
+  const { status: systemStatus } = useSystemStatus()
 
-  const locations = [
-    {
-      id: "north-andaman",
-      name: "North Andaman",
-      temperature: 28.5,
-      coordinates: { lat: 13.2389, lng: 93.0317 },
-      temperatureData: [
-        { day: "Day 1", temp: 27.8 },
-        { day: "Day 2", temp: 28.1 },
-        { day: "Day 3", temp: 28.3 },
-        { day: "Day 4", temp: 28.5 },
-        { day: "Day 5", temp: 28.7 },
-        { day: "Day 6", temp: 28.9 },
-        { day: "Day 7", temp: 28.5 },
-      ],
-      dhwAnalysis: {
-        current: 2.3,
-        trend: "increasing",
-        riskLevel: "moderate",
-      },
+  // Convert real-time data to component format
+  const locations = realtimeLocations.map(loc => ({
+    id: loc.id,
+    name: loc.name,
+    temperature: loc.currentTemperature,
+    coordinates: loc.coordinates,
+    temperatureData: loc.temperatureHistory.slice(-7).map((reading, index) => ({
+      day: `Day ${index + 1}`,
+      temp: Number(reading.temperature.toFixed(1))
+    })),
+    dhwAnalysis: {
+      current: loc.dhw,
+      trend: loc.trend,
+      riskLevel: loc.riskLevel,
     },
-    {
-      id: "neel-islands",
-      name: "Neel Islands",
-      temperature: 27.9,
-      coordinates: { lat: 11.8333, lng: 93.0333 },
-      temperatureData: [
-        { day: "Day 1", temp: 27.2 },
-        { day: "Day 2", temp: 27.5 },
-        { day: "Day 3", temp: 27.8 },
-        { day: "Day 4", temp: 27.9 },
-        { day: "Day 5", temp: 28.1 },
-        { day: "Day 6", temp: 28.0 },
-        { day: "Day 7", temp: 27.9 },
-      ],
-      dhwAnalysis: {
-        current: 1.8,
-        trend: "stable",
-        riskLevel: "low",
-      },
-    },
-    {
-      id: "mahatma-gandhi",
-      name: "Mahatma Gandhi Marine National Park",
-      temperature: 29.2,
-      coordinates: { lat: 11.5833, lng: 92.6167 },
-      temperatureData: [
-        { day: "Day 1", temp: 28.8 },
-        { day: "Day 2", temp: 29.0 },
-        { day: "Day 3", temp: 29.1 },
-        { day: "Day 4", temp: 29.2 },
-        { day: "Day 5", temp: 29.4 },
-        { day: "Day 6", temp: 29.3 },
-        { day: "Day 7", temp: 29.2 },
-      ],
-      dhwAnalysis: {
-        current: 3.1,
-        trend: "increasing",
-        riskLevel: "high",
-      },
-    },
-    {
-      id: "havelock",
-      name: "Havelock",
-      temperature: 28.1,
-      coordinates: { lat: 12.0167, lng: 92.9833 },
-      temperatureData: [
-        { day: "Day 1", temp: 27.6 },
-        { day: "Day 2", temp: 27.8 },
-        { day: "Day 3", temp: 28.0 },
-        { day: "Day 4", temp: 28.1 },
-        { day: "Day 5", temp: 28.2 },
-        { day: "Day 6", temp: 28.0 },
-        { day: "Day 7", temp: 28.1 },
-      ],
-      dhwAnalysis: {
-        current: 2.0,
-        trend: "stable",
-        riskLevel: "moderate",
-      },
-    },
-  ]
+  }))
 
-  const temperatureData = [
-    { day: "Day 1", temp: 26.8, threshold: 29.0 },
-    { day: "Day 2", temp: 27.1, threshold: 29.0 },
-    { day: "Day 3", temp: 27.5, threshold: 29.0 },
-    { day: "Day 4", temp: 28.2, threshold: 29.0 },
-    { day: "Day 5", temp: 28.9, threshold: 29.0 },
-    { day: "Day 6", temp: 29.3, threshold: 29.0 },
-    { day: "Day 7", temp: 29.1, threshold: 29.0 },
-    { day: "Day 8", temp: 28.7, threshold: 29.0 },
-    { day: "Day 9", temp: 28.4, threshold: 29.0 },
-    { day: "Day 10", temp: 27.9, threshold: 29.0 },
-    { day: "Day 11", temp: 27.6, threshold: 29.0 },
-    { day: "Day 12", temp: 27.3, threshold: 29.0 },
-    { day: "Day 13", temp: 27.8, threshold: 29.0 },
-    { day: "Day 14", temp: 28.1, threshold: 29.0 },
-  ]
+  const temperatureData = temperatureAnalysisData
 
-  const reefSites = [
-    { id: 1, name: "North Andaman", health: 87, status: "at-risk" as const, temperature: 28.5, alerts: 1, coordinates: [13.2500, 92.9167] as [number, number] },
-    { id: 2, name: "Neel Islands", health: 92, status: "healthy" as const, temperature: 27.9, alerts: 0, coordinates: [11.832919, 93.052612] as [number, number] },
-    { id: 3, name: "Mahatma Gandhi Marine National Park", health: 65, status: "critical" as const, temperature: 29.2, alerts: 3, coordinates: [11.5690, 92.6542] as [number, number] },
-    { id: 4, name: "Havelock", health: 78, status: "at-risk" as const, temperature: 28.1, alerts: 1, coordinates: [11.960000, 93.000000] as [number, number] },
-  ]
+  const reefSites = realtimeLocations.map((loc, index) => ({
+    id: index + 1,
+    name: loc.name,
+    health: loc.riskLevel === 'low' ? 90 : loc.riskLevel === 'moderate' ? 75 : 60,
+    status: loc.riskLevel === 'low' ? 'healthy' as const : loc.riskLevel === 'moderate' ? 'at-risk' as const : 'critical' as const,
+    temperature: loc.currentTemperature,
+    alerts: loc.riskLevel === 'high' ? 3 : loc.riskLevel === 'moderate' ? 1 : 0,
+    coordinates: [loc.coordinates.lat, loc.coordinates.lng] as [number, number],
+  }))
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -143,8 +72,15 @@ export default function DashboardPage() {
             <CardHeader className="pb-2">
               <div className="flex items-center justify-between">
                 <div>
-                  <CardTitle className="font-serif text-2xl text-blue-900">Indian Reef Monitoring</CardTitle>
-                  <CardDescription>Real-time status of monitored coral reef sites around the islands of India</CardDescription>
+                  <CardTitle className="font-serif text-2xl text-blue-900">Andaman Islands Reef Monitoring</CardTitle>
+                  <CardDescription>
+                    Real-time status of coral reef sites in Andaman Islands
+                    {lastUpdated && (
+                      <span className="ml-2 text-xs text-green-600">
+                        • Live (Updated {lastUpdated.toLocaleTimeString()})
+                      </span>
+                    )}
+                  </CardDescription>
                 </div>
                 <div className="flex gap-2">
                   <Button variant="outline" size="sm" className="bg-white">
@@ -226,19 +162,21 @@ export default function DashboardPage() {
               <CardContent className="pt-0 space-y-2">
                 <div className="flex items-center justify-between p-2 bg-white rounded-lg border-2 border-gray-700">
                   <span className="text-sm font-medium">Satellite Data Feed</span>
-                  <Badge className="bg-emerald-100 text-emerald-800 border-emerald-200">Online</Badge>
+                  <Badge className="bg-emerald-100 text-emerald-800 border-emerald-200">{systemStatus.satelliteDataFeed}</Badge>
                 </div>
                 <div className="flex items-center justify-between p-2 bg-white rounded-lg border-2 border-gray-700">
                   <span className="text-sm font-medium">AI Processing Engine</span>
-                  <Badge className="bg-emerald-100 text-emerald-800 border-emerald-200">Active</Badge>
+                  <Badge className="bg-emerald-100 text-emerald-800 border-emerald-200">{systemStatus.aiProcessingEngine}</Badge>
                 </div>
                 <div className="flex items-center justify-between p-2 bg-white rounded-lg border-2 border-gray-700">
                   <span className="text-sm font-medium">Alert System</span>
-                  <Badge className="bg-emerald-100 text-emerald-800 border-emerald-200">Operational</Badge>
+                  <Badge className="bg-emerald-100 text-emerald-800 border-emerald-200">{systemStatus.alertSystem}</Badge>
                 </div>
                 <div className="flex items-center justify-between p-2 bg-white rounded-lg border-2 border-gray-700">
                   <span className="text-sm font-medium">Data Sync</span>
-                  <Badge className="bg-amber-100 text-amber-800 border-amber-200">Syncing</Badge>
+                  <Badge className={`${systemStatus.dataSync === 'Syncing' ? 'bg-amber-100 text-amber-800 border-amber-200' : 'bg-emerald-100 text-emerald-800 border-emerald-200'}`}>
+                    {systemStatus.dataSync}
+                  </Badge>
                 </div>
               </CardContent>
             </Card>
@@ -445,35 +383,37 @@ export default function DashboardPage() {
               <CardDescription>Latest monitoring alerts and warnings</CardDescription>
             </CardHeader>
             <CardContent className="pt-0 space-y-3">
-              <div className="border-l-4 border-red-500 pl-4 py-3 bg-white rounded-lg border-2 border-gray-700">
-                <div className="flex items-center justify-between mb-2">
-                  <h4 className="font-medium text-gray-900">High Temperature Alert</h4>
-                  <Badge variant="destructive">Critical</Badge>
+              {realtimeAlerts.length > 0 ? (
+                realtimeAlerts.map((alert) => (
+                  <div 
+                    key={alert.id}
+                    className={`border-l-4 pl-4 py-3 bg-white rounded-lg border-2 border-gray-700 ${
+                      alert.severity === 'Critical' ? 'border-red-500' : 
+                      alert.severity === 'Warning' ? 'border-amber-500' : 
+                      'border-blue-500'
+                    }`}
+                  >
+                    <div className="flex items-center justify-between mb-2">
+                      <h4 className="font-medium text-gray-900">{alert.title}</h4>
+                      <Badge variant={
+                        alert.severity === 'Critical' ? 'destructive' : 
+                        alert.severity === 'Warning' ? 'default' : 
+                        'secondary'
+                      }>
+                        {alert.severity}
+                      </Badge>
+                    </div>
+                    <p className="text-sm text-gray-600 mb-1">{alert.location}</p>
+                    <p className="text-sm text-gray-500 mb-2">{alert.description}</p>
+                    <p className="text-xs text-gray-400">{alert.time}</p>
+                  </div>
+                ))
+              ) : (
+                <div className="text-center py-8 text-gray-500">
+                  <p className="text-sm">No active alerts</p>
+                  <p className="text-xs">All reef sites are operating normally</p>
                 </div>
-                <p className="text-sm text-gray-600 mb-1">Great Barrier Reef - Zone A</p>
-                <p className="text-sm text-gray-500 mb-2">Water temperature exceeded 29°C threshold</p>
-                <p className="text-xs text-gray-400">2 minutes ago</p>
-              </div>
-
-              <div className="border-l-4 border-amber-500 pl-4 py-3 bg-white rounded-lg border-2 border-gray-700">
-                <div className="flex items-center justify-between mb-2">
-                  <h4 className="font-medium text-gray-900">Coral Bleaching Risk</h4>
-                  <Badge variant="default">Warning</Badge>
-                </div>
-                <p className="text-sm text-gray-600 mb-1">Maldives - Atoll B</p>
-                <p className="text-sm text-gray-500 mb-2">Elevated stress indicators detected</p>
-                <p className="text-xs text-gray-400">15 minutes ago</p>
-              </div>
-
-              <div className="border-l-4 border-blue-500 pl-4 py-3 bg-white rounded-lg border-2 border-gray-700">
-                <div className="flex items-center justify-between mb-2">
-                  <h4 className="font-medium text-gray-900">Water Quality Alert</h4>
-                  <Badge variant="secondary">Medium</Badge>
-                </div>
-                <p className="text-sm text-gray-600 mb-1">Caribbean Reef - Sector C</p>
-                <p className="text-sm text-gray-500 mb-2">pH levels below optimal range</p>
-                <p className="text-xs text-gray-400">1 hour ago</p>
-              </div>
+              )}
             </CardContent>
           </Card>
         </div>
