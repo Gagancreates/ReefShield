@@ -9,6 +9,8 @@ import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { useState } from "react"
 import { ZoomIn, ZoomOut, RotateCcw, Layers } from "lucide-react"
+import { GlobalMap } from "@/components/global-map"
+import { Map } from "@/components/map"
 
 export default function DashboardPage() {
   const [selectedLocation, setSelectedLocation] = useState<string | null>(null)
@@ -114,12 +116,10 @@ export default function DashboardPage() {
   ]
 
   const reefSites = [
-    { id: 1, name: "Great Barrier Reef - North", health: 87, status: "healthy", temperature: 26.8, alerts: 0 },
-    { id: 2, name: "Great Barrier Reef - Central", health: 72, status: "at-risk", temperature: 28.9, alerts: 2 },
-    { id: 3, name: "Coral Triangle - Indonesia", health: 91, status: "healthy", temperature: 27.2, alerts: 0 },
-    { id: 4, name: "Caribbean Reef - Belize", health: 65, status: "critical", temperature: 29.5, alerts: 3 },
-    { id: 5, name: "Red Sea Coral - Egypt", health: 78, status: "at-risk", temperature: 28.1, alerts: 1 },
-    { id: 6, name: "Maldives Reef System", health: 94, status: "healthy", temperature: 26.5, alerts: 0 },
+    { id: 1, name: "North Andaman", health: 87, status: "at-risk" as const, temperature: 28.5, alerts: 1, coordinates: [13.2500, 92.9167] as [number, number] },
+    { id: 2, name: "Neel Islands", health: 92, status: "healthy" as const, temperature: 27.9, alerts: 0, coordinates: [11.832919, 93.052612] as [number, number] },
+    { id: 3, name: "Mahatma Gandhi Marine National Park", health: 65, status: "critical" as const, temperature: 29.2, alerts: 3, coordinates: [11.5690, 92.6542] as [number, number] },
+    { id: 4, name: "Havelock", health: 78, status: "at-risk" as const, temperature: 28.1, alerts: 1, coordinates: [11.960000, 93.000000] as [number, number] },
   ]
 
   const getStatusColor = (status: string) => {
@@ -155,38 +155,10 @@ export default function DashboardPage() {
               </div>
             </CardHeader>
             <CardContent className="pt-0">
-              <div className="relative h-80 bg-gradient-to-br from-blue-200 to-cyan-300 rounded-lg overflow-hidden">
-                <div className="absolute top-4 right-4 flex flex-col gap-2 z-10">
-                  <Button size="sm" variant="outline" className="bg-white shadow-md">
-                    <ZoomIn className="h-4 w-4" />
-                  </Button>
-                  <Button size="sm" variant="outline" className="bg-white shadow-md">
-                    <ZoomOut className="h-4 w-4" />
-                  </Button>
-                  <Button size="sm" variant="outline" className="bg-white shadow-md">
-                    <RotateCcw className="h-4 w-4" />
-                  </Button>
-                </div>
+              <div className="relative h-80 rounded-lg overflow-hidden">
+                <GlobalMap reefSites={reefSites} className="rounded-lg" />
 
-                <div className="absolute inset-0 bg-gradient-to-b from-blue-300 to-blue-400">
-                  <div className="absolute top-16 left-20 w-32 h-20 bg-emerald-200 rounded-lg opacity-70"></div>
-                  <div className="absolute top-24 right-16 w-28 h-24 bg-emerald-200 rounded-lg opacity-70"></div>
-                  <div className="absolute bottom-20 left-32 w-24 h-16 bg-emerald-200 rounded-lg opacity-70"></div>
-
-                  {reefSites.map((site, index) => (
-                    <div
-                      key={site.id}
-                      className={`absolute w-5 h-5 rounded-full border-2 border-white cursor-pointer transform -translate-x-1/2 -translate-y-1/2 ${getStatusColor(site.status)} hover:scale-125 transition-all duration-200 shadow-lg`}
-                      style={{
-                        left: `${20 + index * 12}%`,
-                        top: `${25 + index * 10}%`,
-                      }}
-                      title={`${site.name} - ${site.health}% Health`}
-                    />
-                  ))}
-                </div>
-
-                <div className="absolute bottom-4 left-4 bg-white p-3 rounded-lg shadow-lg border">
+                <div className="absolute bottom-4 left-4 bg-white p-3 rounded-lg shadow-lg border z-[1000]">
                   <div className="text-sm font-semibold mb-2 text-gray-800">Site Status</div>
                   <div className="space-y-1">
                     <div className="flex items-center gap-2">
@@ -349,16 +321,26 @@ export default function DashboardPage() {
                             <CardTitle className="text-lg">Location Map</CardTitle>
                           </CardHeader>
                           <CardContent>
-                            <div className="h-64 bg-gradient-to-br from-blue-200 to-cyan-300 rounded-lg relative overflow-hidden">
-                              <div className="absolute inset-0 bg-gradient-to-b from-blue-300 to-blue-400">
-                                <div className="absolute top-1/2 left-1/2 w-4 h-4 bg-red-500 rounded-full border-2 border-white transform -translate-x-1/2 -translate-y-1/2 shadow-lg"></div>
-                                <div className="absolute bottom-4 left-4 bg-white p-2 rounded-lg shadow-lg">
-                                  <div className="text-xs font-semibold">{location.name}</div>
-                                  <div className="text-xs text-gray-600">
-                                    {location.coordinates.lat}°N, {location.coordinates.lng}°E
-                                  </div>
-                                </div>
-                              </div>
+                            <div className="h-64 rounded-lg overflow-hidden">
+                              <Map
+                                center={[location.coordinates.lat, location.coordinates.lng]}
+                                zoom={12}
+                                markers={[
+                                  {
+                                    position: [location.coordinates.lat, location.coordinates.lng],
+                                    popup: `
+                                      <div class="p-2">
+                                        <h3 class="font-semibold text-sm">${location.name}</h3>
+                                        <p class="text-xs text-gray-600">Temperature: ${location.temperature}°C</p>
+                                        <p class="text-xs text-gray-600">DHW: ${location.dhwAnalysis.current}</p>
+                                        <p class="text-xs text-gray-600">Risk: ${location.dhwAnalysis.riskLevel}</p>
+                                      </div>
+                                    `,
+                                    status: location.dhwAnalysis.riskLevel === "high" ? "critical" : location.dhwAnalysis.riskLevel === "moderate" ? "at-risk" : "healthy"
+                                  }
+                                ]}
+                                className="rounded-lg"
+                              />
                             </div>
                           </CardContent>
                         </Card>
