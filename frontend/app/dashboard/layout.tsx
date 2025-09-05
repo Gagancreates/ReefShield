@@ -150,11 +150,10 @@ export default function DashboardLayout({
                     </Badge>
                   </Button>
                 </DialogTrigger>
-                <DialogContent className="max-w-md">
+                <DialogContent className="max-w-md" showCloseButton={true}>
                   <DialogHeader>
-                    <DialogTitle className="text-xl font-semibold flex items-center justify-between">
+                    <DialogTitle className="text-xl font-semibold">
                       Recent Alerts
-                      <X className="h-5 w-5 text-black cursor-pointer" />
                     </DialogTitle>
                   </DialogHeader>
                   <div className="space-y-4 max-h-96 overflow-y-auto">

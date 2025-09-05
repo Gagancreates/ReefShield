@@ -337,7 +337,7 @@ export default function DashboardPage() {
                       </CardContent>
                     </Card>
                   </DialogTrigger>
-                  <DialogContent className="w-[85vw] !max-w-none max-h-[90vh] overflow-y-auto sm:!max-w-none">
+                  <DialogContent className="w-[85vw] !max-w-none max-h-[90vh] overflow-y-auto sm:!max-w-none" showCloseButton={true}>
                     <DialogHeader>
                       <DialogTitle className="text-2xl font-semibold">{location.name}</DialogTitle>
                     </DialogHeader>
