@@ -32,13 +32,13 @@ export const Newsletter = () => {
         className="mt-8"
       >
         <Link href="/dashboard">
-          <Button
-            className="px-8 py-3 text-lg font-semibold bg-blue-900 hover:bg-blue-1000 text-white border-0 shadow-lg"
-            size="lg"
-          >
-            View Dashboard
-          </Button>
-        </Link>
+  <Button
+    className="px-8 py-3 text-lg font-semibold text-white border border-white/20 shadow-xl backdrop-blur-md bg-white/10 hover:bg-white/20 hover:backdrop-blur-none transition-all duration-300 hover:shadow-2xl"
+    size="lg"
+  >
+    View Dashboard
+  </Button>
+</Link>
       </motion.div>
     </div>
   )
