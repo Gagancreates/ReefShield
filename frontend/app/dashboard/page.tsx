@@ -143,8 +143,8 @@ export default function DashboardPage() {
             <CardHeader className="pb-2">
               <div className="flex items-center justify-between">
                 <div>
-                  <CardTitle className="font-serif text-2xl text-blue-900">Global Reef Monitoring</CardTitle>
-                  <CardDescription>Real-time status of monitored coral reef sites worldwide</CardDescription>
+                  <CardTitle className="font-serif text-2xl text-blue-900">Indian Reef Monitoring</CardTitle>
+                  <CardDescription>Real-time status of monitored coral reef sites around the islands of India</CardDescription>
                 </div>
                 <div className="flex gap-2">
                   <Button variant="outline" size="sm" className="bg-white">
@@ -436,6 +436,44 @@ export default function DashboardPage() {
                   </DialogContent>
                 </Dialog>
               ))}
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gradient-to-br from-red-50 to-orange-50 border-2 border-gray-800 shadow-lg">
+            <CardHeader className="pb-2">
+              <CardTitle className="font-serif text-xl text-red-900">Recent Alerts</CardTitle>
+              <CardDescription>Latest monitoring alerts and warnings</CardDescription>
+            </CardHeader>
+            <CardContent className="pt-0 space-y-3">
+              <div className="border-l-4 border-red-500 pl-4 py-3 bg-white rounded-lg border-2 border-gray-700">
+                <div className="flex items-center justify-between mb-2">
+                  <h4 className="font-medium text-gray-900">High Temperature Alert</h4>
+                  <Badge variant="destructive">Critical</Badge>
+                </div>
+                <p className="text-sm text-gray-600 mb-1">Great Barrier Reef - Zone A</p>
+                <p className="text-sm text-gray-500 mb-2">Water temperature exceeded 29°C threshold</p>
+                <p className="text-xs text-gray-400">2 minutes ago</p>
+              </div>
+
+              <div className="border-l-4 border-amber-500 pl-4 py-3 bg-white rounded-lg border-2 border-gray-700">
+                <div className="flex items-center justify-between mb-2">
+                  <h4 className="font-medium text-gray-900">Coral Bleaching Risk</h4>
+                  <Badge variant="default">Warning</Badge>
+                </div>
+                <p className="text-sm text-gray-600 mb-1">Maldives - Atoll B</p>
+                <p className="text-sm text-gray-500 mb-2">Elevated stress indicators detected</p>
+                <p className="text-xs text-gray-400">15 minutes ago</p>
+              </div>
+
+              <div className="border-l-4 border-blue-500 pl-4 py-3 bg-white rounded-lg border-2 border-gray-700">
+                <div className="flex items-center justify-between mb-2">
+                  <h4 className="font-medium text-gray-900">Water Quality Alert</h4>
+                  <Badge variant="secondary">Medium</Badge>
+                </div>
+                <p className="text-sm text-gray-600 mb-1">Caribbean Reef - Sector C</p>
+                <p className="text-sm text-gray-500 mb-2">pH levels below optimal range</p>
+                <p className="text-xs text-gray-400">1 hour ago</p>
+              </div>
             </CardContent>
           </Card>
         </div>
