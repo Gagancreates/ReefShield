@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Andaman Reef Heatwave Simulator — MMM shown</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#06b6d4;
+      --muted:#94a3b8;
+      --success:#10b981;
+      --warning:#f59e0b;
+      --danger:#ef4444;
+      --glass: rgba(255,255,255,0.03);
+    }
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#081022,var(--bg));font-family:Inter,ui-sans-serif,system-ui,Roboto,"Helvetica Neue",Arial;}
+    .wrap{max-width:1100px;margin:20px auto;padding:18px;display:grid;grid-template-columns:420px 1fr;gap:18px;}
+    .card{background:var(--card);border-radius:12px;padding:14px;color:#e6eef6;box-shadow:0 6px 20px rgba(2,6,23,0.6);}
+    header h1{margin:0;font-size:18px}
+    header p{color:var(--muted);margin:6px 0 12px;font-size:13px}
+    .file-row{display:flex;gap:8px;flex-wrap:wrap}
+    .file-row label{background:var(--glass);padding:8px 10px;border-radius:8px;cursor:pointer;font-size:13px}
+    input[type=file]{display:none}
+    button.primary{background:linear-gradient(90deg,var(--accent),#7c3aed);border:0;padding:9px 12px;border-radius:8px;color:white;cursor:pointer}
+    .controls{display:flex;gap:8px;align-items:center;margin-top:10px}
+    .status{padding:10px;border-radius:8px;margin-top:10px}
+    .status.safe{background:rgba(16,185,129,0.07);color:var(--success);border:1px solid rgba(16,185,129,0.12)}
+    .status.watch{background:rgba(245,158,11,0.06);color:var(--warning);border:1px solid rgba(245,158,11,0.12)}
+    .status.warn{background:rgba(239,68,68,0.06);color:var(--danger);border:1px solid rgba(239,68,68,0.12)}
+    .row{display:flex;gap:10px;align-items:center}
+    .map-card{height:420px}
+    #map{height:100%;border-radius:10px}
+    .chart-card{height:160px;padding:6px}
+    .small{font-size:13px;color:var(--muted)}
+    .footer-note{font-size:12px;color:var(--muted);margin-top:8px}
+    .flex-col{display:flex;flex-direction:column}
+    .slider{width:120px}
+    .controls input[type=range]{accent-color:var(--accent)}
+    .dhw-box{margin-top:10px;padding:10px;border-radius:8px;background:rgba(255,255,255,0.02)}
+    .input-inline{display:flex;gap:8px;align-items:center}
+    input[type=number]{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:6px;border-radius:6px;color:inherit;width:110px}
+    @media (max-width:980px){
+      .wrap{grid-template-columns:1fr; padding:10px}
+      .map-card{height:300px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- Left: controls and charts -->
+    <div class="card">
+      <header>
+        <h1>Andaman Reef Heatwave Simulator</h1>
+        <p>Replays a 14-day SST simulation and tracks DHW. MMM shown and editable (used for HotSpot).</p>
+      </header>
+
+      <section style="margin-top:10px">
+        <div class="file-row">
+          <label for="simFile">Upload simulation CSV</label>
+          <input id="simFile" type="file" accept=".csv">
+          <button id="useSample" class="primary">Use sample data</button>
+        </div>
+
+        <div class="controls" style="margin-top:12px">
+          <button id="startBtn" class="primary">▶ Start</button>
+          <button id="pauseBtn">⏸ Pause</button>
+          <button id="resetBtn">⟲ Reset</button>
+
+          <div style="margin-left:auto" class="flex-col">
+            <div class="row small"><span>Speed:</span><input id="speed" type="range" min="0.2" max="3" step="0.1" value="1" class="slider"></div>
+            <div class="small" id="speedVal">1.0 s / day</div>
+          </div>
+        </div>
+
+        <div id="statusBox" class="status safe" style="margin-top:12px">
+          <strong id="statusText">Idle — load CSV and press Start</strong>
+        </div>
+
+        <!-- DHW and MMM display -->
+        <div class="dhw-box">
+          <div class="row" style="justify-content:space-between;align-items:center">
+            <div>
+              <div style="font-weight:600">DHW (Degree Heating Weeks)</div>
+              <div class="small">12-week running window (°C·weeks). HotSpot = max(0, SST - MMM).</div>
+            </div>
+            <div style="text-align:right">
+              <div id="dhwVal" style="font-size:20px;font-weight:700">—</div>
+              <div class="small" id="dhwCategory">No data</div>
+            </div>
+          </div>
+
+          <div style="margin-top:8px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+            <div style="flex:1;min-width:220px">
+              <canvas id="dhwChart" height="80"></canvas>
+            </div>
+
+            <div style="min-width:190px">
+              <div style="font-weight:600;margin-bottom:6px">Maximum Monthly Mean (MMM)</div>
+              <div class="input-inline">
+                <input id="mmmInput" type="number" step="0.1" value="29.5" title="MMM (°C)">
+                <div class="small">°C</div>
+              </div>
+              <div class="small" style="margin-top:8px">HotSpot uses MMM: <code>max(0, SST - MMM)</code>.</div>
+              <button id="applyMmm" class="primary" style="margin-top:8px">Apply MMM</button>
+              <button id="resetMmm" style="margin-top:8px;margin-left:8px">Reset MMM</button>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section style="margin-top:14px">
+        <div class="chart-card card" style="padding:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);">
+          <canvas id="liveChart" height="120"></canvas>
+          <div class="footer-note">Live SST across simulated days. X-axis = Date, Y-axis = SST (°C)</div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Right: Map -->
+    <div class="card map-card">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+        <div><strong>Map — Andaman Reef</strong><div class="small">Center: 12.0°N, 92.9°E</div></div>
+        <div class="small">Risk colors: Green / Yellow / Orange / Red</div>
+      </div>
+      <div id="map"></div>
+    </div>
+  </div>
+
+  <!-- Libraries -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+  <script>
+  // ===== Config / defaults =====
+  const reefLat = 12.0, reefLon = 92.9;
+  const colorMap = { "Safe":"rgb(0,200,0)", "Watch":"rgb(255,255,0)", "Warning":"rgb(255,140,0)", "Critical":"rgb(200,0,0)" };
+
+  // Default MMM — editable by user. HotSpot = max(0, SST - MMM)
+  let MMM = 29.5;
+
+  // ===== Map =====
+  const map = L.map('map').setView([reefLat, reefLon], 6);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{ attribution:'© OpenStreetMap' }).addTo(map);
+  let reefMarker = L.circle([reefLat, reefLon], { radius: 40000, color: colorMap.Safe, fillColor: colorMap.Safe, fillOpacity:0.4 }).addTo(map);
+
+  // ===== Charts =====
+  const liveChart = new Chart(document.getElementById('liveChart').getContext('2d'), {
+    type: 'line',
+    data: { labels: [], datasets: [{ label:'SST (°C)', data: [], borderWidth:2, tension:0.2, pointRadius:3, fill:false }]},
+    options: { animation:false, responsive:true, maintainAspectRatio:false, scales:{y:{beginAtZero:false}} }
+  });
+
+  const dhwChart = new Chart(document.getElementById('dhwChart').getContext('2d'), {
+    type: 'line',
+    data: { labels: [], datasets: [{ label: 'DHW (°C·weeks)', data: [], borderWidth:2, tension:0.2, pointRadius:2, fill:false }]},
+    options: { animation:false, responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{y:{beginAtZero:true}} }
+  });
+
+  // ===== UI elements =====
+  const simFile = document.getElementById('simFile');
+  const startBtn = document.getElementById('startBtn');
+  const pauseBtn = document.getElementById('pauseBtn');
+  const resetBtn = document.getElementById('resetBtn');
+  const speed = document.getElementById('speed');
+  const speedVal = document.getElementById('speedVal');
+  const statusText = document.getElementById('statusText');
+  const statusBox = document.getElementById('statusBox');
+  const useSample = document.getElementById('useSample');
+  const dhwVal = document.getElementById('dhwVal');
+  const dhwCategory = document.getElementById('dhwCategory');
+  const mmmInput = document.getElementById('mmmInput');
+  const applyMmm = document.getElementById('applyMmm');
+  const resetMmm = document.getElementById('resetMmm');
+
+  speed.oninput = () => speedVal.textContent = speed.value + " s / day";
+
+  // ===== State =====
+  let simData = [];
+  let pointer = 0, running = false, timer = null;
+  let dhwHistory = [];
+
+  // prevent DHW flicker with RAF scheduling
+  let dhwNeedsRender = false, dhwRafScheduled = false;
+
+  // ===== Helpers =====
+  function setStatus(cls, text){ statusBox.className="status "+cls; statusText.innerHTML=text; }
+  function parseCSVFile(file, callback){ Papa.parse(file,{header:true,skipEmptyLines:true,complete:(res)=>callback(res.data)}); }
+
+  function hotspotFromSST(sst){ return Math.max(0, sst - MMM); }
+
+  function updateMap(risk, sst, dhw){
+    const col = colorMap[risk] || colorMap.Safe;
+    reefMarker.setStyle({ color:col, fillColor:col });
+    reefMarker.bindTooltip(`<strong>Andaman Reef</strong><br/>Risk: ${risk}<br/>SST: ${sst.toFixed(2)} °C<br/>MMM: ${MMM.toFixed(2)} °C<br/>DHW: ${dhw.toFixed(2)} °C·weeks`).openTooltip();
+  }
+
+  function updateLiveChart(date, sst){
+    liveChart.data.labels.push(date);
+    liveChart.data.datasets[0].data.push(sst);
+    liveChart.update('none');
+  }
+
+  function updateDHWChart(date, dhw){
+    dhwChart.data.labels.push(date);
+    dhwChart.data.datasets[0].data.push(dhw);
+    dhwNeedsRender = true;
+    if(!dhwRafScheduled){
+      dhwRafScheduled = true;
+      requestAnimationFrame(()=>{
+        if(dhwNeedsRender){
+          dhwChart.update('none');
+          dhwNeedsRender = false;
+        }
+        dhwRafScheduled = false;
+      });
+    }
+  }
+
+  function resetCharts(){
+    liveChart.data.labels=[]; liveChart.data.datasets[0].data=[]; liveChart.update('none');
+    dhwChart.data.labels=[]; dhwChart.data.datasets[0].data=[]; dhwChart.update('none');
+    dhwHistory=[]; dhwVal.textContent="—"; dhwCategory.textContent="No data";
+  }
+
+  function computeDHW_addHotspot(hotspot, dateLabel){
+    dhwHistory.push({date: dateLabel, hotspot: hotspot});
+    if(dhwHistory.length > 84) dhwHistory.splice(0, dhwHistory.length - 84);
+    const sumHot = dhwHistory.reduce((s,d)=>s + (parseFloat(d.hotspot)||0), 0);
+    return sumHot / 7.0;
+  }
+
+  function dhwCategoryFromValue(dhw){
+    if(dhw < 4) return {cls:"safe", txt:"Low / no widespread bleaching expected"};
+    if(dhw < 8) return {cls:"watch", txt:"Significant bleaching likely"};
+    return {cls:"warn", txt:"Severe bleaching likely"};
+  }
+
+  // ===== Playback =====
+  function stepOnce(){
+    if(pointer >= simData.length){ stopSimulation(); setStatus("safe","Simulation finished."); return; }
+    const row = simData[pointer];
+    const dateLabel = row.Date || (`Day ${pointer+1}`);
+    const risk = (row.Risk_Level || row.Risk || "Safe").toString();
+    const sst = parseFloat(row.SST_C || row.SST || 0);
+
+    // compute hotspot using MMM and DHW
+    const hotspot = hotspotFromSST(sst);
+    const dhw = computeDHW_addHotspot(hotspot, dateLabel);
+
+    updateMap(risk, sst, dhw);
+    updateLiveChart(dateLabel, sst);
+    updateDHWChart(dateLabel, dhw);
+
+    dhwVal.textContent = dhw.toFixed(2) + " °C·weeks";
+    dhwCategory.textContent = dhwCategoryFromValue(dhw).txt;
+
+    if(risk.toLowerCase()==="safe"){
+      setStatus("safe", `Day ${dateLabel}: 🌿 Reef Safe (SST ${sst.toFixed(2)} °C) — DHW ${dhw.toFixed(2)} °C·weeks`);
+    } else if(risk.toLowerCase()==="watch"){
+      setStatus("watch", `Day ${dateLabel}: ⚠️ Stress Watch (SST ${sst.toFixed(2)} °C) — ${dhwCategoryFromValue(dhw).txt}`);
+    } else if(risk.toLowerCase()==="warning"){
+      setStatus("warn", `Day ${dateLabel}: 🚨 Bleaching Warning (SST ${sst.toFixed(2)} °C) — ${dhwCategoryFromValue(dhw).txt}`);
+    } else {
+      setStatus("warn", `Day ${dateLabel}: 🔴 CRITICAL Bleaching Alert (SST ${sst.toFixed(2)} °C) — ${dhwCategoryFromValue(dhw).txt}`);
+    }
+
+    pointer++;
+  }
+
+  function startSimulation(){
+    if(simData.length === 0){ alert("No simulation data loaded. Upload a CSV or click 'Use sample data'."); return; }
+    if(running) return;
+    running = true;
+    const delay = parseFloat(speed.value) * 1000;
+    stepOnce();
+    timer = setInterval(()=>{
+      if(!running) return;
+      if(pointer >= simData.length){ stopSimulation(); setStatus("safe","Simulation finished."); return; }
+      stepOnce();
+    }, delay);
+  }
+
+  function stopSimulation(){
+    running = false;
+    if(timer){ clearInterval(timer); timer = null; }
+  }
+
+  function resetSimulation(){
+    stopSimulation();
+    pointer = 0;
+    resetCharts();
+    setStatus("safe","Idle — load CSV and press Start");
+  }
+
+  // ===== File handling & sample =====
+  function sanitizeSim(rows){
+    return rows.map(r => ({
+      Date: r.Date || r.date || r.DAY || r.Day || "",
+      Risk_Level: r.Risk_Level || r.Risk || r.risk_level || r.risk || guessRiskFromSST(r),
+      SST_C: r.SST_C || r.SST || r.sst || r.SST_Celsius || r.SST_C || ""
+    })).filter(r => r.Date && (r.SST_C !== "" && r.SST_C !== undefined && r.SST_C !== null));
+  }
+
+  function guessRiskFromSST(r){
+    const s = parseFloat(r.SST_C || r.SST || r.sst || 0);
+    if(isNaN(s)) return "Safe";
+    if(s < 29.5) return "Safe";
+    if(s < 30.5) return "Watch";
+    if(s < 31.5) return "Warning";
+    return "Critical";
+  }
+
+  simFile.addEventListener('change', (ev)=>{
+    if(ev.target.files.length) parseCSVFile(ev.target.files[0], (rows)=>{ simData = sanitizeSim(rows); resetSimulation(); });
+  });
+
+  useSample.addEventListener('click', ()=>{
+    simData = sampleSim();
+    resetSimulation();
+    alert("Sample data loaded. Press Start to run sample simulation.");
+  });
+
+  startBtn.addEventListener('click', ()=>{ startSimulation(); });
+  pauseBtn.addEventListener('click', ()=>{
+    if(running){ stopSimulation(); pauseBtn.textContent='▶ Resume'; }
+    else { startSimulation(); pauseBtn.textContent='⏸ Pause'; }
+  });
+  resetBtn.addEventListener('click', ()=>{ resetSimulation(); pauseBtn.textContent='⏸ Pause'; });
+  speed.addEventListener('change', ()=>{ if(running){ stopSimulation(); startSimulation(); } });
+
+  // MMM controls
+  applyMmm.addEventListener('click', ()=>{
+    const val = parseFloat(mmmInput.value);
+    if(isNaN(val)){ alert("Enter a numeric MMM (°C)."); return; }
+    MMM = val;
+    // reset DHW history (optional) — keep current DHW? We'll reset so user sees effect immediately
+    dhwHistory = [];
+    resetCharts();
+    setStatus("safe", `MMM set to ${MMM.toFixed(2)} °C — charts reset.`);
+  });
+
+  resetMmm.addEventListener('click', ()=>{
+    MMM = 29.5;
+    mmmInput.value = MMM.toFixed(1);
+    dhwHistory = [];
+    resetCharts();
+    setStatus("safe", `MMM reset to ${MMM.toFixed(2)} °C — charts reset.`);
+  });
+
+  // ===== Sample data function =====
+  function sampleSim(){
+    return [
+      {Date:"2025-08-20", Risk_Level:"Safe", SST_C:"28.9"},
+      {Date:"2025-08-21", Risk_Level:"Watch", SST_C:"29.8"},
+      {Date:"2025-08-22", Risk_Level:"Watch", SST_C:"30.1"},
+      {Date:"2025-08-23", Risk_Level:"Warning", SST_C:"30.8"},
+      {Date:"2025-08-24", Risk_Level:"Warning", SST_C:"31.0"},
+      {Date:"2025-08-25", Risk_Level:"Critical", SST_C:"31.6"},
+      {Date:"2025-08-26", Risk_Level:"Critical", SST_C:"31.8"},
+      {Date:"2025-08-27", Risk_Level:"Warning", SST_C:"31.2"},
+      {Date:"2025-08-28", Risk_Level:"Watch", SST_C:"30.4"},
+      {Date:"2025-08-29", Risk_Level:"Safe", SST_C:"29.2"},
+      {Date:"2025-08-30", Risk_Level:"Safe", SST_C:"28.8"},
+      {Date:"2025-08-31", Risk_Level:"Safe", SST_C:"28.6"},
+      {Date:"2025-09-01", Risk_Level:"Safe", SST_C:"28.7"},
+      {Date:"2025-09-02", Risk_Level:"Safe", SST_C:"28.9"}
+    ];
+  }
+
+  // Done
+  </script>
+</body>
+</html>
