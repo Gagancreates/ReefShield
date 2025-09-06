@@ -3458,3 +3458,42 @@
 2025-09-07 02:38:26 - watchfiles.main - INFO - 1 change detected
 2025-09-07 02:38:38 - watchfiles.main - INFO - 1 change detected
 2025-09-07 02:39:13 - watchfiles.main - INFO - 1 change detected
+2025-09-07 03:43:23 - app.utils.logging_config - INFO - Advanced logging system initialized
+2025-09-07 03:43:23 - main - INFO - ReefShield Backend API starting up...
+2025-09-07 03:43:23 - app.services.model_service - INFO - ModelService initialized with script: G:\JusticeGang\models\finalig.py
+2025-09-07 03:43:23 - app.services.scheduler_service - INFO - SchedulerService initialized
+2025-09-07 03:43:23 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-07 03:43:23 - apscheduler.scheduler - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-07 03:43:23 - app.services.scheduler_service - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-07 03:43:23 - app.services.scheduler_service - INFO - Next scheduled run: 2025-09-07 06:00:00+00:00
+2025-09-07 03:43:23 - app.services.scheduler_service - INFO - SchedulerService started successfully
+2025-09-07 03:43:23 - main - INFO - Models directory found: G:\JusticeGang\models
+2025-09-07 03:43:23 - main - INFO - ReefShield Backend API startup complete
+2025-09-07 03:43:57 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-07 03:43:57 - app.services.data_service - INFO - Reading combined 14-day data from: G:\JusticeGang\models\andaman_sst_14day_combined.csv
+2025-09-07 03:43:57 - app.utils.csv_reader - INFO - Extracted 14 combined readings from G:\JusticeGang\models\andaman_sst_14day_combined.csv
+2025-09-07 03:43:57 - app.services.data_service - INFO - Retrieved 14 combined temperature readings
+2025-09-07 03:43:57 - app.services.data_service - INFO - Combined temperature data created with 14 readings
+2025-09-07 03:43:57 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-07 03:43:57 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-07 03:43:57 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-07 03:45:58 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-07 03:45:58 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-07 03:45:58 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-07 03:45:58 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-07 03:46:05 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-07 03:46:05 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-07 03:46:05 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-07 03:46:05 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-07 03:46:49 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-07 03:46:49 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-07 03:46:49 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-07 03:46:49 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-07 03:47:27 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-07 03:47:27 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-07 03:47:27 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-07 03:47:27 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-07 03:47:35 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-07 03:47:35 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-07 03:47:35 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-07 03:47:35 - app.api.routes - INFO - Retrieved combined data: 14 readings

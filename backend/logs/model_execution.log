@@ -1184,3 +1184,9 @@ odels\finalig.py
 2025-09-07 02:24:35 - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
 2025-09-07 02:24:35 - INFO - Daily model execution scheduled for 06:00 UTC
 2025-09-07 02:24:35 - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-07 03:43:23 - INFO - ModelService initialized with script: G:\JusticeGang\models\finalig.py
+2025-09-07 03:43:23 - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-07 03:43:23 - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-07 03:43:23 - INFO - Models directory found: G:\JusticeGang\models
+2025-09-07 03:43:57 - INFO - Reading combined 14-day data from: G:\JusticeGang\models\andaman_sst_14day_combined.csv
+2025-09-07 03:43:57 - INFO - Extracted 14 combined readings from G:\JusticeGang\models\andaman_sst_14day_combined.csv
