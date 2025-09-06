@@ -18,70 +18,80 @@ import {
   BarChart,
   Bar,
 } from "recharts"
-import { Thermometer, TrendingUp, TrendingDown, AlertTriangle, Download, RefreshCw } from "lucide-react"
+import { Thermometer, TrendingUp, TrendingDown, AlertTriangle, Download, RefreshCw, Wifi, WifiOff } from "lucide-react"
 import { useRealtimeLocations, useTemperatureAnalysis } from "@/lib/hooks/useRealtimeData"
 
-// Dummy temperature data for 14 days
-const temperatureData = [
-  { date: "2024-01-01", temp: 26.2, threshold: 28.5, site: "Great Barrier Reef" },
-  { date: "2024-01-02", temp: 26.8, threshold: 28.5, site: "Great Barrier Reef" },
-  { date: "2024-01-03", temp: 27.1, threshold: 28.5, site: "Great Barrier Reef" },
-  { date: "2024-01-04", temp: 27.5, threshold: 28.5, site: "Great Barrier Reef" },
-  { date: "2024-01-05", temp: 28.2, threshold: 28.5, site: "Great Barrier Reef" },
-  { date: "2024-01-06", temp: 28.9, threshold: 28.5, site: "Great Barrier Reef" },
-  { date: "2024-01-07", temp: 29.1, threshold: 28.5, site: "Great Barrier Reef" },
-  { date: "2024-01-08", temp: 28.7, threshold: 28.5, site: "Great Barrier Reef" },
-  { date: "2024-01-09", temp: 28.3, threshold: 28.5, site: "Great Barrier Reef" },
-  { date: "2024-01-10", temp: 27.9, threshold: 28.5, site: "Great Barrier Reef" },
-  { date: "2024-01-11", temp: 27.4, threshold: 28.5, site: "Great Barrier Reef" },
-  { date: "2024-01-12", temp: 27.0, threshold: 28.5, site: "Great Barrier Reef" },
-  { date: "2024-01-13", temp: 26.8, threshold: 28.5, site: "Great Barrier Reef" },
-  { date: "2024-01-14", temp: 26.5, threshold: 28.5, site: "Great Barrier Reef" },
+// Fallback temperature data for 14 days - shows immediately
+const fallbackTemperatureData = [
+  { date: "2025-03-01", temp: 28.2, threshold: 29.0, site: "Andaman Islands" },
+  { date: "2025-03-02", temp: 28.8, threshold: 29.0, site: "Andaman Islands" },
+  { date: "2025-03-03", temp: 29.1, threshold: 29.0, site: "Andaman Islands" },
+  { date: "2025-03-04", temp: 28.5, threshold: 29.0, site: "Andaman Islands" },
+  { date: "2025-03-05", temp: 28.2, threshold: 29.0, site: "Andaman Islands" },
+  { date: "2025-03-06", temp: 28.9, threshold: 29.0, site: "Andaman Islands" },
+  { date: "2025-03-07", temp: 29.3, threshold: 29.0, site: "Andaman Islands" },
+  { date: "2025-03-08", temp: 28.7, threshold: 29.0, site: "Andaman Islands" },
+  { date: "2025-03-09", temp: 28.3, threshold: 29.0, site: "Andaman Islands" },
+  { date: "2025-03-10", temp: 27.9, threshold: 29.0, site: "Andaman Islands" },
+  { date: "2025-03-11", temp: 28.4, threshold: 29.0, site: "Andaman Islands" },
+  { date: "2025-03-12", temp: 28.0, threshold: 29.0, site: "Andaman Islands" },
+  { date: "2025-03-13", temp: 28.8, threshold: 29.0, site: "Andaman Islands" },
+  { date: "2025-03-14", temp: 28.5, threshold: 29.0, site: "Andaman Islands" },
 ]
 
-// Dummy hourly temperature data for detailed analysis
-const hourlyTempData = [
-  { hour: "00:00", temp: 26.8 },
-  { hour: "04:00", temp: 26.2 },
-  { hour: "08:00", temp: 26.9 },
-  { hour: "12:00", temp: 28.1 },
-  { hour: "16:00", temp: 29.2 },
-  { hour: "20:00", temp: 28.4 },
+// Fallback hourly temperature data for detailed analysis
+const fallbackHourlyTempData = [
+  { hour: "00:00", temp: 28.1 },
+  { hour: "04:00", temp: 27.8 },
+  { hour: "08:00", temp: 28.3 },
+  { hour: "12:00", temp: 29.2 },
+  { hour: "16:00", temp: 29.8 },
+  { hour: "20:00", temp: 28.9 },
 ]
 
-// Dummy monthly temperature comparison data
-const monthlyComparisonData = [
-  { month: "Oct", current: 27.2, historical: 26.8 },
-  { month: "Nov", current: 27.8, historical: 27.1 },
-  { month: "Dec", current: 28.4, historical: 27.6 },
-  { month: "Jan", current: 28.9, historical: 28.1 },
+// Fallback monthly temperature comparison data
+const fallbackMonthlyComparisonData = [
+  { month: "Dec", current: 27.2, historical: 26.8 },
+  { month: "Jan", current: 27.8, historical: 27.1 },
+  { month: "Feb", current: 28.4, historical: 27.6 },
+  { month: "Mar", current: 28.9, historical: 28.1 },
 ]
 
-const sites = [
-  { id: "gbr", name: "Great Barrier Reef", avgTemp: 27.4, trend: "down", status: "normal" },
-  { id: "ct", name: "Coral Triangle", avgTemp: 28.9, trend: "up", status: "warning" },
-  { id: "cr", name: "Caribbean Reef", avgTemp: 26.8, trend: "stable", status: "normal" },
-  { id: "rs", name: "Red Sea Coral", avgTemp: 29.2, trend: "up", status: "critical" },
+// Fallback sites data
+const fallbackSites = [
+  { id: "jolly-buoy", name: "Jolly Buoy", avgTemp: 28.4, trend: "stable", status: "normal" },
+  { id: "neel-islands", name: "Neel Islands", avgTemp: 28.9, trend: "up", status: "warning" },
+  { id: "mahatma-gandhi", name: "Mahatma Gandhi Marine Park", avgTemp: 28.1, trend: "down", status: "normal" },
+  { id: "havelock", name: "Havelock", avgTemp: 29.2, trend: "up", status: "critical" },
 ]
 
 export default function TemperaturePage() {
   // Real-time data hooks
-  const { locations: realtimeLocations, loading, lastUpdated } = useRealtimeLocations()
-  const { data: temperatureAnalysisData } = useTemperatureAnalysis()
+  const { locations: realtimeLocations, loading, lastUpdated, isUsingFallback, forceRefresh } = useRealtimeLocations()
+  const { data: temperatureAnalysisData, isUsingFallback: tempAnalysisFallback, forceRefresh: refreshTempAnalysis } = useTemperatureAnalysis()
 
-  // Calculate real-time statistics
-  const currentTemps = realtimeLocations.map(loc => loc.currentTemperature)
+  // Use real data if available, otherwise fallback data
+  const temperatureData = temperatureAnalysisData.length > 0 
+    ? temperatureAnalysisData.map((item, index) => ({
+        date: `2025-03-${String(index + 1).padStart(2, '0')}`,
+        temp: item.temp,
+        threshold: item.threshold,
+        site: "Andaman Islands"
+      }))
+    : fallbackTemperatureData
+
+  // Calculate statistics from current data
+  const locations = realtimeLocations.length > 0 ? realtimeLocations : 
+    fallbackSites.map(site => ({
+      ...site,
+      currentTemperature: site.avgTemp,
+      riskLevel: site.status as 'low' | 'moderate' | 'high'
+    }))
+
+  const currentTemps = locations.map(loc => loc.currentTemperature || avgTemp)
   const currentTemp = currentTemps.length > 0 ? currentTemps.reduce((a, b) => a + b) / currentTemps.length : 0
   const maxTemp = currentTemps.length > 0 ? Math.max(...currentTemps) : 0
   const minTemp = currentTemps.length > 0 ? Math.min(...currentTemps) : 0
-  
-  // Use real temperature analysis data
-  const temperatureData = temperatureAnalysisData.map((item, index) => ({
-    date: `2025-03-${String(index + 1).padStart(2, '0')}`,
-    temp: item.temp,
-    threshold: item.threshold,
-    site: "Andaman Islands"
-  }))
 
   const avgTemp = temperatureData.length > 0 ? 
     temperatureData.reduce((sum, data) => sum + data.temp, 0) / temperatureData.length : 0
@@ -89,13 +99,25 @@ export default function TemperaturePage() {
     temperatureData[temperatureData.length - 1].temp - temperatureData[temperatureData.length - 2].temp : 0
 
   // Convert locations to sites format
-  const sites = realtimeLocations.map(loc => ({
-    id: loc.id,
-    name: loc.name,
-    avgTemp: loc.currentTemperature,
-    trend: loc.trend === 'increasing' ? 'up' : loc.trend === 'decreasing' ? 'down' : 'stable',
-    status: loc.riskLevel === 'high' ? 'critical' : loc.riskLevel === 'moderate' ? 'warning' : 'normal'
-  }))
+  const sites = realtimeLocations.length > 0 
+    ? realtimeLocations.map(loc => ({
+        id: loc.id,
+        name: loc.name,
+        avgTemp: loc.currentTemperature,
+        trend: loc.trend === 'increasing' ? 'up' : loc.trend === 'decreasing' ? 'down' : 'stable',
+        status: loc.riskLevel === 'high' ? 'critical' : loc.riskLevel === 'moderate' ? 'warning' : 'normal'
+      }))
+    : fallbackSites
+
+  // Determine overall data status
+  const isUsingAnyFallback = isUsingFallback || tempAnalysisFallback
+  const dataStatusText = isUsingAnyFallback ? "Demo Data" : "Live Data"
+  const dataStatusIcon = isUsingAnyFallback ? <WifiOff className="h-4 w-4" /> : <Wifi className="h-4 w-4" />
+  const dataStatusColor = isUsingAnyFallback ? "text-orange-600" : "text-green-600"
+
+  const handleRefresh = async () => {
+    await Promise.all([forceRefresh(), refreshTempAnalysis()])
+  }
 
   return (
     <div className="space-y-6">
@@ -105,11 +127,13 @@ export default function TemperaturePage() {
           <h1 className="font-serif text-4xl font-bold text-gray-900">Temperature Analysis</h1>
           <p className="text-muted-foreground">
             Real-time water temperature trends for Andaman Islands
-            {lastUpdated && (
-              <span className="ml-2 text-xs text-green-600">
-                • Live (Updated {lastUpdated.toLocaleTimeString()})
-              </span>
-            )}
+            <span className={`ml-2 text-xs ${dataStatusColor} flex items-center gap-1 inline-flex`}>
+              {dataStatusIcon}
+              {dataStatusText}
+              {lastUpdated && !isUsingAnyFallback && (
+                <span> • Updated {lastUpdated.toLocaleTimeString()}</span>
+              )}
+            </span>
           </p>
         </div>
         <div className="flex gap-2">
@@ -132,9 +156,14 @@ export default function TemperaturePage() {
               </SelectItem>
             </SelectContent>
           </Select>
-          <Button variant="outline" size="sm">
+          <Button 
+            variant="outline" 
+            size="sm" 
+            onClick={handleRefresh}
+            className={isUsingAnyFallback ? "border-orange-300 hover:border-orange-400" : "border-green-300 hover:border-green-400"}
+          >
             <RefreshCw className={`h-4 w-4 mr-2 ${loading ? 'animate-spin' : ''}`} />
-            {loading ? 'Updating...' : 'Live Data'}
+            {loading ? 'Updating...' : isUsingAnyFallback ? 'Connect Live' : 'Refresh'}
           </Button>
           <Button variant="outline" size="sm">
             <Download className="h-4 w-4 mr-2" />
@@ -142,6 +171,20 @@ export default function TemperaturePage() {
           </Button>
         </div>
       </div>
+
+      {/* Data Status Alert */}
+      {isUsingAnyFallback && (
+        <Card className="border-2 border-orange-300 bg-orange-50">
+          <CardContent className="pt-4">
+            <div className="flex items-center gap-2 text-orange-800">
+              <WifiOff className="h-4 w-4" />
+              <span className="text-sm font-medium">
+                Showing demonstration data. Click "Connect Live" to fetch real-time data from sensors.
+              </span>
+            </div>
+          </CardContent>
+        </Card>
+      )}
 
       {/* Summary Stats */}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
@@ -182,7 +225,7 @@ export default function TemperaturePage() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-red-600">{maxTemp.toFixed(1)}°C</div>
-            <div className="text-xs text-muted-foreground">Recorded on Jan 7th</div>
+            <div className="text-xs text-muted-foreground">Recorded recently</div>
           </CardContent>
         </Card>
 
@@ -193,7 +236,7 @@ export default function TemperaturePage() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-blue-600">{minTemp.toFixed(1)}°C</div>
-            <div className="text-xs text-muted-foreground">Recorded on Jan 1st</div>
+            <div className="text-xs text-muted-foreground">Recorded recently</div>
           </CardContent>
         </Card>
       </div>
@@ -201,7 +244,14 @@ export default function TemperaturePage() {
       {/* Temperature Chart */}
       <Card className="border-2 border-gray-800 shadow-lg">
         <CardHeader>
-          <CardTitle className="font-serif text-2xl">14-Day Temperature Trend</CardTitle>
+          <CardTitle className="font-serif text-2xl flex items-center gap-2">
+            14-Day Temperature Trend
+            {isUsingAnyFallback && (
+              <Badge variant="secondary" className="text-xs">
+                Demo Data
+              </Badge>
+            )}
+          </CardTitle>
           <CardDescription>Water temperature readings with bleaching threshold indicator</CardDescription>
         </CardHeader>
         <CardContent>
@@ -233,7 +283,7 @@ export default function TemperaturePage() {
                   formatter={(value: number) => [`${value.toFixed(1)}°C`, "Temperature"]}
                 />
                 <ReferenceLine
-                  y={28.5}
+                  y={29.0}
                   stroke="#ef4444"
                   strokeDasharray="5 5"
                   label={{ value: "Bleaching Threshold", position: "top" }}
@@ -241,10 +291,10 @@ export default function TemperaturePage() {
                 <Line
                   type="monotone"
                   dataKey="temp"
-                  stroke="#2563eb"
+                  stroke={isUsingAnyFallback ? "#f59e0b" : "#2563eb"}
                   strokeWidth={3}
-                  dot={{ fill: "#2563eb", strokeWidth: 2, r: 4 }}
-                  activeDot={{ r: 6, stroke: "#2563eb", strokeWidth: 2 }}
+                  dot={{ fill: isUsingAnyFallback ? "#f59e0b" : "#2563eb", strokeWidth: 2, r: 4 }}
+                  activeDot={{ r: 6, stroke: isUsingAnyFallback ? "#f59e0b" : "#2563eb", strokeWidth: 2 }}
                 />
               </LineChart>
             </ResponsiveContainer>
@@ -255,18 +305,31 @@ export default function TemperaturePage() {
       <div className="grid gap-6 lg:grid-cols-2">
         <Card className="border-2 border-gray-800 shadow-lg">
           <CardHeader>
-            <CardTitle className="font-serif text-2xl">Today's Hourly Temperature</CardTitle>
+            <CardTitle className="font-serif text-2xl flex items-center gap-2">
+              Today's Hourly Temperature
+              {isUsingAnyFallback && (
+                <Badge variant="secondary" className="text-xs">
+                  Demo Data
+                </Badge>
+              )}
+            </CardTitle>
             <CardDescription>Temperature variations throughout the day</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="h-64">
               <ResponsiveContainer width="100%" height="100%">
-                <AreaChart data={hourlyTempData}>
+                <AreaChart data={fallbackHourlyTempData}>
                   <CartesianGrid strokeDasharray="3 3" />
                   <XAxis dataKey="hour" />
                   <YAxis tickFormatter={(value) => `${value}°C`} />
                   <Tooltip formatter={(value: number) => [`${value.toFixed(1)}°C`, "Temperature"]} />
-                  <Area type="monotone" dataKey="temp" stroke="#10b981" fill="#10b981" fillOpacity={0.3} />
+                  <Area 
+                    type="monotone" 
+                    dataKey="temp" 
+                    stroke={isUsingAnyFallback ? "#f59e0b" : "#10b981"} 
+                    fill={isUsingAnyFallback ? "#f59e0b" : "#10b981"} 
+                    fillOpacity={0.3} 
+                  />
                 </AreaChart>
               </ResponsiveContainer>
             </div>
@@ -275,19 +338,34 @@ export default function TemperaturePage() {
 
         <Card className="border-2 border-gray-800 shadow-lg">
           <CardHeader>
-            <CardTitle className="font-serif text-2xl">Monthly Temperature Comparison</CardTitle>
+            <CardTitle className="font-serif text-2xl flex items-center gap-2">
+              Monthly Temperature Comparison
+              {isUsingAnyFallback && (
+                <Badge variant="secondary" className="text-xs">
+                  Demo Data
+                </Badge>
+              )}
+            </CardTitle>
             <CardDescription>Current vs historical monthly averages</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="h-64">
               <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={monthlyComparisonData}>
+                <BarChart data={fallbackMonthlyComparisonData}>
                   <CartesianGrid strokeDasharray="3 3" />
                   <XAxis dataKey="month" />
                   <YAxis tickFormatter={(value) => `${value}°C`} />
                   <Tooltip formatter={(value: number) => [`${value.toFixed(1)}°C`, ""]} />
-                  <Bar dataKey="current" fill="#3b82f6" name="Current Year" />
-                  <Bar dataKey="historical" fill="#94a3b8" name="Historical Average" />
+                  <Bar 
+                    dataKey="current" 
+                    fill={isUsingAnyFallback ? "#f59e0b" : "#3b82f6"} 
+                    name="Current Year" 
+                  />
+                  <Bar 
+                    dataKey="historical" 
+                    fill="#94a3b8" 
+                    name="Historical Average" 
+                  />
                 </BarChart>
               </ResponsiveContainer>
             </div>
@@ -298,7 +376,14 @@ export default function TemperaturePage() {
       {/* Site Comparison */}
       <Card className="border-2 border-gray-800 shadow-lg">
         <CardHeader>
-          <CardTitle className="font-serif text-2xl">Site Temperature Comparison</CardTitle>
+          <CardTitle className="font-serif text-2xl flex items-center gap-2">
+            Site Temperature Comparison
+            {isUsingAnyFallback && (
+              <Badge variant="secondary" className="text-xs">
+                Demo Data
+              </Badge>
+            )}
+          </CardTitle>
           <CardDescription>Current temperature status across all monitored reef sites</CardDescription>
         </CardHeader>
         <CardContent>
