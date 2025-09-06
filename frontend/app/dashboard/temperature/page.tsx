@@ -19,7 +19,7 @@ import {
   Bar,
 } from "recharts"
 import { Thermometer, TrendingUp, TrendingDown, AlertTriangle, Download, RefreshCw } from "lucide-react"
-import { useRealtimeLocations, useTemperatureAnalysis } from "@/lib/hooks/useRealtimeData"
+import { useRealtimeLocations, useTemperatureAnalysis, useCombinedTemperatureData } from "@/lib/hooks/useRealtimeData"
 
 // Fallback temperature data for 14 days - shows immediately
 const fallbackTemperatureData = [
@@ -69,32 +69,19 @@ export default function TemperaturePage() {
   // Real-time data hooks
   const { locations: realtimeLocations, loading, lastUpdated, forceRefresh } = useRealtimeLocations()
   const { data: temperatureAnalysisData, forceRefresh: refreshTempAnalysis } = useTemperatureAnalysis()
+  const { data: combinedTempData, loading: tempLoading, error: tempError } = useCombinedTemperatureData();
 
-  // Use real data if available, otherwise fallback data
-  const temperatureData = temperatureAnalysisData.length > 0 
-    ? temperatureAnalysisData.map((item, index) => ({
-        date: `2025-03-${String(index + 1).padStart(2, '0')}`,
-        temp: item.temp,
-        threshold: item.threshold,
-        site: "Andaman Islands"
-      }))
-    : fallbackTemperatureData
+  // Use real temperature data if available, otherwise fallback
+  const temperatureData = (!tempLoading && !tempError && combinedTempData.length > 0)
+    ? combinedTempData
+    : fallbackTemperatureData;
 
   // Calculate statistics from current data
-  const locations = realtimeLocations.length > 0 ? realtimeLocations : 
-    fallbackSites.map(site => ({
-      ...site,
-      currentTemperature: site.avgTemp,
-      riskLevel: site.status as 'low' | 'moderate' | 'high'
-    }))
-
-  const currentTemps = locations.map(loc => loc.currentTemperature || avgTemp)
-  const currentTemp = currentTemps.length > 0 ? currentTemps.reduce((a, b) => a + b) / currentTemps.length : 0
-  const maxTemp = currentTemps.length > 0 ? Math.max(...currentTemps) : 0
-  const minTemp = currentTemps.length > 0 ? Math.min(...currentTemps) : 0
-
+  const currentTemp = temperatureData.length > 0 ? temperatureData[temperatureData.length - 1].temp : 0;
   const avgTemp = temperatureData.length > 0 ? 
     temperatureData.reduce((sum, data) => sum + data.temp, 0) / temperatureData.length : 0
+  const maxTemp = temperatureData.length > 0 ? Math.max(...temperatureData.map(d => d.temp)) : 0
+  const minTemp = temperatureData.length > 0 ? Math.min(...temperatureData.map(d => d.temp)) : 0
   const tempChange = temperatureData.length >= 2 ? 
     temperatureData[temperatureData.length - 1].temp - temperatureData[temperatureData.length - 2].temp : 0
 
@@ -232,10 +219,7 @@ export default function TemperaturePage() {
               <LineChart data={temperatureData}>
                 <CartesianGrid strokeDasharray="3 3" className="opacity-30" />
                 <XAxis
-                  dataKey="date"
-                  tickFormatter={(value) =>
-                    new Date(value).toLocaleDateString("en-US", { month: "short", day: "numeric" })
-                  }
+                  dataKey="day"
                   className="text-xs"
                 />
                 <YAxis
@@ -244,14 +228,7 @@ export default function TemperaturePage() {
                   className="text-xs"
                 />
                 <Tooltip
-                  labelFormatter={(value) =>
-                    new Date(value).toLocaleDateString("en-US", {
-                      weekday: "long",
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })
-                  }
+                  labelFormatter={(value) => value}
                   formatter={(value: number) => [`${value.toFixed(1)}°C`, "Temperature"]}
                 />
                 <ReferenceLine
