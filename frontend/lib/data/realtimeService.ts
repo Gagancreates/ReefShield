@@ -1,4 +1,5 @@
 // Real-time data service using CSV data from models folder
+import { loadChlorophyllData, getChlorophyllForLocation, getChlorophyllRiskLevel, type ChlorophyllData } from '@/lib/utils/chlorophyllData';
 export interface TemperatureReading {
     date: string;
     temperature: number;
@@ -17,6 +18,11 @@ export interface LocationData {
     trend: 'stable' | 'increasing' | 'decreasing';
     temperatureHistory: TemperatureReading[];
     forecast: TemperatureReading[];
+    chlorophyll?: {
+        value: number;
+        riskLevel: 'low' | 'moderate' | 'high';
+        threshold: number;
+    };
 }
 
 // Simulated real-time data based on CSV patterns
@@ -90,18 +96,27 @@ export class RealtimeDataService {
     private locations: LocationData[] = [];
     private currentDataIndex = 0;
     private intervalId: NodeJS.Timeout | null = null;
+    private chlorophyllData: ChlorophyllData[] = [];
 
     constructor() {
         this.initializeLocations();
     }
 
-    private initializeLocations() {
+    private async initializeLocations() {
         const locationConfigs = [
-            { id: 'north-andaman', name: 'North Andaman', lat: 13.2500, lon: 92.9167, offset: 0 },
+            { id: 'jolly-buoy', name: 'Jolly_Buoy', lat: 11.495, lon: 92.610, offset: 0 },
             { id: 'neel-islands', name: 'Neel Islands', lat: 11.832919, lon: 93.052612, offset: -0.6 },
             { id: 'mahatma-gandhi', name: 'Mahatma Gandhi Marine National Park', lat: 11.5690, lon: 92.6542, offset: 0.3 },
             { id: 'havelock', name: 'Havelock', lat: 11.960000, lon: 93.000000, offset: -0.4 },
         ];
+
+        // Load chlorophyll data
+        try {
+            this.chlorophyllData = await loadChlorophyllData();
+        } catch (error) {
+            console.error('Failed to load chlorophyll data:', error);
+            this.chlorophyllData = [];
+        }
 
         this.locations = locationConfigs.map(config => {
             const locationData = generateLocationVariation(csvData, config.offset);
@@ -109,6 +124,14 @@ export class RealtimeDataService {
             const forecastData = locationData.filter(d => d.source === 'Forecast');
             const currentReading = observedData[observedData.length - 1];
             const dhw = calculateDHW(observedData);
+
+            // Get chlorophyll data for this location
+            const chlorData = getChlorophyllForLocation(config.name, this.chlorophyllData);
+            const chlorophyll = chlorData ? {
+                value: Number(chlorData.chlor_a.toFixed(3)),
+                riskLevel: getChlorophyllRiskLevel(chlorData.chlor_a, 0.77),
+                threshold: 0.77
+            } : undefined;
 
             return {
                 id: config.id,
@@ -120,6 +143,7 @@ export class RealtimeDataService {
                 trend: calculateTrend(observedData.slice(-7)),
                 temperatureHistory: observedData,
                 forecast: forecastData,
+                chlorophyll,
             };
         });
     }

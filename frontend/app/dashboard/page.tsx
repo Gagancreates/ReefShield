@@ -11,6 +11,7 @@ import { useState } from "react"
 import { ZoomIn, ZoomOut, RotateCcw, Layers, RefreshCw } from "lucide-react"
 import { GlobalMap } from "@/components/global-map"
 import { Map } from "@/components/map"
+import { ChlorophyllChart } from "@/components/chlorophyll-chart"
 import { useRealtimeLocations, useTemperatureAnalysis, useRealtimeAlerts, useSystemStatus } from "@/lib/hooks/useRealtimeData"
 
 export default function DashboardPage() {
@@ -37,6 +38,7 @@ export default function DashboardPage() {
       trend: loc.trend,
       riskLevel: loc.riskLevel,
     },
+    chlorophyll: loc.chlorophyll,
   }))
 
   const temperatureData = temperatureAnalysisData
@@ -91,12 +93,15 @@ export default function DashboardPage() {
               </div>
             </CardHeader>
             <CardContent className="pt-0">
-              <div className="relative h-80 rounded-lg overflow-hidden">
-                <GlobalMap reefSites={reefSites} className="rounded-lg" />
-
-                <div className="absolute bottom-4 left-4 bg-white p-3 rounded-lg shadow-lg border z-[1000]">
+              <div className="space-y-3">
+                <div className="relative h-80 rounded-lg overflow-hidden">
+                  <GlobalMap reefSites={reefSites} className="rounded-lg" />
+                </div>
+                
+                {/* Site Status Legend - Now positioned below the map */}
+                <div className="bg-white p-3 rounded-lg shadow-lg border border-gray-200">
                   <div className="text-sm font-semibold mb-2 text-gray-800">Site Status</div>
-                  <div className="space-y-1">
+                  <div className="flex items-center gap-6">
                     <div className="flex items-center gap-2">
                       <div className="w-3 h-3 rounded-full bg-emerald-500 border border-white shadow-sm"></div>
                       <span className="text-xs font-medium">Healthy</span>
@@ -250,6 +255,9 @@ export default function DashboardPage() {
                   <DialogContent className="w-[85vw] !max-w-none max-h-[90vh] overflow-y-auto sm:!max-w-none" showCloseButton={true}>
                     <DialogHeader>
                       <DialogTitle className="text-2xl font-semibold">{location.name}</DialogTitle>
+                      <div className="text-sm text-gray-600">
+                        Coordinates: {location.coordinates.lat.toFixed(6)}°N, {location.coordinates.lng.toFixed(6)}°E
+                      </div>
                     </DialogHeader>
                     <div className="grid gap-4 lg:grid-cols-3">
                       {/* Map View */}
@@ -269,9 +277,11 @@ export default function DashboardPage() {
                                     popup: `
                                       <div class="p-2">
                                         <h3 class="font-semibold text-sm">${location.name}</h3>
+                                        <p class="text-xs text-gray-600">Lat: ${location.coordinates.lat.toFixed(4)}°, Lng: ${location.coordinates.lng.toFixed(4)}°</p>
                                         <p class="text-xs text-gray-600">Temperature: ${location.temperature}°C</p>
                                         <p class="text-xs text-gray-600">DHW: ${location.dhwAnalysis.current}</p>
                                         <p class="text-xs text-gray-600">Risk: ${location.dhwAnalysis.riskLevel}</p>
+                                        ${location.chlorophyll ? `<p class="text-xs text-gray-600">Chlorophyll: ${location.chlorophyll.value.toFixed(3)} mg/m³</p>` : ''}
                                       </div>
                                     `,
                                     status: location.dhwAnalysis.riskLevel === "high" ? "critical" : location.dhwAnalysis.riskLevel === "moderate" ? "at-risk" : "healthy"
@@ -312,9 +322,9 @@ export default function DashboardPage() {
                         </Card>
                       </div>
 
-                      {/* DHW Analysis */}
-                      <div>
-                        <Card className="border-2 border-gray-800 shadow-lg h-full">
+                      {/* DHW Analysis and Chlorophyll */}
+                      <div className="space-y-4">
+                        <Card className="border-2 border-gray-800 shadow-lg">
                           <CardHeader className="pb-2">
                             <CardTitle className="text-lg">DHW Analysis</CardTitle>
                             <CardDescription>Degree Heating Weeks Assessment</CardDescription>
@@ -369,6 +379,19 @@ export default function DashboardPage() {
                             </div>
                           </CardContent>
                         </Card>
+
+                        {/* Chlorophyll Analysis */}
+                        {location.chlorophyll && (
+                          <Card className="border-2 border-gray-800 shadow-lg">
+                            <CardContent className="p-4">
+                              <ChlorophyllChart 
+                                value={location.chlorophyll.value}
+                                threshold={location.chlorophyll.threshold}
+                                riskLevel={location.chlorophyll.riskLevel}
+                              />
+                            </CardContent>
+                          </Card>
+                        )}
                       </div>
                     </div>
                   </DialogContent>
