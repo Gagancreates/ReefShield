@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Andaman Points — Leaflet map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    html,body { height: 100%; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+    #map { position: absolute; top: 0; right: 0; bottom: 0; left: 0; }
+    .info { padding: 6px 8px; background: rgba(255,255,255,0.95); box-shadow: 0 0 10px rgba(0,0,0,0.15); border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const points = [
+      [6.603913,92.541676,30.029390,0.116376,0.965575,1.0,0.979345],
+      [9.965359,92.475009,30.029390,0.261496,0.965575,1.0,0.979345],
+      [11.583833,92.341674,29.980686,0.158026,0.971531,1.0,0.982918],
+      [9.405118,92.475009,30.029390,0.186197,0.965575,1.0,0.979345],
+      [10.836845,92.341674,30.029390,0.254957,0.965575,1.0,0.979345],
+      [8.907126,92.475009,30.029390,0.144308,0.965575,1.0,0.979345],
+      [9.716363,92.608343,30.029390,0.202786,0.965575,1.0,0.979345],
+      [10.774596,92.475009,30.029390,0.255452,0.965575,1.0,0.979345],
+      [9.591865,92.341674,30.029390,0.215223,0.965575,1.0,0.979345],
+      [11.085841,92.541676,30.029390,0.210024,0.965575,1.0,0.979345],
+      [9.218371,92.408341,30.029390,0.152374,0.965575,1.0,0.979345],
+      [6.728411,92.341674,30.029390,0.116725,0.965575,1.0,0.979345],
+      [9.778612,92.341674,30.029390,0.262918,0.965575,1.0,0.979345],
+      [10.214355,92.475009,30.029390,0.245443,0.965575,1.0,0.979345],
+      [6.541664,92.341674,30.029390,0.116725,0.965575,1.0,0.979345],
+      [8.844877,92.608343,30.029390,0.164650,0.965575,1.0,0.979345],
+      [9.591865,92.408341,30.029390,0.215223,0.965575,1.0,0.979345],
+      [9.405118,92.341674,30.029390,0.193140,0.965575,1.0,0.979345],
+      [11.708331,92.541676,29.931572,0.158026,0.976987,1.0,0.986192],
+      [9.093873,92.475009,30.029390,0.150322,0.965575,1.0,0.979345],
+      [11.085841,92.408341,30.029390,0.185929,0.965575,1.0,0.979345],
+      [6.852909,92.541676,30.029390,0.116376,0.965575,1.0,0.979345],
+      [8.907126,92.341674,30.029390,0.128028,0.965575,1.0,0.979345],
+      [11.708331,92.408341,29.931572,0.158026,0.976987,1.0,0.986192],
+      [9.903110,92.475009,30.029390,0.247212,0.965575,1.0,0.979345],
+      [9.529616,92.541676,30.029390,0.208757,0.965575,1.0,0.979345],
+      [9.093873,92.341674,30.029390,0.152118,0.965575,1.0,0.979345],
+      [11.210339,92.341674,30.029390,0.182923,0.965575,1.0,0.979345],
+      [10.152106,92.608343,30.029390,0.223373,0.965575,1.0,0.979345],
+      [9.218371,92.541676,30.029390,0.158279,0.965575,1.0,0.979345]
+    ];
+
+    const avgLat = points.reduce((s,p)=>s+p[0],0)/points.length;
+    const avgLon = points.reduce((s,p)=>s+p[1],0)/points.length;
+
+    const map = L.map('map').setView([avgLat, avgLon], 8);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const latlngs = [];
+    points.forEach((p,i)=>{
+      const lat = p[0], lon = p[1];
+      latlngs.push([lat,lon]);
+      const marker = L.circleMarker([lat,lon], {
+        radius: 8, // slightly bigger
+        fillColor: '#3388ff',
+        color: '#111',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+      }).addTo(map);
+
+      const popupHtml = `Index: ${i}<br>Lat: ${lat}<br>Lon: ${lon}<br>SST: ${p[2]} °C<br>Chlor_a: ${p[3]}<br>Scaled SST: ${p[4]}<br>Scaled Chl: ${p[5]}<br>CCSI: ${p[6]}`;
+      marker.bindPopup(popupHtml);
+    });
+
+    if (latlngs.length) map.fitBounds(latlngs, {padding:[30,30]});
+
+    const info = L.control({position:'topright'});
+    info.onAdd = function(){
+      const div = L.DomUtil.create('div','info');
+      div.innerHTML = `<strong>Points</strong><br>${points.length} samples`;
+      return div;
+    }
+    info.addTo(map);
+  </script>
+</body>
+</html>
