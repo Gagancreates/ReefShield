@@ -3609,3 +3609,27 @@
 2025-09-07 04:22:58 - app.api.routes - INFO - Retrieved combined data: 14 readings
 2025-09-07 04:22:58 - app.api.routes - INFO - Fetching 14-day combined temperature data
 2025-09-07 04:22:58 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-07 04:33:49 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-07 04:33:49 - app.services.data_service - INFO - Reading combined 14-day data from: G:\JusticeGang\models\andaman_sst_14day_combined.csv
+2025-09-07 04:33:49 - app.utils.csv_reader - INFO - Extracted 14 combined readings from G:\JusticeGang\models\andaman_sst_14day_combined.csv
+2025-09-07 04:33:49 - app.services.data_service - INFO - Retrieved 14 combined temperature readings
+2025-09-07 04:33:49 - app.services.data_service - INFO - Combined temperature data created with 14 readings
+2025-09-07 04:33:49 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-07 04:33:49 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-07 04:33:49 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-07 04:34:11 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-07 04:34:11 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-07 04:34:11 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-07 04:34:11 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-07 04:34:23 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-07 04:34:23 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-07 04:34:23 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-07 04:34:23 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-07 04:35:32 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-07 04:35:32 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-07 04:35:32 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-07 04:35:32 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-07 04:50:41 - main - INFO - ReefShield Backend API shutting down...
+2025-09-07 04:50:41 - app.services.scheduler_service - INFO - SchedulerService stopped successfully
+2025-09-07 04:50:41 - main - INFO - ReefShield Backend API shutdown complete
+2025-09-07 04:50:41 - apscheduler.scheduler - INFO - Scheduler has been shut down

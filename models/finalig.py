@@ -278,3 +278,32 @@ if __name__ == "__main__":
         print(f"❌ Failed to create combined 14-day CSV: {e}")
 
     print("\nAll done. 🎯")
+
+    # === EMAIL ALERT FOR HIGH TEMPERATURES (2 days ahead prediction) ===
+    try:
+        import os
+        import pandas as pd
+        from datetime import date, timedelta
+        from app.utils.email_alert import send_temperature_alert_email
+        csv_path = os.path.join(os.path.dirname(__file__), 'andaman_sst_14day_combined.csv')
+        if os.path.exists(csv_path):
+            df = pd.read_csv(csv_path)
+            # Find the prediction for 2 days from today
+            target_date = (date.today() + timedelta(days=2)).strftime('%Y-%m-%d')
+            row = df[(df['Date'] == target_date) & (df['Source'].str.lower() == 'predicted')]
+            if not row.empty and float(row.iloc[0]['SST']) > 29.0:
+                pred_temp = float(row.iloc[0]['SST'])
+                subject = f"Coral Reef Alert: High Temperature Predicted for {target_date}"
+                body = f"Warning: Predicted sea surface temperature for {target_date} is above 29°C.\n\nPredicted: {pred_temp:.2f}°C\n\nPlease investigate immediately."
+                send_temperature_alert_email(
+                    to_email="example@gmail.com",
+                    subject=subject,
+                    body=body
+                )
+                print(f"✅ High temperature prediction alert email sent for {target_date}.")
+            else:
+                print(f"No high temperature predicted for {target_date}. No email sent.")
+        else:
+            print(f"CSV not found for alert check: {csv_path}")
+    except Exception as e:
+        print(f"❌ Failed to send temperature alert email: {e}")
