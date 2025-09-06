@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
 import { Button } from "@/components/ui/button"
-import { Line, LineChart, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from "recharts"
+import { Line, LineChart, XAxis, YAxis, CartesianGrid, ResponsiveContainer, DotProps } from "recharts"
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { useState } from "react"
@@ -35,6 +35,42 @@ const fallbackTemperatureData = [
   { day: "Day 13", temp: 28.8, threshold: 29.0, source: "Forecast" },
   { day: "Day 14", temp: 28.5, threshold: 29.0, source: "Forecast" },
 ]
+
+// Custom dot for highlighting today's temperature
+interface CustomDotProps extends DotProps {
+  index?: number;           // Recharts gives us this automatically
+  highlightIndex: number;   // we’ll pass this manually
+}
+
+const HighlightDot = ({ cx, cy, index, highlightIndex }: CustomDotProps) => {
+  if (cx == null || cy == null) return null; // safety check
+
+  if (index === highlightIndex) {
+    // highlighted dot (for the 7th day)
+    return (
+      <circle
+        cx={cx}
+        cy={cy}
+        r={8}
+        fill="#f59e42"
+        stroke="#d97706"
+        strokeWidth={3}
+      />
+    );
+  }
+
+  // normal small dot
+  return (
+    <circle
+      cx={cx}
+      cy={cy}
+      r={3}
+      fill="var(--color-temp)"
+      strokeWidth={2}
+    />
+  );
+};
+
 
 export default function DashboardPage() {
   const [selectedLocation, setSelectedLocation] = useState<string | null>(null)
@@ -190,14 +226,16 @@ export default function DashboardPage() {
                     <LineChart data={temperatureData}>
                       <CartesianGrid strokeDasharray="3 3" />
                       <XAxis dataKey="day" />
-                      <YAxis domain={[26, 30]} />
+                      <YAxis domain={[26, 31]} />
                       <ChartTooltip content={<ChartTooltipContent />} />
                       <Line 
                         type="monotone" 
                         dataKey="temp" 
                         stroke="var(--color-temp)" 
                         strokeWidth={2}
-                        dot={{ fill: "var(--color-temp)", strokeWidth: 2, r: 3 }}
+                        dot={(dotProps) => (
+                          <HighlightDot {...dotProps} highlightIndex={6} /> // 7th day = index 6 (0-based)
+                        )}
                       />
                       <Line
                         type="monotone"
