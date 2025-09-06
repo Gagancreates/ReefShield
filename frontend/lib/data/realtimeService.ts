@@ -207,12 +207,12 @@ export class RealtimeDataService {
                 location_name: config.name,
                 past_data: Array.from({ length: 8 }, (_, i) => ({
                     date: new Date(Date.now() - (7 - i) * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
-                    temperature: 28.5 + Math.random() * 2,
+                    temperature: Number((28.9 + Math.random() * 0.4).toFixed(2)),
                     is_predicted: false
                 })),
                 future_data: Array.from({ length: 7 }, (_, i) => ({
                     date: new Date(Date.now() + (i + 1) * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
-                    temperature: 29.0 + Math.random() * 2,
+                    temperature: Number((28.9 + Math.random() * 0.4).toFixed(2)),
                     is_predicted: true
                 })),
                 bleaching_threshold: 29.0,
@@ -247,7 +247,7 @@ export class RealtimeDataService {
         locationConfigs.forEach(config => {
             fallbackLocations[config.id] = {
                 location_id: config.id,
-                current_temp: 28.5 + Math.random() * 2,
+                current_temp: Number((28.9 + Math.random() * 0.4).toFixed(2)),
                 dhw: 2.5,
                 risk_level: 'moderate',
                 coordinates: { lat: config.lat, lon: config.lon },

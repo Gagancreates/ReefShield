@@ -153,33 +153,21 @@ export default function DashboardLayout({
                   </Button>
                 </DialogTrigger>
                 <DialogContent className="max-w-md" showCloseButton={true}>
-                  <DialogHeader>
-                    <DialogTitle className="text-xl font-semibold">
-                      Recent Alerts
-                    </DialogTitle>
-                  </DialogHeader>
-                  <div className="space-y-4 max-h-96 overflow-y-auto">
-                    {recentAlerts.map((alert) => (
-                      <div key={alert.id} className="border-l-4 border-red-500 pl-4 py-2">
-                        <div className="flex items-center justify-between">
-                          <h4 className="font-medium text-gray-900">{alert.title}</h4>
-                          <Badge
-                            variant={
-                              alert.severity === "Critical"
-                                ? "destructive"
-                                : alert.severity === "Warning"
-                                  ? "default"
-                                  : "secondary"
-                            }
-                          >
-                            {alert.severity}
-                          </Badge>
-                        </div>
-                        <p className="text-sm text-gray-600 mt-1">{alert.location}</p>
-                        <p className="text-sm text-gray-500 mt-1">{alert.description}</p>
-                        <p className="text-xs text-gray-400 mt-2">{alert.time}</p>
-                      </div>
-                    ))}
+                  <div className="space-y-2">
+                    <div className="font-bold text-lg text-orange-900">pH Level Alert</div>
+                    <div className="flex items-center gap-2">
+                      <Badge className="bg-amber-400 text-white">medium</Badge>
+                      <Badge className="bg-green-500 text-white">acknowledged</Badge>
+                    </div>
+                    <div className="text-gray-700 mt-2">pH levels have dropped below optimal range for coral health</div>
+                    <div className="text-gray-500 text-sm mt-2">Andaman Islands - General Area</div>
+                    <div className="text-xs text-gray-400">601 days ago</div>
+                    <div className="mt-2 text-sm">
+                      <span className="font-semibold">Current:</span> 7.9
+                      <span className="mx-2">•</span>
+                      <span className="font-semibold">Threshold:</span> 8.1-8.4
+                    </div>
+                    <div className="mt-1 text-sm text-red-700 font-medium">Impact: Acidification stress</div>
                   </div>
                 </DialogContent>
               </Dialog>
