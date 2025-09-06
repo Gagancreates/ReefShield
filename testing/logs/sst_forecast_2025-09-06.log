@@ -1,0 +1,32 @@
+2025-09-06 11:12:44,188 - INFO - === DAILY SST FORECAST SYSTEM STARTED ===
+2025-09-06 11:12:44,188 - INFO - Step 1: Updating observed data
+2025-09-06 11:12:44,192 - INFO - Updating observed data from 2025-06-08 to 2025-09-05
+2025-09-06 11:12:44,195 - INFO - Fetching data for year 2025
+2025-09-06 11:12:44,324 - WARNING - Failed to fetch 2025: found the following matches with the input file in xarray's IO backends: ['netcdf4', 'pydap']. But their dependencies may not be installed, see:
+https://docs.xarray.dev/en/stable/user-guide/io.html 
+https://docs.xarray.dev/en/stable/getting-started-guide/installing.html
+2025-09-06 11:12:44,324 - ERROR - No data fetched from any year
+2025-09-06 11:12:44,332 - WARNING - No new observed data available
+2025-09-06 11:12:44,335 - ERROR - DAILY FORECAST SYSTEM FAILED: Insufficient observed data: 0 days (need 60)
+2025-09-06 11:12:44,335 - ERROR - Full error traceback:
+Traceback (most recent call last):
+  File "g:\JusticeGang\testing\test.py", line 411, in main
+    raise ValueError(f"Insufficient observed data: {len(observed_data)} days (need {MIN_HISTORY_DAYS})")
+ValueError: Insufficient observed data: 0 days (need 60)
+2025-09-06 11:15:28,768 - INFO - === DAILY SST FORECAST SYSTEM STARTED ===
+2025-09-06 11:15:28,768 - INFO - Step 1: Updating observed data
+2025-09-06 11:15:28,768 - INFO - Updating observed data from 2025-06-08 to 2025-09-05
+2025-09-06 11:15:28,768 - INFO - Fetching data for year 2025
+2025-09-06 11:15:32,283 - INFO - Successfully connected using netcdf4 engine
+2025-09-06 11:15:58,092 - INFO - Fetched 89 data points from 2025-06-08 to 2025-09-04
+2025-09-06 11:15:58,107 - INFO - Updated observed database: 89 new records
+2025-09-06 11:15:58,109 - INFO - Step 2: Loading/training forecast models
+2025-09-06 11:15:58,109 - INFO - Retraining models...
+2025-09-06 11:15:58,111 - INFO - Fetching additional historical data for training
+2025-09-06 11:15:58,111 - INFO - Fetching data for year 1982
+2025-09-06 11:16:07,708 - INFO - Successfully connected using netcdf4 engine
+2025-09-06 11:23:57,907 - WARNING - Failed to fetch 1982: NetCDF: DAP failure
+2025-09-06 11:23:57,912 - INFO - Fetching data for year 1983
+2025-09-06 11:24:01,812 - INFO - Successfully connected using netcdf4 engine
+2025-09-06 11:31:49,881 - WARNING - Failed to fetch 1983: NetCDF: DAP failure
+2025-09-06 11:31:49,881 - INFO - Fetching data for year 1984

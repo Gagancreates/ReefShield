@@ -347,3 +347,42 @@ export function useConnectivityStatus() {
     testConnection
   }
 }
+
+// --- New hook for 14-day combined temperature data ---
+export function useCombinedTemperatureData() {
+  const [data, setData] = useState<Array<{ day: string, temp: number, threshold: number, source: string }>>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+
+  useEffect(() => {
+    async function fetchCombinedData() {
+      setLoading(true)
+      setError(null)
+      try {
+        const res = await fetch(
+          process.env.NEXT_PUBLIC_API_URL
+            ? process.env.NEXT_PUBLIC_API_URL + '/v1/combined-data'
+            : 'http://localhost:8000/api/v1/combined-data'
+        )
+        if (!res.ok) throw new Error('Failed to fetch combined temperature data')
+        const json = await res.json()
+        // json.data is an array of { date, temperature, source }
+        const chartData = json.data.map((item: any, idx: number) => ({
+          day: `Day ${idx + 1}`,
+          temp: Number(item.temperature),
+          threshold: 29.0, // hardcoded bleaching threshold
+          source: item.source,
+        }))
+        setData(chartData)
+      } catch (e: any) {
+        setError(e.message || 'Unknown error')
+        setData([])
+      } finally {
+        setLoading(false)
+      }
+    }
+    fetchCombinedData()
+  }, [])
+
+  return { data, loading, error }
+}

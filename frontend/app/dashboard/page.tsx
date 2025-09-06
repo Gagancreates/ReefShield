@@ -12,7 +12,7 @@ import { ZoomIn, ZoomOut, RotateCcw, Layers, RefreshCw } from "lucide-react"
 import { GlobalMap } from "@/components/global-map"
 import { Map } from "@/components/map"
 import { ChlorophyllChart } from "@/components/chlorophyll-chart"
-import { useRealtimeLocations, useTemperatureAnalysis, useRealtimeAlerts, useSystemStatus } from "@/lib/hooks/useRealtimeData"
+import { useRealtimeLocations, useTemperatureAnalysis, useRealtimeAlerts, useSystemStatus, useCombinedTemperatureData } from "@/lib/hooks/useRealtimeData"
 import jsPDF from "jspdf";
 // If not installed, also install html2canvas: npm install html2canvas
 import html2canvas from "html2canvas";
@@ -81,9 +81,12 @@ export default function DashboardPage() {
   const { data: temperatureAnalysisData, forceRefresh: refreshTempAnalysis } = useTemperatureAnalysis()
   const { alerts: realtimeAlerts } = useRealtimeAlerts()
   const { status: systemStatus } = useSystemStatus()
+  const { data: combinedTempData, loading: tempLoading, error: tempError } = useCombinedTemperatureData();
 
   // Use real temperature data if available, otherwise fallback
-  const temperatureData = temperatureAnalysisData.length > 0 ? temperatureAnalysisData : fallbackTemperatureData
+  const temperatureData = (!tempLoading && !tempError && combinedTempData.length > 0)
+    ? combinedTempData
+    : fallbackTemperatureData;
 
   // Convert real-time data to component format
   const locations = realtimeLocations.map(loc => ({
