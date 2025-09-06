@@ -7,7 +7,7 @@ from calendar import isleap
 from sklearn.ensemble import RandomForestRegressor
 
 lat, lon = 11.67, 92.75     # Andaman reef coords
-window = 7                  # number of previous days as features
+window = 14          # number of previous days as features
 train_csv = "andaman_sst_training.csv"
 pred_rows_csv = "andaman_sst_predictions.csv"
 filled_series_csv = "andaman_sst_recent_filled.csv"
@@ -29,6 +29,7 @@ def fetch_range_for_point(lat, lon, start_date: dt.date, end_date: dt.date) -> p
     Fetch OISST sst for [start_date, end_date] at nearest grid to (lat,lon),
     stitching across year files as needed. Returns DataFrame(Date, SST).
     """
+
     pieces = []
     for y in range(start_date.year, end_date.year + 1):
         url = f"https://psl.noaa.gov/thredds/dodsC/Datasets/noaa.oisst.v2.highres/sst.day.mean.{y}.nc"
@@ -144,9 +145,14 @@ def predict_missing_days(model, base_df: pd.DataFrame, start_date: dt.date, end_
     return pred_df, combined
 
 # =================== MAIN ===================
+# if __name__ == "__main__":
+    # =================== MAIN ===================
 if __name__ == "__main__":
     # 1) Establish "today" (local date is fine)
     today = dt.date.today()
+
+    FUTURE_DAYS = 7
+    future_csv = "andaman_sst_next7_predictions.csv"
 
     # 2) Build/refresh seasonal training CSV for this calendar day across years
     train_df = build_training_csv(today, START_YEAR, END_YEAR, window, train_csv)
@@ -168,6 +174,7 @@ if __name__ == "__main__":
     last_obs = recent["Date"].max()
     start_missing = last_obs + dt.timedelta(days=1)
 
+    combined_series = None
     if start_missing <= today:
         # Ensure we have enough history before the first missing day
         recent = ensure_enough_history(recent, start_missing, window)
@@ -196,5 +203,25 @@ if __name__ == "__main__":
         combined_series.to_csv(filled_series_csv, index=False)
         print(f"ℹ️ No missing observed days. Still predicted today.\n"
               f"✅ {pred_rows_csv}\n✅ {filled_series_csv}")
+
+    # ---------------------
+    # 7) Predict next FUTURE_DAYS days (today+1 .. today+FUTURE_DAYS)
+    # ---------------------
+    future_start = today + dt.timedelta(days=1)
+    future_end = today + dt.timedelta(days=FUTURE_DAYS)
+
+    # ensure combined_series exists and has enough history for predicting future_start
+    combined_series = ensure_enough_history(combined_series, future_start, window)
+    if combined_series.empty:
+        print("⚠️ Cannot predict future days: insufficient history after ensuring more data.")
+    else:
+        try:
+            future_preds, _ = predict_missing_days(
+                model, combined_series, future_start, future_end, window
+            )
+            future_preds.to_csv(future_csv, index=False)
+            print(f"✅ Wrote next-{FUTURE_DAYS}-day predictions -> {future_csv}")
+        except Exception as e:
+            print(f"❌ Failed to predict next-{FUTURE_DAYS} days: {e}")
 
     print("\nAll done. 🎯")
