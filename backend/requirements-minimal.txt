@@ -1,0 +1,13 @@
+# Minimal requirements that should work on most systems
+fastapi
+uvicorn[standard]
+pydantic
+numpy
+pandas
+scikit-learn
+xarray
+aiohttp
+python-multipart
+python-dotenv
+aiofiles
+httpx
