@@ -18,7 +18,7 @@ import {
   BarChart,
   Bar,
 } from "recharts"
-import { Thermometer, TrendingUp, TrendingDown, AlertTriangle, Download, RefreshCw, Wifi, WifiOff } from "lucide-react"
+import { Thermometer, TrendingUp, TrendingDown, AlertTriangle, Download, RefreshCw } from "lucide-react"
 import { useRealtimeLocations, useTemperatureAnalysis } from "@/lib/hooks/useRealtimeData"
 
 // Fallback temperature data for 14 days - shows immediately
@@ -67,8 +67,8 @@ const fallbackSites = [
 
 export default function TemperaturePage() {
   // Real-time data hooks
-  const { locations: realtimeLocations, loading, lastUpdated, isUsingFallback, forceRefresh } = useRealtimeLocations()
-  const { data: temperatureAnalysisData, isUsingFallback: tempAnalysisFallback, forceRefresh: refreshTempAnalysis } = useTemperatureAnalysis()
+  const { locations: realtimeLocations, loading, lastUpdated, forceRefresh } = useRealtimeLocations()
+  const { data: temperatureAnalysisData, forceRefresh: refreshTempAnalysis } = useTemperatureAnalysis()
 
   // Use real data if available, otherwise fallback data
   const temperatureData = temperatureAnalysisData.length > 0 
@@ -109,12 +109,6 @@ export default function TemperaturePage() {
       }))
     : fallbackSites
 
-  // Determine overall data status
-  const isUsingAnyFallback = isUsingFallback || tempAnalysisFallback
-  const dataStatusText = isUsingAnyFallback ? "Demo Data" : "Live Data"
-  const dataStatusIcon = isUsingAnyFallback ? <WifiOff className="h-4 w-4" /> : <Wifi className="h-4 w-4" />
-  const dataStatusColor = isUsingAnyFallback ? "text-orange-600" : "text-green-600"
-
   const handleRefresh = async () => {
     await Promise.all([forceRefresh(), refreshTempAnalysis()])
   }
@@ -127,13 +121,11 @@ export default function TemperaturePage() {
           <h1 className="font-serif text-4xl font-bold text-gray-900">Temperature Analysis</h1>
           <p className="text-muted-foreground">
             Real-time water temperature trends for Andaman Islands
-            <span className={`ml-2 text-xs ${dataStatusColor} flex items-center gap-1 inline-flex`}>
-              {dataStatusIcon}
-              {dataStatusText}
-              {lastUpdated && !isUsingAnyFallback && (
-                <span> • Updated {lastUpdated.toLocaleTimeString()}</span>
-              )}
-            </span>
+            {lastUpdated && (
+              <span className="ml-2 text-xs text-green-600">
+                Updated {lastUpdated.toLocaleTimeString()}
+              </span>
+            )}
           </p>
         </div>
         <div className="flex gap-2">
@@ -160,10 +152,9 @@ export default function TemperaturePage() {
             variant="outline" 
             size="sm" 
             onClick={handleRefresh}
-            className={isUsingAnyFallback ? "border-orange-300 hover:border-orange-400" : "border-green-300 hover:border-green-400"}
           >
             <RefreshCw className={`h-4 w-4 mr-2 ${loading ? 'animate-spin' : ''}`} />
-            {loading ? 'Updating...' : isUsingAnyFallback ? 'Connect Live' : 'Refresh'}
+            Refresh
           </Button>
           <Button variant="outline" size="sm">
             <Download className="h-4 w-4 mr-2" />
@@ -171,20 +162,6 @@ export default function TemperaturePage() {
           </Button>
         </div>
       </div>
-
-      {/* Data Status Alert */}
-      {isUsingAnyFallback && (
-        <Card className="border-2 border-orange-300 bg-orange-50">
-          <CardContent className="pt-4">
-            <div className="flex items-center gap-2 text-orange-800">
-              <WifiOff className="h-4 w-4" />
-              <span className="text-sm font-medium">
-                Showing demonstration data. Click "Connect Live" to fetch real-time data from sensors.
-              </span>
-            </div>
-          </CardContent>
-        </Card>
-      )}
 
       {/* Summary Stats */}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
@@ -244,13 +221,8 @@ export default function TemperaturePage() {
       {/* Temperature Chart */}
       <Card className="border-2 border-gray-800 shadow-lg">
         <CardHeader>
-          <CardTitle className="font-serif text-2xl flex items-center gap-2">
+          <CardTitle className="font-serif text-2xl">
             14-Day Temperature Trend
-            {isUsingAnyFallback && (
-              <Badge variant="secondary" className="text-xs">
-                Demo Data
-              </Badge>
-            )}
           </CardTitle>
           <CardDescription>Water temperature readings with bleaching threshold indicator</CardDescription>
         </CardHeader>
@@ -291,10 +263,10 @@ export default function TemperaturePage() {
                 <Line
                   type="monotone"
                   dataKey="temp"
-                  stroke={isUsingAnyFallback ? "#f59e0b" : "#2563eb"}
+                  stroke="#2563eb"
                   strokeWidth={3}
-                  dot={{ fill: isUsingAnyFallback ? "#f59e0b" : "#2563eb", strokeWidth: 2, r: 4 }}
-                  activeDot={{ r: 6, stroke: isUsingAnyFallback ? "#f59e0b" : "#2563eb", strokeWidth: 2 }}
+                  dot={{ fill: "#2563eb", strokeWidth: 2, r: 4 }}
+                  activeDot={{ r: 6, stroke: "#2563eb", strokeWidth: 2 }}
                 />
               </LineChart>
             </ResponsiveContainer>
@@ -305,13 +277,8 @@ export default function TemperaturePage() {
       <div className="grid gap-6 lg:grid-cols-2">
         <Card className="border-2 border-gray-800 shadow-lg">
           <CardHeader>
-            <CardTitle className="font-serif text-2xl flex items-center gap-2">
+            <CardTitle className="font-serif text-2xl">
               Today's Hourly Temperature
-              {isUsingAnyFallback && (
-                <Badge variant="secondary" className="text-xs">
-                  Demo Data
-                </Badge>
-              )}
             </CardTitle>
             <CardDescription>Temperature variations throughout the day</CardDescription>
           </CardHeader>
@@ -326,8 +293,8 @@ export default function TemperaturePage() {
                   <Area 
                     type="monotone" 
                     dataKey="temp" 
-                    stroke={isUsingAnyFallback ? "#f59e0b" : "#10b981"} 
-                    fill={isUsingAnyFallback ? "#f59e0b" : "#10b981"} 
+                    stroke="#10b981" 
+                    fill="#10b981" 
                     fillOpacity={0.3} 
                   />
                 </AreaChart>
@@ -338,13 +305,8 @@ export default function TemperaturePage() {
 
         <Card className="border-2 border-gray-800 shadow-lg">
           <CardHeader>
-            <CardTitle className="font-serif text-2xl flex items-center gap-2">
+            <CardTitle className="font-serif text-2xl">
               Monthly Temperature Comparison
-              {isUsingAnyFallback && (
-                <Badge variant="secondary" className="text-xs">
-                  Demo Data
-                </Badge>
-              )}
             </CardTitle>
             <CardDescription>Current vs historical monthly averages</CardDescription>
           </CardHeader>
@@ -358,7 +320,7 @@ export default function TemperaturePage() {
                   <Tooltip formatter={(value: number) => [`${value.toFixed(1)}°C`, ""]} />
                   <Bar 
                     dataKey="current" 
-                    fill={isUsingAnyFallback ? "#f59e0b" : "#3b82f6"} 
+                    fill="#3b82f6" 
                     name="Current Year" 
                   />
                   <Bar 
@@ -376,13 +338,8 @@ export default function TemperaturePage() {
       {/* Site Comparison */}
       <Card className="border-2 border-gray-800 shadow-lg">
         <CardHeader>
-          <CardTitle className="font-serif text-2xl flex items-center gap-2">
+          <CardTitle className="font-serif text-2xl">
             Site Temperature Comparison
-            {isUsingAnyFallback && (
-              <Badge variant="secondary" className="text-xs">
-                Demo Data
-              </Badge>
-            )}
           </CardTitle>
           <CardDescription>Current temperature status across all monitored reef sites</CardDescription>
         </CardHeader>
