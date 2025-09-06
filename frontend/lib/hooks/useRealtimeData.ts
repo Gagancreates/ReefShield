@@ -1,7 +1,8 @@
 "use client"
 
 import { useState, useEffect, useCallback } from 'react'
-import { realtimeService, type LocationData } from '@/lib/data/realtimeService'
+import { backendRealtimeService, type LocationData } from '@/lib/services/backendRealtimeService'
+import type { SystemStatusData, AlertData } from '@/lib/services/backendRealtimeService'
 
 // Hook for real-time location data
 export function useRealtimeLocations() {
@@ -16,16 +17,16 @@ export function useRealtimeLocations() {
 
   useEffect(() => {
     // Initial load
-    const initialData = realtimeService.getCurrentData()
+    const initialData = backendRealtimeService.getCurrentData()
     setLocations(initialData)
     setLoading(false)
     setLastUpdated(new Date())
 
     // Start real-time updates every 30 seconds
-    realtimeService.startRealtimeUpdates(updateData, 30000)
+    backendRealtimeService.startRealtimeUpdates(updateData, 30000)
 
     return () => {
-      realtimeService.stopRealtimeUpdates()
+      backendRealtimeService.stopRealtimeUpdates()
     }
   }, [updateData])
 
@@ -42,8 +43,16 @@ export function useTemperatureAnalysis() {
   }>>([])
 
   useEffect(() => {
-    const analysisData = realtimeService.getTemperatureAnalysis()
+    const analysisData = backendRealtimeService.getTemperatureAnalysis()
     setData(analysisData)
+    
+    // Update temperature analysis every minute
+    const interval = setInterval(() => {
+      const newAnalysisData = backendRealtimeService.getTemperatureAnalysis()
+      setData(newAnalysisData)
+    }, 60000)
+
+    return () => clearInterval(interval)
   }, [])
 
   return { data }
@@ -51,18 +60,11 @@ export function useTemperatureAnalysis() {
 
 // Hook for real-time alerts
 export function useRealtimeAlerts() {
-  const [alerts, setAlerts] = useState<Array<{
-    id: string
-    title: string
-    location: string
-    severity: 'Critical' | 'Warning' | 'Medium'
-    time: string
-    description: string
-  }>>([])
+  const [alerts, setAlerts] = useState<AlertData[]>([])
 
   useEffect(() => {
     const updateAlerts = () => {
-      const newAlerts = realtimeService.generateAlerts()
+      const newAlerts = backendRealtimeService.generateAlerts()
       setAlerts(newAlerts)
     }
 
@@ -84,7 +86,7 @@ export function useLocationData(locationId: string) {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    const data = realtimeService.getLocationData(locationId)
+    const data = backendRealtimeService.getLocationData(locationId)
     setLocationData(data)
     setLoading(false)
   }, [locationId])
@@ -92,32 +94,107 @@ export function useLocationData(locationId: string) {
   return { locationData, loading }
 }
 
-// Hook for system status simulation
+// Hook for enhanced system status with backend integration
 export function useSystemStatus() {
-  const [status, setStatus] = useState({
+  const [status, setStatus] = useState<SystemStatusData>({
     satelliteDataFeed: 'Online',
-    aiProcessingEngine: 'Active', 
+    aiProcessingEngine: 'Active',
     alertSystem: 'Operational',
-    dataSync: 'Syncing'
+    dataSync: 'Connecting...',
+    backendConnection: 'disconnected',
+    modelStatus: 'Unknown',
+    lastModelRun: null,
+    nextScheduledRun: null
   })
 
   useEffect(() => {
     const updateStatus = () => {
-      // Simulate occasional status changes
-      const statuses = ['Online', 'Active', 'Operational', 'Syncing', 'Updating']
-      const randomStatus = statuses[Math.floor(Math.random() * statuses.length)]
-      
-      setStatus(prev => ({
-        ...prev,
-        dataSync: Math.random() > 0.8 ? randomStatus : 'Syncing'
-      }))
+      const newStatus = backendRealtimeService.getSystemStatus()
+      setStatus(newStatus)
     }
 
-    // Update status every 5 minutes
-    const interval = setInterval(updateStatus, 5 * 60 * 1000)
+    // Initial load
+    updateStatus()
+
+    // Update status every 30 seconds
+    const interval = setInterval(updateStatus, 30 * 1000)
 
     return () => clearInterval(interval)
   }, [])
 
   return { status }
+}
+
+// Hook for backend connection status
+export function useBackendConnection() {
+  const [connectionStatus, setConnectionStatus] = useState<'connected' | 'disconnected' | 'error'>('disconnected')
+  const [lastChecked, setLastChecked] = useState<Date | null>(null)
+
+  useEffect(() => {
+    const checkConnection = () => {
+      const status = backendRealtimeService.getConnectionStatus()
+      setConnectionStatus(status)
+      setLastChecked(new Date())
+    }
+
+    // Initial check
+    checkConnection()
+
+    // Check every 30 seconds
+    const interval = setInterval(checkConnection, 30 * 1000)
+
+    return () => clearInterval(interval)
+  }, [])
+
+  return { connectionStatus, lastChecked }
+}
+
+// Hook for triggering manual model runs
+export function useModelExecution() {
+  const [isRunning, setIsRunning] = useState(false)
+  const [lastResult, setLastResult] = useState<string | null>(null)
+
+  const triggerRun = useCallback(async () => {
+    setIsRunning(true)
+    try {
+      const success = await backendRealtimeService.triggerModelRun()
+      setLastResult(success ? 'Model run triggered successfully' : 'Failed to trigger model run')
+    } catch (error) {
+      setLastResult(`Error: ${error}`)
+    } finally {
+      setIsRunning(false)
+    }
+  }, [])
+
+  return { triggerRun, isRunning, lastResult }
+}
+
+// Hook for scheduler information
+export function useSchedulerStatus() {
+  const [schedulerInfo, setSchedulerInfo] = useState<any>(null)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const fetchSchedulerInfo = async () => {
+      setLoading(true)
+      try {
+        const info = await backendRealtimeService.getSchedulerInfo()
+        setSchedulerInfo(info)
+      } catch (error) {
+        console.error('Failed to fetch scheduler info:', error)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    // Initial fetch
+    fetchSchedulerInfo()
+
+    // Update every 2 minutes
+    const interval = setInterval(fetchSchedulerInfo, 2 * 60 * 1000)
+
+    return () => clearInterval(interval)
+  }, [])
+
+  return { schedulerInfo, loading }
 }

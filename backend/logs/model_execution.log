@@ -1,0 +1,124 @@
+2025-09-06 22:19:03 - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 22:19:03 - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+odels\finalig.py
+2025-09-06 22:19:03 - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 22:19:03 - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 22:19:03 - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:19:03 - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 22:19:03 - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 22:19:07 - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 22:19:07 - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:19:07 - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 22:19:07 - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 22:19:07 - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 22:19:07 - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:19:07 - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 22:19:07 - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 22:19:49 - INFO - Manual model run triggered by user: test_phase4
+2025-09-06 22:19:49 - INFO - Starting manual model execution (Job ID: manual_run_20250906_221949, User: test_phase4)
+2025-09-06 22:19:49 - INFO - Starting model execution (ID: d6d28827-73c5-42dc-adfa-0d289b19bfb2)
+2025-09-06 22:19:49 - ERROR - Unexpected exception during model execution: 
+2025-09-06 22:19:49 - WARNING - Attempt 1 failed for run_model: Unexpected error during script execution: . Retrying in 0.87s
+2025-09-06 22:19:50 - INFO - Retrying run_model (attempt 2/3)
+2025-09-06 22:19:50 - INFO - Starting model execution (ID: fa11b858-8fd0-4c77-9f06-3a2a501a5545)
+2025-09-06 22:19:50 - ERROR - Unexpected exception during model execution: 
+2025-09-06 22:19:50 - WARNING - Attempt 2 failed for run_model: Unexpected error during script execution: . Retrying in 1.11s
+2025-09-06 22:19:51 - INFO - Retrying run_model (attempt 3/3)
+2025-09-06 22:19:51 - INFO - Starting model execution (ID: ff70c173-f6bb-471f-bc4f-a7de0a1a2b92)
+2025-09-06 22:19:51 - ERROR - Unexpected exception during model execution: 
+2025-09-06 22:19:51 - ERROR - Circuit breaker for run_model transitioning to OPEN after 3 failures
+2025-09-06 22:19:51 - ERROR - All retry attempts failed for run_model: Unexpected error during script execution: 
+2025-09-06 22:19:51 - WARNING - Safe execution of _safe_model_execution failed: Unexpected error during script execution: 
+2025-09-06 22:19:51 - WARNING - Manual model execution failed (Job ID: manual_run_20250906_221949): Safe execution failed
+2025-09-06 22:19:59 - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:20:01 - INFO - Reading last 8 historical records from: C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 22:20:01 - INFO - Extracted 8 readings from C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 22:20:01 - INFO - Reading prediction data from: C:\Users\workspace\ReefShield\models\andaman_sst_next7_predictions.csv
+2025-09-06 22:20:01 - INFO - Extracted 7 readings from C:\Users\workspace\ReefShield\models\andaman_sst_next7_predictions.csv
+2025-09-06 22:20:01 - INFO - Retrieved 7 prediction temperature readings
+2025-09-06 22:20:01 - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:20:03 - INFO - Reading combined 14-day data from: C:\Users\workspace\ReefShield\models\andaman_sst_14day_combined.csv
+2025-09-06 22:20:03 - INFO - Extracted 14 combined readings from C:\Users\workspace\ReefShield\models\andaman_sst_14day_combined.csv
+2025-09-06 22:20:05 - INFO - Removed job daily_model_run
+2025-09-06 22:20:05 - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:20:05 - INFO - Daily model execution scheduled for 08:30 UTC
+2025-09-06 22:20:05 - INFO - Daily model run rescheduled to 08:30 UTC
+2025-09-06 22:20:08 - INFO - Removed job daily_model_run
+2025-09-06 22:20:08 - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:20:08 - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 22:20:08 - INFO - Daily model run rescheduled to 06:00 UTC
+2025-09-06 22:25:39 - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 22:25:39 - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 22:25:39 - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:25:39 - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 22:25:39 - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:25:39 - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 22:25:39 - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 22:25:39 - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 22:25:42 - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 22:25:42 - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:25:42 - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 22:25:42 - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 22:25:42 - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 22:25:42 - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:25:42 - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 22:25:42 - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 22:27:07 - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 22:27:07 - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:27:07 - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 22:27:07 - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 22:27:07 - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 22:27:07 - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:27:07 - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 22:27:07 - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 22:27:08 - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 22:27:08 - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 22:27:08 - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:27:08 - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:27:08 - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 22:27:08 - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 22:27:08 - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 22:27:08 - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 22:27:26 - INFO - Reading last 8 historical records from: C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 22:27:26 - INFO - Extracted 8 readings from C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 22:27:26 - INFO - Reading prediction data from: C:\Users\workspace\ReefShield\models\andaman_sst_next7_predictions.csv
+2025-09-06 22:27:26 - INFO - Extracted 7 readings from C:\Users\workspace\ReefShield\models\andaman_sst_next7_predictions.csv
+2025-09-06 22:27:26 - INFO - Retrieved 7 prediction temperature readings
+2025-09-06 22:27:26 - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:27:28 - INFO - Reading combined 14-day data from: C:\Users\workspace\ReefShield\models\andaman_sst_14day_combined.csv
+2025-09-06 22:27:28 - INFO - Extracted 14 combined readings from C:\Users\workspace\ReefShield\models\andaman_sst_14day_combined.csv
+2025-09-06 22:27:30 - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:27:36 - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:27:41 - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 22:27:41 - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 22:27:41 - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:27:41 - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 22:27:41 - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:27:41 - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 22:27:41 - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 22:27:41 - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 22:27:41 - INFO - Reading last 8 historical records from: C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 22:27:41 - INFO - Extracted 8 readings from C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 22:27:41 - INFO - Reading prediction data from: C:\Users\workspace\ReefShield\models\andaman_sst_next7_predictions.csv
+2025-09-06 22:27:41 - INFO - Extracted 7 readings from C:\Users\workspace\ReefShield\models\andaman_sst_next7_predictions.csv
+2025-09-06 22:27:41 - INFO - Retrieved 7 prediction temperature readings
+2025-09-06 22:27:41 - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:27:44 - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:27:47 - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:28:02 - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:32:05 - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:32:05 - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:32:05 - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:32:05 - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:32:05 - INFO - Reading combined 14-day data from: C:\Users\workspace\ReefShield\models\andaman_sst_14day_combined.csv
+2025-09-06 22:32:05 - INFO - Extracted 14 combined readings from C:\Users\workspace\ReefShield\models\andaman_sst_14day_combined.csv
+2025-09-06 22:32:35 - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:32:35 - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:32:48 - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:32:48 - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:32:48 - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:32:48 - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:33:18 - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:33:18 - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:33:48 - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:33:48 - INFO - System status: API=healthy, Model running=False

@@ -1,0 +1,325 @@
+2025-09-06 22:19:03 - app.utils.logging_config - INFO - Advanced logging system initialized
+2025-09-06 22:19:03 - app.utils.logging_config - INFO - Advanced logging system initialized
+2025-09-06 22:19:03 - main - INFO - ReefShield Backend API starting up...
+2025-09-06 22:19:03 - app.services.model_service - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 22:19:03 - app.services.scheduler_service - INFO - SchedulerService initialized
+2025-09-06 22:19:03 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-06 22:19:03 - main - INFO - ReefShield Backend API starting up...
+2025-09-06 22:19:03 - app.services.model_service - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 22:19:03 - apscheduler.scheduler - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:19:03 - app.services.scheduler_service - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 22:19:03 - app.services.scheduler_service - INFO - SchedulerService initialized
+2025-09-06 22:19:03 - app.services.scheduler_service - INFO - Next scheduled run: 2025-09-07 06:00:00+00:00
+2025-09-06 22:19:03 - app.services.scheduler_service - INFO - SchedulerService started successfully
+2025-09-06 22:19:03 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-06 22:19:03 - main - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 22:19:03 - main - INFO - ReefShield Backend API startup complete
+2025-09-06 22:19:03 - apscheduler.scheduler - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:19:03 - app.services.scheduler_service - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 22:19:03 - app.services.scheduler_service - INFO - Next scheduled run: 2025-09-07 06:00:00+00:00
+2025-09-06 22:19:03 - app.services.scheduler_service - INFO - SchedulerService started successfully
+2025-09-06 22:19:03 - main - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 22:19:03 - main - INFO - ReefShield Backend API startup complete
+2025-09-06 22:19:05 - main - INFO - ReefShield Backend API shutting down...
+2025-09-06 22:19:05 - app.services.scheduler_service - INFO - SchedulerService stopped successfully
+2025-09-06 22:19:05 - main - INFO - ReefShield Backend API shutdown complete
+2025-09-06 22:19:05 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-09-06 22:19:06 - main - INFO - ReefShield Backend API shutting down...
+2025-09-06 22:19:06 - app.services.scheduler_service - INFO - SchedulerService stopped successfully
+2025-09-06 22:19:06 - main - INFO - ReefShield Backend API shutdown complete
+2025-09-06 22:19:06 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-09-06 22:19:07 - app.utils.logging_config - INFO - Advanced logging system initialized
+2025-09-06 22:19:07 - main - INFO - ReefShield Backend API starting up...
+2025-09-06 22:19:07 - app.services.model_service - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 22:19:07 - app.services.scheduler_service - INFO - SchedulerService initialized
+2025-09-06 22:19:07 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-06 22:19:07 - apscheduler.scheduler - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:19:07 - app.services.scheduler_service - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 22:19:07 - app.services.scheduler_service - INFO - Next scheduled run: 2025-09-07 06:00:00+00:00
+2025-09-06 22:19:07 - app.services.scheduler_service - INFO - SchedulerService started successfully
+2025-09-06 22:19:07 - main - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 22:19:07 - main - INFO - ReefShield Backend API startup complete
+2025-09-06 22:19:07 - app.utils.logging_config - INFO - Advanced logging system initialized
+2025-09-06 22:19:07 - main - INFO - ReefShield Backend API starting up...
+2025-09-06 22:19:07 - app.services.model_service - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 22:19:07 - app.services.scheduler_service - INFO - SchedulerService initialized
+2025-09-06 22:19:07 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-06 22:19:07 - apscheduler.scheduler - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:19:07 - app.services.scheduler_service - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 22:19:07 - app.services.scheduler_service - INFO - Next scheduled run: 2025-09-07 06:00:00+00:00
+2025-09-06 22:19:07 - app.services.scheduler_service - INFO - SchedulerService started successfully
+2025-09-06 22:19:07 - main - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 22:19:07 - main - INFO - ReefShield Backend API startup complete
+2025-09-06 22:19:49 - app.api.routes - INFO - Manual model run triggered by user: test_phase4
+2025-09-06 22:19:49 - app.services.scheduler_service - INFO - Starting manual model execution (Job ID: manual_run_20250906_221949, User: test_phase4)
+2025-09-06 22:19:49 - app.services.model_service - INFO - Starting model execution (ID: d6d28827-73c5-42dc-adfa-0d289b19bfb2)
+2025-09-06 22:19:49 - app.services.model_service - ERROR - Unexpected exception during model execution: 
+2025-09-06 22:19:49 - app.utils.error_handling - WARNING - Attempt 1 failed for run_model: Unexpected error during script execution: . Retrying in 0.87s
+2025-09-06 22:19:50 - app.utils.error_handling - INFO - Retrying run_model (attempt 2/3)
+2025-09-06 22:19:50 - app.services.model_service - INFO - Starting model execution (ID: fa11b858-8fd0-4c77-9f06-3a2a501a5545)
+2025-09-06 22:19:50 - app.services.model_service - ERROR - Unexpected exception during model execution: 
+2025-09-06 22:19:50 - app.utils.error_handling - WARNING - Attempt 2 failed for run_model: Unexpected error during script execution: . Retrying in 1.11s
+2025-09-06 22:19:51 - app.utils.error_handling - INFO - Retrying run_model (attempt 3/3)
+2025-09-06 22:19:51 - app.services.model_service - INFO - Starting model execution (ID: ff70c173-f6bb-471f-bc4f-a7de0a1a2b92)
+2025-09-06 22:19:51 - app.services.model_service - ERROR - Unexpected exception during model execution: 
+2025-09-06 22:19:51 - app.utils.error_handling - ERROR - Circuit breaker for run_model transitioning to OPEN after 3 failures
+2025-09-06 22:19:51 - app.utils.error_handling - ERROR - All retry attempts failed for run_model: Unexpected error during script execution: 
+2025-09-06 22:19:51 - app.utils.error_handling - WARNING - Safe execution of _safe_model_execution failed: Unexpected error during script execution: 
+2025-09-06 22:19:51 - app.services.scheduler_service - WARNING - Manual model execution failed (Job ID: manual_run_20250906_221949): Safe execution failed
+2025-09-06 22:19:59 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:19:59 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:20:01 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:20:01 - app.services.data_service - INFO - Reading last 8 historical records from: C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 22:20:01 - app.utils.csv_reader - INFO - Extracted 8 readings from C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 22:20:01 - app.services.data_service - INFO - Retrieved 8 historical temperature readings
+2025-09-06 22:20:01 - app.services.data_service - INFO - Reading prediction data from: C:\Users\workspace\ReefShield\models\andaman_sst_next7_predictions.csv
+2025-09-06 22:20:01 - app.utils.csv_reader - INFO - Extracted 7 readings from C:\Users\workspace\ReefShield\models\andaman_sst_next7_predictions.csv
+2025-09-06 22:20:01 - app.services.data_service - INFO - Retrieved 7 prediction temperature readings
+2025-09-06 22:20:01 - app.services.data_service - INFO - Combined reef data created with 8 historical + 7 predicted readings
+2025-09-06 22:20:01 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:20:03 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:20:03 - app.services.data_service - INFO - Reading combined 14-day data from: C:\Users\workspace\ReefShield\models\andaman_sst_14day_combined.csv
+2025-09-06 22:20:03 - app.utils.csv_reader - INFO - Extracted 14 combined readings from C:\Users\workspace\ReefShield\models\andaman_sst_14day_combined.csv
+2025-09-06 22:20:03 - app.services.data_service - INFO - Retrieved 14 combined temperature readings
+2025-09-06 22:20:03 - app.services.data_service - INFO - Combined temperature data created with 14 readings
+2025-09-06 22:20:03 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:20:05 - apscheduler.scheduler - INFO - Removed job daily_model_run
+2025-09-06 22:20:05 - apscheduler.scheduler - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:20:05 - app.services.scheduler_service - INFO - Daily model execution scheduled for 08:30 UTC
+2025-09-06 22:20:05 - app.services.scheduler_service - INFO - Next scheduled run: 2025-09-07 08:30:00+00:00
+2025-09-06 22:20:05 - app.services.scheduler_service - INFO - Daily model run rescheduled to 08:30 UTC
+2025-09-06 22:20:08 - apscheduler.scheduler - INFO - Removed job daily_model_run
+2025-09-06 22:20:08 - apscheduler.scheduler - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:20:08 - app.services.scheduler_service - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 22:20:08 - app.services.scheduler_service - INFO - Next scheduled run: 2025-09-07 06:00:00+00:00
+2025-09-06 22:20:08 - app.services.scheduler_service - INFO - Daily model run rescheduled to 06:00 UTC
+2025-09-06 22:25:38 - main - INFO - ReefShield Backend API shutting down...
+2025-09-06 22:25:38 - app.services.scheduler_service - INFO - SchedulerService stopped successfully
+2025-09-06 22:25:38 - main - INFO - ReefShield Backend API shutdown complete
+2025-09-06 22:25:38 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-09-06 22:25:38 - main - INFO - ReefShield Backend API shutting down...
+2025-09-06 22:25:38 - app.services.scheduler_service - INFO - SchedulerService stopped successfully
+2025-09-06 22:25:38 - main - INFO - ReefShield Backend API shutdown complete
+2025-09-06 22:25:38 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-09-06 22:25:39 - app.utils.logging_config - INFO - Advanced logging system initialized
+2025-09-06 22:25:39 - app.utils.logging_config - INFO - Advanced logging system initialized
+2025-09-06 22:25:39 - main - INFO - ReefShield Backend API starting up...
+2025-09-06 22:25:39 - app.services.model_service - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 22:25:39 - main - INFO - ReefShield Backend API starting up...
+2025-09-06 22:25:39 - app.services.scheduler_service - INFO - SchedulerService initialized
+2025-09-06 22:25:39 - app.services.model_service - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 22:25:39 - app.services.scheduler_service - INFO - SchedulerService initialized
+2025-09-06 22:25:39 - apscheduler.scheduler - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:25:39 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-06 22:25:39 - app.services.scheduler_service - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 22:25:39 - app.services.scheduler_service - INFO - Next scheduled run: 2025-09-07 06:00:00+00:00
+2025-09-06 22:25:39 - apscheduler.scheduler - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:25:39 - app.services.scheduler_service - INFO - SchedulerService started successfully
+2025-09-06 22:25:39 - app.services.scheduler_service - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 22:25:39 - main - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 22:25:39 - app.services.scheduler_service - INFO - Next scheduled run: 2025-09-07 06:00:00+00:00
+2025-09-06 22:25:39 - main - INFO - ReefShield Backend API startup complete
+2025-09-06 22:25:39 - app.services.scheduler_service - INFO - SchedulerService started successfully
+2025-09-06 22:25:39 - main - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 22:25:39 - main - INFO - ReefShield Backend API startup complete
+2025-09-06 22:25:41 - main - INFO - ReefShield Backend API shutting down...
+2025-09-06 22:25:41 - app.services.scheduler_service - INFO - SchedulerService stopped successfully
+2025-09-06 22:25:41 - main - INFO - ReefShield Backend API shutdown complete
+2025-09-06 22:25:41 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-09-06 22:25:41 - main - INFO - ReefShield Backend API shutting down...
+2025-09-06 22:25:41 - app.services.scheduler_service - INFO - SchedulerService stopped successfully
+2025-09-06 22:25:41 - main - INFO - ReefShield Backend API shutdown complete
+2025-09-06 22:25:41 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-09-06 22:25:42 - app.utils.logging_config - INFO - Advanced logging system initialized
+2025-09-06 22:25:42 - main - INFO - ReefShield Backend API starting up...
+2025-09-06 22:25:42 - app.services.model_service - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 22:25:42 - app.services.scheduler_service - INFO - SchedulerService initialized
+2025-09-06 22:25:42 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-06 22:25:42 - apscheduler.scheduler - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:25:42 - app.services.scheduler_service - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 22:25:42 - app.services.scheduler_service - INFO - Next scheduled run: 2025-09-07 06:00:00+00:00
+2025-09-06 22:25:42 - app.services.scheduler_service - INFO - SchedulerService started successfully
+2025-09-06 22:25:42 - main - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 22:25:42 - main - INFO - ReefShield Backend API startup complete
+2025-09-06 22:25:42 - app.utils.logging_config - INFO - Advanced logging system initialized
+2025-09-06 22:25:42 - main - INFO - ReefShield Backend API starting up...
+2025-09-06 22:25:42 - app.services.model_service - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 22:25:42 - app.services.scheduler_service - INFO - SchedulerService initialized
+2025-09-06 22:25:42 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-06 22:25:42 - apscheduler.scheduler - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:25:42 - app.services.scheduler_service - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 22:25:42 - app.services.scheduler_service - INFO - Next scheduled run: 2025-09-07 06:00:00+00:00
+2025-09-06 22:25:42 - app.services.scheduler_service - INFO - SchedulerService started successfully
+2025-09-06 22:25:42 - main - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 22:25:42 - main - INFO - ReefShield Backend API startup complete
+2025-09-06 22:27:05 - main - INFO - ReefShield Backend API shutting down...
+2025-09-06 22:27:05 - app.services.scheduler_service - INFO - SchedulerService stopped successfully
+2025-09-06 22:27:05 - main - INFO - ReefShield Backend API shutdown complete
+2025-09-06 22:27:05 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-09-06 22:27:05 - main - INFO - ReefShield Backend API shutting down...
+2025-09-06 22:27:05 - app.services.scheduler_service - INFO - SchedulerService stopped successfully
+2025-09-06 22:27:05 - main - INFO - ReefShield Backend API shutdown complete
+2025-09-06 22:27:05 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-09-06 22:27:07 - app.utils.logging_config - INFO - Advanced logging system initialized
+2025-09-06 22:27:07 - main - INFO - ReefShield Backend API starting up...
+2025-09-06 22:27:07 - app.utils.logging_config - INFO - Advanced logging system initialized
+2025-09-06 22:27:07 - app.services.model_service - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 22:27:07 - app.services.scheduler_service - INFO - SchedulerService initialized
+2025-09-06 22:27:07 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-06 22:27:07 - apscheduler.scheduler - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:27:07 - app.services.scheduler_service - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 22:27:07 - app.services.scheduler_service - INFO - Next scheduled run: 2025-09-07 06:00:00+00:00
+2025-09-06 22:27:07 - app.services.scheduler_service - INFO - SchedulerService started successfully
+2025-09-06 22:27:07 - main - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 22:27:07 - main - INFO - ReefShield Backend API startup complete
+2025-09-06 22:27:07 - main - INFO - ReefShield Backend API starting up...
+2025-09-06 22:27:07 - app.services.model_service - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 22:27:07 - app.services.scheduler_service - INFO - SchedulerService initialized
+2025-09-06 22:27:07 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-06 22:27:07 - apscheduler.scheduler - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:27:07 - app.services.scheduler_service - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 22:27:07 - app.services.scheduler_service - INFO - Next scheduled run: 2025-09-07 06:00:00+00:00
+2025-09-06 22:27:07 - app.services.scheduler_service - INFO - SchedulerService started successfully
+2025-09-06 22:27:07 - main - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 22:27:07 - main - INFO - ReefShield Backend API startup complete
+2025-09-06 22:27:07 - main - INFO - ReefShield Backend API shutting down...
+2025-09-06 22:27:07 - app.services.scheduler_service - INFO - SchedulerService stopped successfully
+2025-09-06 22:27:07 - main - INFO - ReefShield Backend API shutdown complete
+2025-09-06 22:27:07 - main - INFO - ReefShield Backend API shutting down...
+2025-09-06 22:27:07 - app.services.scheduler_service - INFO - SchedulerService stopped successfully
+2025-09-06 22:27:07 - main - INFO - ReefShield Backend API shutdown complete
+2025-09-06 22:27:07 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-09-06 22:27:07 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-09-06 22:27:08 - app.utils.logging_config - INFO - Advanced logging system initialized
+2025-09-06 22:27:08 - app.utils.logging_config - INFO - Advanced logging system initialized
+2025-09-06 22:27:08 - main - INFO - ReefShield Backend API starting up...
+2025-09-06 22:27:08 - main - INFO - ReefShield Backend API starting up...
+2025-09-06 22:27:08 - app.services.model_service - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 22:27:08 - app.services.model_service - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 22:27:08 - app.services.scheduler_service - INFO - SchedulerService initialized
+2025-09-06 22:27:08 - app.services.scheduler_service - INFO - SchedulerService initialized
+2025-09-06 22:27:08 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-06 22:27:08 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-06 22:27:08 - apscheduler.scheduler - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:27:08 - apscheduler.scheduler - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:27:08 - app.services.scheduler_service - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 22:27:08 - app.services.scheduler_service - INFO - Next scheduled run: 2025-09-07 06:00:00+00:00
+2025-09-06 22:27:08 - app.services.scheduler_service - INFO - SchedulerService started successfully
+2025-09-06 22:27:08 - app.services.scheduler_service - INFO - Next scheduled run: 2025-09-07 06:00:00+00:00
+2025-09-06 22:27:08 - app.services.scheduler_service - INFO - SchedulerService started successfully
+2025-09-06 22:27:08 - main - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 22:27:08 - main - INFO - ReefShield Backend API startup complete
+2025-09-06 22:27:08 - main - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 22:27:08 - main - INFO - ReefShield Backend API startup complete
+2025-09-06 22:27:26 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:27:26 - app.services.data_service - INFO - Reading last 8 historical records from: C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 22:27:26 - app.utils.csv_reader - INFO - Extracted 8 readings from C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 22:27:26 - app.services.data_service - INFO - Retrieved 8 historical temperature readings
+2025-09-06 22:27:26 - app.services.data_service - INFO - Reading prediction data from: C:\Users\workspace\ReefShield\models\andaman_sst_next7_predictions.csv
+2025-09-06 22:27:26 - app.utils.csv_reader - INFO - Extracted 7 readings from C:\Users\workspace\ReefShield\models\andaman_sst_next7_predictions.csv
+2025-09-06 22:27:26 - app.services.data_service - INFO - Retrieved 7 prediction temperature readings
+2025-09-06 22:27:26 - app.services.data_service - INFO - Combined reef data created with 8 historical + 7 predicted readings
+2025-09-06 22:27:26 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:27:28 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:27:28 - app.services.data_service - INFO - Reading combined 14-day data from: C:\Users\workspace\ReefShield\models\andaman_sst_14day_combined.csv
+2025-09-06 22:27:28 - app.utils.csv_reader - INFO - Extracted 14 combined readings from C:\Users\workspace\ReefShield\models\andaman_sst_14day_combined.csv
+2025-09-06 22:27:28 - app.services.data_service - INFO - Retrieved 14 combined temperature readings
+2025-09-06 22:27:28 - app.services.data_service - INFO - Combined temperature data created with 14 readings
+2025-09-06 22:27:28 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:27:30 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:27:30 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:27:36 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:27:36 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:27:38 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:27:38 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:27:40 - main - INFO - ReefShield Backend API shutting down...
+2025-09-06 22:27:40 - app.services.scheduler_service - INFO - SchedulerService stopped successfully
+2025-09-06 22:27:40 - main - INFO - ReefShield Backend API shutdown complete
+2025-09-06 22:27:40 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-09-06 22:27:40 - main - INFO - ReefShield Backend API shutting down...
+2025-09-06 22:27:40 - app.services.scheduler_service - INFO - SchedulerService stopped successfully
+2025-09-06 22:27:40 - main - INFO - ReefShield Backend API shutdown complete
+2025-09-06 22:27:40 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-09-06 22:27:41 - app.utils.logging_config - INFO - Advanced logging system initialized
+2025-09-06 22:27:41 - app.utils.logging_config - INFO - Advanced logging system initialized
+2025-09-06 22:27:41 - main - INFO - ReefShield Backend API starting up...
+2025-09-06 22:27:41 - app.services.model_service - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 22:27:41 - app.services.scheduler_service - INFO - SchedulerService initialized
+2025-09-06 22:27:41 - main - INFO - ReefShield Backend API starting up...
+2025-09-06 22:27:41 - app.services.model_service - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 22:27:41 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-06 22:27:41 - app.services.scheduler_service - INFO - SchedulerService initialized
+2025-09-06 22:27:41 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-06 22:27:41 - apscheduler.scheduler - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:27:41 - app.services.scheduler_service - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 22:27:41 - apscheduler.scheduler - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:27:41 - app.services.scheduler_service - INFO - Next scheduled run: 2025-09-07 06:00:00+00:00
+2025-09-06 22:27:41 - app.services.scheduler_service - INFO - SchedulerService started successfully
+2025-09-06 22:27:41 - app.services.scheduler_service - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 22:27:41 - main - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 22:27:41 - app.services.scheduler_service - INFO - Next scheduled run: 2025-09-07 06:00:00+00:00
+2025-09-06 22:27:41 - main - INFO - ReefShield Backend API startup complete
+2025-09-06 22:27:41 - app.services.scheduler_service - INFO - SchedulerService started successfully
+2025-09-06 22:27:41 - main - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 22:27:41 - main - INFO - ReefShield Backend API startup complete
+2025-09-06 22:27:41 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:27:41 - app.services.data_service - INFO - Reading last 8 historical records from: C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 22:27:41 - app.utils.csv_reader - INFO - Extracted 8 readings from C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 22:27:41 - app.services.data_service - INFO - Retrieved 8 historical temperature readings
+2025-09-06 22:27:41 - app.services.data_service - INFO - Reading prediction data from: C:\Users\workspace\ReefShield\models\andaman_sst_next7_predictions.csv
+2025-09-06 22:27:41 - app.utils.csv_reader - INFO - Extracted 7 readings from C:\Users\workspace\ReefShield\models\andaman_sst_next7_predictions.csv
+2025-09-06 22:27:41 - app.services.data_service - INFO - Retrieved 7 prediction temperature readings
+2025-09-06 22:27:41 - app.services.data_service - INFO - Combined reef data created with 8 historical + 7 predicted readings
+2025-09-06 22:27:41 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:27:44 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:27:44 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:27:47 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:27:47 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:28:02 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:28:02 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:32:05 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:32:05 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:32:05 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:32:05 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:32:05 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:32:05 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:32:05 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:32:05 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:32:05 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:32:05 - app.services.data_service - INFO - Reading combined 14-day data from: C:\Users\workspace\ReefShield\models\andaman_sst_14day_combined.csv
+2025-09-06 22:32:05 - app.utils.csv_reader - INFO - Extracted 14 combined readings from C:\Users\workspace\ReefShield\models\andaman_sst_14day_combined.csv
+2025-09-06 22:32:05 - app.services.data_service - INFO - Retrieved 14 combined temperature readings
+2025-09-06 22:32:05 - app.services.data_service - INFO - Combined temperature data created with 14 readings
+2025-09-06 22:32:05 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:32:05 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:32:05 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:32:35 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:32:35 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:32:35 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:32:35 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:32:35 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:32:35 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:32:48 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:32:48 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:32:48 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:32:48 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:32:48 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:32:48 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:32:48 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:32:48 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:32:48 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:32:48 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:32:48 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:32:48 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:33:18 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:33:18 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:33:18 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:33:18 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:33:18 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:33:18 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:33:48 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:33:48 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:33:48 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:33:48 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:33:48 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:33:48 - app.api.routes - INFO - Retrieved combined data: 14 readings

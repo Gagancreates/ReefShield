@@ -11,6 +11,7 @@ window = 14          # number of previous days as features
 train_csv = "andaman_sst_training.csv"
 pred_rows_csv = "andaman_sst_predictions.csv"
 filled_series_csv = "andaman_sst_recent_filled.csv"
+combined_14day_csv = "andaman_sst_14day_combined.csv"  # New: 7 days historical + 7 days predicted
 
 # Seasonal training years: 1982 -> last full year
 START_YEAR = 1982
@@ -223,5 +224,57 @@ if __name__ == "__main__":
             print(f"✅ Wrote next-{FUTURE_DAYS}-day predictions -> {future_csv}")
         except Exception as e:
             print(f"❌ Failed to predict next-{FUTURE_DAYS} days: {e}")
+
+    # ---------------------
+    # 8) Create combined CSV with last 7 days historical + next 7 days predicted
+    # ---------------------
+    print("\n📊 Creating combined 14-day CSV (7 historical + 7 predicted)...")
+    
+    combined_14day_csv = "andaman_sst_14day_combined.csv"
+    
+    try:
+        # Get last 7 days from historical data (from combined_series)
+        if combined_series is not None and not combined_series.empty:
+            # Sort by date to ensure correct order
+            combined_series_sorted = combined_series.sort_values('Date').reset_index(drop=True)
+            
+            # Get last 7 days of historical data
+            last_7_historical = combined_series_sorted.tail(7).copy()
+            last_7_historical['Source'] = 'Historical'
+            
+            # Get next 7 days from predictions
+            if 'future_preds' in locals() and not future_preds.empty:
+                next_7_predicted = future_preds[['Date', 'SST']].copy()
+                next_7_predicted['Source'] = 'Predicted'
+                
+                # Combine historical and predicted data
+                combined_14day = pd.concat([
+                    last_7_historical[['Date', 'SST', 'Source']], 
+                    next_7_predicted[['Date', 'SST', 'Source']]
+                ], ignore_index=True)
+                
+                # Round SST values to 3 decimal places for consistency
+                combined_14day['SST'] = combined_14day['SST'].round(3)
+                
+                # Ensure Date column is properly formatted
+                combined_14day['Date'] = pd.to_datetime(combined_14day['Date']).dt.strftime('%Y-%m-%d')
+                
+                # Save the combined CSV
+                combined_14day.to_csv(combined_14day_csv, index=False)
+                print(f"✅ Created 14-day combined CSV -> {combined_14day_csv}")
+                print(f"   📈 Historical days: {len(last_7_historical)}")
+                print(f"   🔮 Predicted days: {len(next_7_predicted)}")
+                
+                # Display sample of the data
+                print("\n📋 Sample of combined data:")
+                print(combined_14day.to_string(index=False))
+                
+            else:
+                print("⚠️ No future predictions available to create combined CSV")
+        else:
+            print("⚠️ No historical data available to create combined CSV")
+            
+    except Exception as e:
+        print(f"❌ Failed to create combined 14-day CSV: {e}")
 
     print("\nAll done. 🎯")
