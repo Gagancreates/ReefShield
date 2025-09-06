@@ -19,7 +19,7 @@ import {
   Bar,
 } from "recharts"
 import { Thermometer, TrendingUp, TrendingDown, AlertTriangle, Download, RefreshCw } from "lucide-react"
-import { useRealtimeLocations, useTemperaturePageData } from "@/lib/hooks/useRealtimeData"
+import { useRealtimeLocations, useTemperatureAnalysis } from "@/lib/hooks/useRealtimeData"
 
 // Dummy temperature data for 14 days
 const temperatureData = [
@@ -67,7 +67,7 @@ const sites = [
 export default function TemperaturePage() {
   // Real-time data hooks
   const { locations: realtimeLocations, loading, lastUpdated } = useRealtimeLocations()
-  const { data: temperatureData } = useTemperaturePageData()
+  const { data: temperatureAnalysisData } = useTemperatureAnalysis()
 
   // Calculate real-time statistics
   const currentTemps = realtimeLocations.map(loc => loc.currentTemperature)
@@ -75,7 +75,14 @@ export default function TemperaturePage() {
   const maxTemp = currentTemps.length > 0 ? Math.max(...currentTemps) : 0
   const minTemp = currentTemps.length > 0 ? Math.min(...currentTemps) : 0
   
-  // Use the formatted temperature data directly from the hook
+  // Use real temperature analysis data
+  const temperatureData = temperatureAnalysisData.map((item, index) => ({
+    date: `2025-03-${String(index + 1).padStart(2, '0')}`,
+    temp: item.temp,
+    threshold: item.threshold,
+    site: "Andaman Islands"
+  }))
+
   const avgTemp = temperatureData.length > 0 ? 
     temperatureData.reduce((sum, data) => sum + data.temp, 0) / temperatureData.length : 0
   const tempChange = temperatureData.length >= 2 ? 
@@ -100,7 +107,7 @@ export default function TemperaturePage() {
             Real-time water temperature trends for Andaman Islands
             {lastUpdated && (
               <span className="ml-2 text-xs text-green-600">
-                • Live (Updated {lastUpdated?.toLocaleTimeString() || 'Loading...'})
+                • Live (Updated {lastUpdated.toLocaleTimeString()})
               </span>
             )}
           </p>
@@ -210,7 +217,7 @@ export default function TemperaturePage() {
                   className="text-xs"
                 />
                 <YAxis
-                  domain={["dataMin - 2", "dataMax + 2"]}
+                  domain={["dataMin - 1", "dataMax + 1"]}
                   tickFormatter={(value) => `${value}°C`}
                   className="text-xs"
                 />
@@ -257,7 +264,7 @@ export default function TemperaturePage() {
                 <AreaChart data={hourlyTempData}>
                   <CartesianGrid strokeDasharray="3 3" />
                   <XAxis dataKey="hour" />
-                  <YAxis domain={[24, 32]} tickFormatter={(value) => `${value}°C`} />
+                  <YAxis tickFormatter={(value) => `${value}°C`} />
                   <Tooltip formatter={(value: number) => [`${value.toFixed(1)}°C`, "Temperature"]} />
                   <Area type="monotone" dataKey="temp" stroke="#10b981" fill="#10b981" fillOpacity={0.3} />
                 </AreaChart>
@@ -277,7 +284,7 @@ export default function TemperaturePage() {
                 <BarChart data={monthlyComparisonData}>
                   <CartesianGrid strokeDasharray="3 3" />
                   <XAxis dataKey="month" />
-                  <YAxis domain={[24, 32]} tickFormatter={(value) => `${value}°C`} />
+                  <YAxis tickFormatter={(value) => `${value}°C`} />
                   <Tooltip formatter={(value: number) => [`${value.toFixed(1)}°C`, ""]} />
                   <Bar dataKey="current" fill="#3b82f6" name="Current Year" />
                   <Bar dataKey="historical" fill="#94a3b8" name="Historical Average" />

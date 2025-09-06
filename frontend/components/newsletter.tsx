@@ -3,11 +3,8 @@
 import { Button } from "./ui/button"
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { useState } from "react"
-import { Loader2 } from "lucide-react"
 
 export const Newsletter = () => {
-  const [isLoading, setIsLoading] = useState(false)
   return (
     <div className="flex overflow-hidden relative flex-col gap-6 justify-center items-center pt-10 w-full h-full short:lg:pt-10 pb-footer-safe-area 2xl:pt-footer-safe-area px-sides short:lg:gap-6 lg:gap-8">
       <motion.div layout="position" transition={{ duration: 0.3, ease: "easeOut" }}>
@@ -35,22 +32,13 @@ export const Newsletter = () => {
         className="mt-8"
       >
         <Link href="/dashboard">
-          <Button
-            className="px-8 py-3 text-lg font-semibold text-white border border-white/20 shadow-xl backdrop-blur-md bg-white/10 hover:bg-white/20 hover:backdrop-blur-none transition-all duration-300 hover:shadow-2xl disabled:opacity-50"
-            size="lg"
-            onClick={() => setIsLoading(true)}
-            disabled={isLoading}
-          >
-            {isLoading ? (
-              <>
-                <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                Loading Dashboard...
-              </>
-            ) : (
-              "View Dashboard"
-            )}
-          </Button>
-        </Link>
+  <Button
+    className="px-8 py-3 text-lg font-semibold text-white border border-white/20 shadow-xl backdrop-blur-md bg-white/10 hover:bg-white/20 hover:backdrop-blur-none transition-all duration-300 hover:shadow-2xl"
+    size="lg"
+  >
+    View Dashboard
+  </Button>
+</Link>
       </motion.div>
     </div>
   )
