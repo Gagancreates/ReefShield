@@ -7,7 +7,7 @@ import pandas as pd
 import os
 from math import radians, sin, cos, sqrt, atan2
 
-MODIS_PATH = r"G:\JusticeGang\models\AQUA_MODIS.20250731.L3m.DAY.CHL.chlor_a.9km.nc"
+MODIS_PATH = r"D:\INFERENTIA\AQUA_MODIS.20250731.L3m.DAY.CHL.chlor_a.9km.nc"
 OUT_DIR = "andaman_chl_output"
 os.makedirs(OUT_DIR, exist_ok=True)
 
