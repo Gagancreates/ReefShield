@@ -114,6 +114,21 @@ export class BackendRealtimeService {
     // Generate location ID from name
     const locationId = backendData.location_name.toLowerCase().replace(/\s+/g, '-');
 
+    // Map backend risk levels to frontend risk levels
+    let frontendRiskLevel: 'low' | 'moderate' | 'high' = 'low';
+    switch (backendData.risk_assessment.current_risk) {
+      case 'low':
+        frontendRiskLevel = 'low';
+        break;
+      case 'moderate':
+        frontendRiskLevel = 'moderate';
+        break;
+      case 'high':
+      case 'critical':
+        frontendRiskLevel = 'high';
+        break;
+    }
+
     return {
       id: locationId,
       name: backendData.location_name,
@@ -122,17 +137,13 @@ export class BackendRealtimeService {
         lng: backendData.coordinates.lon 
       },
       currentTemperature: Number(currentTemperature.toFixed(1)),
-      riskLevel: backendData.risk_assessment.current_risk,
+      riskLevel: frontendRiskLevel,
       dhw: backendData.risk_assessment.dhw || 0,
       trend: backendData.risk_assessment.trend,
       temperatureHistory: historical,
       forecast: forecast,
-      // Simulate chlorophyll data for now (can be enhanced later)
-      chlorophyll: {
-        value: Number((0.5 + Math.random() * 0.4).toFixed(3)),
-        riskLevel: backendData.risk_assessment.current_risk,
-        threshold: 0.77
-      }
+      // Use real chlorophyll data from backend if available
+      chlorophyll: undefined // Will be enhanced later with real backend data
     };
   }
 
@@ -180,15 +191,15 @@ export class BackendRealtimeService {
     }
   }
 
-  // Get current data (from backend or fallback)
+  // Get current data (from backend or empty if not connected)
   getCurrentData(): LocationData[] {
     if (this.connectionStatus === 'connected' && this.lastBackendData) {
       // Return real backend data
       const locationData = this.convertBackendDataToLocationData(this.lastBackendData);
       return [locationData];
     } else {
-      // Fallback to simulated data
-      return this.getFallbackLocationData();
+      // Return empty data when not connected - let UI show loading state
+      return [];
     }
   }
 
@@ -208,8 +219,8 @@ export class BackendRealtimeService {
         source: reading.source === 'Historical' ? 'Observed' : 'Forecast'
       }));
     } else {
-      // Fallback to simulated data
-      return this.getFallbackTemperatureAnalysis();
+      // Return empty data when not connected - let UI show loading state
+      return [];
     }
   }
 
@@ -254,7 +265,7 @@ export class BackendRealtimeService {
           title: 'High Temperature Alert',
           location: location.name,
           severity: 'Critical',
-          time: `${Math.floor(Math.random() * 30)} minutes ago`,
+          time: '5 minutes ago',
           description: `Water temperature ${location.currentTemperature}°C exceeds safe threshold`
         });
       }
@@ -265,7 +276,7 @@ export class BackendRealtimeService {
           title: 'Coral Bleaching Risk',
           location: location.name,
           severity: location.dhw >= 8 ? 'Critical' : 'Warning',
-          time: `${Math.floor(Math.random() * 60)} minutes ago`,
+          time: '10 minutes ago',
           description: `DHW ${location.dhw} °C-weeks indicates bleaching stress`
         });
       }
@@ -276,7 +287,7 @@ export class BackendRealtimeService {
           title: 'Temperature Rising',
           location: location.name,
           severity: 'Medium',
-          time: `${Math.floor(Math.random() * 120)} minutes ago`,
+          time: '15 minutes ago',
           description: 'Upward temperature trend detected'
         });
       }
@@ -355,46 +366,6 @@ export class BackendRealtimeService {
 
   getConnectionStatus(): 'connected' | 'disconnected' | 'error' {
     return this.connectionStatus;
-  }
-
-  // Fallback methods for when backend is unavailable
-  private getFallbackLocationData(): LocationData[] {
-    // Simplified fallback data
-    return [{
-      id: 'andaman-reef',
-      name: 'Andaman Reef',
-      coordinates: { lat: 11.67, lng: 92.75 },
-      currentTemperature: 28.5,
-      riskLevel: 'low',
-      dhw: 0.5,
-      trend: 'stable',
-      temperatureHistory: [],
-      forecast: [],
-      chlorophyll: {
-        value: 0.65,
-        riskLevel: 'low',
-        threshold: 0.77
-      }
-    }];
-  }
-
-  private getFallbackTemperatureAnalysis(): Array<{
-    day: string;
-    temp: number;
-    threshold: number;
-    source: string;
-  }> {
-    // Generate simple 14-day pattern
-    const data = [];
-    for (let i = 0; i < 14; i++) {
-      data.push({
-        day: `Day ${i + 1}`,
-        temp: 28.0 + Math.sin(i * 0.5) * 0.8 + Math.random() * 0.3,
-        threshold: 29.0,
-        source: i < 7 ? 'Observed' : 'Forecast'
-      });
-    }
-    return data;
   }
 }
 

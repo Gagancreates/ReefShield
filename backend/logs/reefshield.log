@@ -323,3 +323,2046 @@
 2025-09-06 22:33:48 - app.api.routes - INFO - System status: API=healthy, Model running=False
 2025-09-06 22:33:48 - app.api.routes - INFO - Fetching 14-day combined temperature data
 2025-09-06 22:33:48 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:34:18 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:34:18 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:34:18 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:34:18 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:34:18 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:34:18 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:34:48 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:34:48 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:34:48 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:34:48 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:34:48 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:34:48 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:35:18 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:35:18 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:35:18 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:35:18 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:35:18 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:35:18 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:35:47 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:35:47 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:35:47 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:35:47 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:35:47 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:35:47 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:35:47 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:35:47 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:35:47 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:35:47 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:35:47 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:35:47 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:36:17 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:36:17 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:36:17 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:36:17 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:36:17 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:36:17 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:36:48 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:36:48 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:36:48 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:36:48 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:36:48 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:36:48 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:37:06 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:37:06 - app.services.data_service - INFO - Reading last 8 historical records from: C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 22:37:06 - app.utils.csv_reader - INFO - Extracted 8 readings from C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 22:37:06 - app.services.data_service - INFO - Retrieved 8 historical temperature readings
+2025-09-06 22:37:06 - app.services.data_service - INFO - Combined reef data created with 8 historical + 7 predicted readings
+2025-09-06 22:37:06 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:37:06 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:37:06 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:37:06 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:37:06 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:37:06 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:37:06 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:37:06 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:37:06 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:37:06 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:37:06 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:37:22 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:37:22 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:37:22 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:37:22 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:37:22 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:37:22 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:37:22 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:37:22 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:37:22 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:37:22 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:37:22 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:37:22 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:37:28 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:37:28 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:37:28 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:37:28 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:37:28 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:37:28 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:37:28 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:37:28 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:37:28 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:37:28 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:37:28 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:37:28 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:37:37 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:37:37 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:37:37 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:37:37 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:37:37 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:37:37 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:37:37 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:37:37 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:37:37 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:37:37 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:37:37 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:37:37 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:37:43 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:37:43 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:37:43 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:37:43 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:37:43 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:37:43 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:37:43 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:37:43 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:37:43 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:37:43 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:37:43 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:37:43 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:37:47 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:37:47 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:37:47 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:37:47 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:37:47 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:37:47 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:37:47 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:37:47 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:37:47 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:37:47 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:37:47 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:37:47 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:37:56 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:37:56 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:37:56 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:37:56 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:37:56 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:37:56 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:37:56 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:37:56 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:37:56 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:37:56 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:37:56 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:37:56 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:38:06 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:38:06 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:38:06 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:38:06 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:38:06 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:38:06 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:38:06 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:38:06 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:38:06 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:38:06 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:38:06 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:38:06 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:38:36 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:38:36 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:38:36 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:38:36 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:38:36 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:38:36 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:39:06 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:39:06 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:39:06 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:39:06 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:39:06 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:39:06 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:39:36 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:39:36 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:39:36 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:39:36 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:39:36 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:39:36 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:40:06 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:40:06 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:40:06 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:40:06 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:40:06 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:40:06 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:40:36 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:40:36 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:40:36 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:40:36 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:40:36 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:40:36 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:41:06 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:41:06 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:41:06 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:41:06 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:41:06 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:41:06 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:41:42 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:41:42 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:41:42 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:41:42 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:41:42 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:41:42 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:42:42 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:42:42 - app.services.data_service - INFO - Reading last 8 historical records from: C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 22:42:42 - app.utils.csv_reader - INFO - Extracted 8 readings from C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 22:42:42 - app.services.data_service - INFO - Retrieved 8 historical temperature readings
+2025-09-06 22:42:42 - app.services.data_service - INFO - Combined reef data created with 8 historical + 7 predicted readings
+2025-09-06 22:42:42 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:42:42 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:42:42 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:42:42 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:42:42 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:43:42 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:43:42 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:43:42 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:43:42 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:43:42 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:43:42 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:44:42 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:44:42 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:44:42 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:44:42 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:44:42 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:44:42 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:45:42 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:45:42 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:45:42 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:45:42 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:45:42 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:45:42 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:46:42 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:46:42 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:46:42 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:46:42 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:46:42 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:46:42 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:47:42 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:47:42 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:47:42 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:47:42 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:47:42 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:47:42 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:48:23 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:48:23 - app.services.data_service - INFO - Reading last 8 historical records from: C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 22:48:23 - app.utils.csv_reader - INFO - Extracted 8 readings from C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 22:48:23 - app.services.data_service - INFO - Retrieved 8 historical temperature readings
+2025-09-06 22:48:23 - app.services.data_service - INFO - Combined reef data created with 8 historical + 7 predicted readings
+2025-09-06 22:48:23 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:48:23 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:48:23 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:48:23 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:48:23 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:48:32 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:48:32 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:48:32 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:48:32 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:48:32 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:48:32 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:48:32 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:48:32 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:48:32 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:48:32 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:48:32 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:48:32 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:49:03 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:49:03 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:49:03 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:49:03 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:49:03 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:49:03 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:49:33 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:49:33 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:49:33 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:49:33 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:49:33 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:49:33 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:49:37 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:49:37 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:49:37 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:49:37 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:49:37 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:49:37 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:49:37 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:49:37 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:49:37 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:49:37 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:49:37 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:49:37 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:50:08 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:50:08 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:50:08 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:50:08 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:50:08 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:50:08 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:50:38 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:50:38 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:50:38 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:50:38 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:50:38 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:50:38 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:51:08 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:51:08 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:51:08 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:51:08 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:51:08 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:51:08 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:51:20 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:51:20 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:51:20 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:51:20 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:51:20 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:51:20 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:51:20 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:51:20 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:51:20 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:51:20 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:51:20 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:51:20 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:51:30 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:51:30 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:51:30 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:51:30 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:51:30 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:51:30 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:51:30 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:51:30 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:51:30 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:51:30 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:51:30 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:51:30 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:52:00 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:52:00 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:52:00 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:52:00 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:52:00 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:52:00 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:52:30 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:52:30 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:52:30 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:52:30 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:52:30 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:52:30 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:53:00 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:53:00 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:53:00 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:53:00 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:53:00 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:53:00 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:53:30 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:53:30 - app.services.data_service - INFO - Reading last 8 historical records from: C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 22:53:30 - app.utils.csv_reader - INFO - Extracted 8 readings from C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 22:53:30 - app.services.data_service - INFO - Retrieved 8 historical temperature readings
+2025-09-06 22:53:30 - app.services.data_service - INFO - Combined reef data created with 8 historical + 7 predicted readings
+2025-09-06 22:53:30 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:53:30 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:53:30 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:53:30 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:53:30 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:57:39 - app.utils.logging_config - INFO - Advanced logging system initialized
+2025-09-06 22:57:39 - main - INFO - ReefShield Backend API starting up...
+2025-09-06 22:57:39 - app.services.model_service - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 22:57:39 - app.services.scheduler_service - INFO - SchedulerService initialized
+2025-09-06 22:57:39 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-06 22:57:39 - apscheduler.scheduler - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 22:57:39 - app.services.scheduler_service - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 22:57:39 - app.services.scheduler_service - INFO - Next scheduled run: 2025-09-07 06:00:00+00:00
+2025-09-06 22:57:39 - app.services.scheduler_service - INFO - SchedulerService started successfully
+2025-09-06 22:57:39 - main - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 22:57:39 - main - INFO - ReefShield Backend API startup complete
+2025-09-06 22:57:42 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:57:42 - app.services.data_service - INFO - Reading last 8 historical records from: C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 22:57:42 - app.utils.csv_reader - INFO - Extracted 8 readings from C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 22:57:42 - app.services.data_service - INFO - Retrieved 8 historical temperature readings
+2025-09-06 22:57:42 - app.services.data_service - INFO - Reading prediction data from: C:\Users\workspace\ReefShield\models\andaman_sst_next7_predictions.csv
+2025-09-06 22:57:42 - app.utils.csv_reader - INFO - Extracted 7 readings from C:\Users\workspace\ReefShield\models\andaman_sst_next7_predictions.csv
+2025-09-06 22:57:42 - app.services.data_service - INFO - Retrieved 7 prediction temperature readings
+2025-09-06 22:57:42 - app.services.data_service - INFO - Combined reef data created with 8 historical + 7 predicted readings
+2025-09-06 22:57:42 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:57:42 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:57:42 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:57:42 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:57:42 - app.services.data_service - INFO - Reading combined 14-day data from: C:\Users\workspace\ReefShield\models\andaman_sst_14day_combined.csv
+2025-09-06 22:57:42 - app.utils.csv_reader - INFO - Extracted 14 combined readings from C:\Users\workspace\ReefShield\models\andaman_sst_14day_combined.csv
+2025-09-06 22:57:42 - app.services.data_service - INFO - Retrieved 14 combined temperature readings
+2025-09-06 22:57:42 - app.services.data_service - INFO - Combined temperature data created with 14 readings
+2025-09-06 22:57:42 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:57:54 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:57:54 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:57:54 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:57:54 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:57:54 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:57:54 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:57:54 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:57:54 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:57:54 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:57:54 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:57:54 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:57:54 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:58:11 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:58:11 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:58:11 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:58:11 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:58:11 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:58:11 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:58:11 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:58:11 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:58:11 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:58:11 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:58:11 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:58:11 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:58:16 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:58:16 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:58:16 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:58:16 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:58:16 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:58:16 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:58:16 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:58:16 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:58:16 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:58:16 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:58:16 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:58:16 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:58:47 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:58:47 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:58:47 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:58:47 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:58:47 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:58:47 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:59:16 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:59:16 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:59:16 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:59:16 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:59:16 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:59:16 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:59:47 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:59:47 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:59:47 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:59:47 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:59:47 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:59:47 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:59:57 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:59:57 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:59:57 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 22:59:57 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 22:59:57 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:59:57 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:59:57 - app.api.routes - INFO - Fetching system status
+2025-09-06 22:59:57 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 22:59:57 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:59:57 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 22:59:57 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 22:59:57 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:00:03 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:00:03 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:00:03 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:00:03 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:00:03 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:00:03 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:00:03 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:00:03 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:00:03 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:00:03 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:00:03 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:00:03 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:00:08 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:00:08 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:00:08 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:00:08 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:00:08 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:00:09 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:00:09 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:00:09 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:00:09 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:00:09 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:00:09 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:00:09 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:00:39 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:00:39 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:00:39 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:00:39 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:00:39 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:00:39 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:01:09 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:01:09 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:01:09 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:01:09 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:01:09 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:01:09 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:01:27 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:01:27 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:01:27 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:01:27 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:01:28 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:01:28 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:01:28 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:01:28 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:01:28 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:01:28 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:01:28 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:01:28 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:01:58 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:01:58 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:01:58 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:01:58 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:01:58 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:01:58 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:02:28 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:02:28 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:02:28 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:02:28 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:02:28 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:02:28 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:02:58 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:02:58 - app.services.data_service - INFO - Reading last 8 historical records from: C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 23:02:58 - app.utils.csv_reader - INFO - Extracted 8 readings from C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 23:02:58 - app.services.data_service - INFO - Retrieved 8 historical temperature readings
+2025-09-06 23:02:58 - app.services.data_service - INFO - Combined reef data created with 8 historical + 7 predicted readings
+2025-09-06 23:02:58 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:02:58 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:02:58 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:02:58 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:02:58 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:03:26 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:03:26 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:03:26 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:03:26 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:03:26 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:03:26 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:03:26 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:03:26 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:03:26 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:03:26 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:03:26 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:03:26 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:03:27 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:03:27 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:03:27 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:03:27 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:03:27 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:03:27 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:03:31 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:03:31 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:03:31 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:03:31 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:03:31 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:03:31 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:03:31 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:03:31 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:03:31 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:03:31 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:03:31 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:03:31 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:04:01 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:04:01 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:04:01 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:04:01 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:04:01 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:04:01 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:04:01 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:04:01 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:04:01 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:04:01 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:04:01 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:04:01 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:04:31 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:04:31 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:04:31 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:04:31 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:04:31 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:04:31 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:04:47 - main - INFO - ReefShield Backend API shutting down...
+2025-09-06 23:04:47 - app.services.scheduler_service - INFO - SchedulerService stopped successfully
+2025-09-06 23:04:47 - main - INFO - ReefShield Backend API shutdown complete
+2025-09-06 23:04:47 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-09-06 23:04:54 - app.utils.logging_config - INFO - Advanced logging system initialized
+2025-09-06 23:04:55 - app.utils.logging_config - INFO - Advanced logging system initialized
+2025-09-06 23:04:55 - main - INFO - ReefShield Backend API starting up...
+2025-09-06 23:04:55 - app.services.model_service - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 23:04:55 - app.services.scheduler_service - INFO - SchedulerService initialized
+2025-09-06 23:04:55 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-06 23:04:55 - apscheduler.scheduler - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 23:04:55 - app.services.scheduler_service - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 23:04:55 - app.services.scheduler_service - INFO - Next scheduled run: 2025-09-07 06:00:00+00:00
+2025-09-06 23:04:55 - app.services.scheduler_service - INFO - SchedulerService started successfully
+2025-09-06 23:04:55 - main - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 23:04:55 - main - INFO - ReefShield Backend API startup complete
+2025-09-06 23:04:55 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:04:57 - watchfiles.main - INFO - 2 changes detected
+2025-09-06 23:05:01 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:05:01 - app.services.data_service - INFO - Reading last 8 historical records from: C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 23:05:01 - app.utils.csv_reader - INFO - Extracted 8 readings from C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 23:05:01 - app.services.data_service - INFO - Retrieved 8 historical temperature readings
+2025-09-06 23:05:01 - app.services.data_service - INFO - Reading prediction data from: C:\Users\workspace\ReefShield\models\andaman_sst_next7_predictions.csv
+2025-09-06 23:05:01 - app.utils.csv_reader - INFO - Extracted 7 readings from C:\Users\workspace\ReefShield\models\andaman_sst_next7_predictions.csv
+2025-09-06 23:05:01 - app.services.data_service - INFO - Retrieved 7 prediction temperature readings
+2025-09-06 23:05:01 - app.services.data_service - INFO - Combined reef data created with 8 historical + 7 predicted readings
+2025-09-06 23:05:01 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:05:01 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:05:01 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:05:01 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:05:01 - app.services.data_service - INFO - Reading combined 14-day data from: C:\Users\workspace\ReefShield\models\andaman_sst_14day_combined.csv
+2025-09-06 23:05:01 - app.utils.csv_reader - INFO - Extracted 14 combined readings from C:\Users\workspace\ReefShield\models\andaman_sst_14day_combined.csv
+2025-09-06 23:05:01 - app.services.data_service - INFO - Retrieved 14 combined temperature readings
+2025-09-06 23:05:01 - app.services.data_service - INFO - Combined temperature data created with 14 readings
+2025-09-06 23:05:01 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:05:20 - app.api.routes - INFO - Manual model run triggered by user: frontend-user
+2025-09-06 23:05:20 - app.services.scheduler_service - INFO - Starting manual model execution (Job ID: manual_run_20250906_230520, User: frontend-user)
+2025-09-06 23:05:20 - app.services.model_service - INFO - Starting model execution (ID: 63107eff-4ef3-4890-993a-aa3f4cce8c55)
+2025-09-06 23:05:20 - app.services.model_service - ERROR - Unexpected exception during model execution: 
+2025-09-06 23:05:20 - app.utils.error_handling - WARNING - Attempt 1 failed for run_model: Unexpected error during script execution: . Retrying in 0.54s
+2025-09-06 23:05:21 - app.utils.error_handling - INFO - Retrying run_model (attempt 2/3)
+2025-09-06 23:05:21 - app.services.model_service - INFO - Starting model execution (ID: 86cb8895-bfb0-47f8-8afc-235d124542b3)
+2025-09-06 23:05:21 - app.services.model_service - ERROR - Unexpected exception during model execution: 
+2025-09-06 23:05:21 - app.utils.error_handling - WARNING - Attempt 2 failed for run_model: Unexpected error during script execution: . Retrying in 1.33s
+2025-09-06 23:05:22 - app.utils.error_handling - INFO - Retrying run_model (attempt 3/3)
+2025-09-06 23:05:22 - app.services.model_service - INFO - Starting model execution (ID: a75e03e8-cfc5-4119-9b6d-3fc6f698cdb8)
+2025-09-06 23:05:22 - app.services.model_service - ERROR - Unexpected exception during model execution: 
+2025-09-06 23:05:22 - app.utils.error_handling - ERROR - Circuit breaker for run_model transitioning to OPEN after 3 failures
+2025-09-06 23:05:22 - app.utils.error_handling - ERROR - All retry attempts failed for run_model: Unexpected error during script execution: 
+2025-09-06 23:05:22 - app.utils.error_handling - WARNING - Safe execution of _safe_model_execution failed: Unexpected error during script execution: 
+2025-09-06 23:05:22 - app.services.scheduler_service - WARNING - Manual model execution failed (Job ID: manual_run_20250906_230520): Safe execution failed
+2025-09-06 23:05:28 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:05:28 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:05:28 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:05:28 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:05:28 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:05:28 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:05:28 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:05:28 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:05:28 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:05:28 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:05:28 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:05:28 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:05:34 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:05:34 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:05:34 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:05:34 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:05:34 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:05:34 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:05:34 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:05:34 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:05:34 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:05:34 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:05:34 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:05:34 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:05:41 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:05:41 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:05:41 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:05:41 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:05:41 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:05:41 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:05:41 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:05:41 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:05:41 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:05:41 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:05:41 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:05:41 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:05:47 - watchfiles.main - INFO - 4 changes detected
+2025-09-06 23:05:48 - app.api.routes - INFO - Manual model run triggered by user: frontend-user
+2025-09-06 23:05:48 - app.services.scheduler_service - INFO - Starting manual model execution (Job ID: manual_run_20250906_230548, User: frontend-user)
+2025-09-06 23:05:48 - app.utils.error_handling - WARNING - Attempt 1 failed for run_model: Circuit breaker is OPEN for run_model. Too many recent failures.. Retrying in 0.61s
+2025-09-06 23:05:49 - app.utils.error_handling - INFO - Retrying run_model (attempt 2/3)
+2025-09-06 23:05:49 - app.utils.error_handling - WARNING - Attempt 2 failed for run_model: Circuit breaker is OPEN for run_model. Too many recent failures.. Retrying in 1.75s
+2025-09-06 23:05:50 - app.utils.error_handling - INFO - Retrying run_model (attempt 3/3)
+2025-09-06 23:05:50 - app.utils.error_handling - ERROR - All retry attempts failed for run_model: Circuit breaker is OPEN for run_model. Too many recent failures.
+2025-09-06 23:05:50 - app.utils.error_handling - WARNING - Safe execution of _safe_model_execution failed: Circuit breaker is OPEN for run_model. Too many recent failures.
+2025-09-06 23:05:50 - app.services.scheduler_service - WARNING - Manual model execution failed (Job ID: manual_run_20250906_230548): Safe execution failed
+2025-09-06 23:05:56 - watchfiles.main - INFO - 4 changes detected
+2025-09-06 23:06:12 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:06:12 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:06:12 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:06:12 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:06:12 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:06:12 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:06:42 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:06:42 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:06:42 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:06:42 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:06:42 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:06:42 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:06:49 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:06:49 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:06:49 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:06:49 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:06:49 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:06:49 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:06:49 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:06:49 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:06:49 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:06:49 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:06:49 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:06:49 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:06:53 - watchfiles.main - INFO - 3 changes detected
+2025-09-06 23:06:56 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:06:56 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:06:56 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:06:56 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:06:56 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:06:56 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:06:56 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:06:56 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:06:56 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:06:56 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:06:56 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:06:56 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:07:04 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:07:04 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:07:04 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:07:04 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:07:04 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:07:04 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:07:04 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:07:04 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:07:04 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:07:04 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:07:04 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:07:04 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:07:11 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:07:11 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:07:11 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:07:11 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:07:11 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:07:11 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:07:11 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:07:11 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:07:11 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:07:11 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:07:11 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:07:11 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:07:15 - watchfiles.main - INFO - 3 changes detected
+2025-09-06 23:07:16 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:07:16 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:07:16 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:07:16 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:07:16 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:07:16 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:07:16 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:07:16 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:07:16 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:07:16 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:07:16 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:07:16 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:07:19 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:07:19 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:07:19 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:07:19 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:07:19 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:07:19 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:07:19 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:07:19 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:07:19 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:07:19 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:07:19 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:07:19 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:07:23 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:07:23 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:07:23 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:07:23 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:07:23 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:07:23 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:07:23 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:07:23 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:07:23 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:07:23 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:07:23 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:07:23 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:07:24 - watchfiles.main - INFO - 3 changes detected
+2025-09-06 23:07:34 - main - INFO - ReefShield Backend API shutting down...
+2025-09-06 23:07:34 - app.services.scheduler_service - INFO - SchedulerService stopped successfully
+2025-09-06 23:07:34 - main - INFO - ReefShield Backend API shutdown complete
+2025-09-06 23:07:34 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-09-06 23:07:39 - app.utils.logging_config - INFO - Advanced logging system initialized
+2025-09-06 23:07:41 - app.utils.logging_config - INFO - Advanced logging system initialized
+2025-09-06 23:07:41 - main - INFO - ReefShield Backend API starting up...
+2025-09-06 23:07:41 - app.services.model_service - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 23:07:41 - app.services.scheduler_service - INFO - SchedulerService initialized
+2025-09-06 23:07:41 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-06 23:07:41 - apscheduler.scheduler - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 23:07:41 - app.services.scheduler_service - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 23:07:41 - app.services.scheduler_service - INFO - Next scheduled run: 2025-09-07 06:00:00+00:00
+2025-09-06 23:07:41 - app.services.scheduler_service - INFO - SchedulerService started successfully
+2025-09-06 23:07:41 - main - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 23:07:41 - main - INFO - ReefShield Backend API startup complete
+2025-09-06 23:07:41 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:07:48 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:07:48 - app.services.data_service - INFO - Reading last 8 historical records from: C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 23:07:48 - app.utils.csv_reader - INFO - Extracted 8 readings from C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 23:07:48 - app.services.data_service - INFO - Retrieved 8 historical temperature readings
+2025-09-06 23:07:48 - app.services.data_service - INFO - Reading prediction data from: C:\Users\workspace\ReefShield\models\andaman_sst_next7_predictions.csv
+2025-09-06 23:07:48 - app.utils.csv_reader - INFO - Extracted 7 readings from C:\Users\workspace\ReefShield\models\andaman_sst_next7_predictions.csv
+2025-09-06 23:07:48 - app.services.data_service - INFO - Retrieved 7 prediction temperature readings
+2025-09-06 23:07:48 - app.services.data_service - INFO - Combined reef data created with 8 historical + 7 predicted readings
+2025-09-06 23:07:48 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:07:48 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:07:48 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:07:48 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:07:48 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:07:48 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:07:48 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:07:48 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:07:48 - app.services.data_service - INFO - Reading combined 14-day data from: C:\Users\workspace\ReefShield\models\andaman_sst_14day_combined.csv
+2025-09-06 23:07:48 - app.utils.csv_reader - INFO - Extracted 14 combined readings from C:\Users\workspace\ReefShield\models\andaman_sst_14day_combined.csv
+2025-09-06 23:07:48 - app.services.data_service - INFO - Retrieved 14 combined temperature readings
+2025-09-06 23:07:48 - app.services.data_service - INFO - Combined temperature data created with 14 readings
+2025-09-06 23:07:48 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:07:48 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:07:48 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:08:17 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:08:17 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:08:17 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:08:17 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:08:18 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:08:18 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:08:44 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:08:44 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:08:44 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:08:44 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:08:44 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:08:44 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:08:44 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:08:44 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:08:44 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:08:44 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:08:44 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:08:44 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:09:01 - watchfiles.main - INFO - 3 changes detected
+2025-09-06 23:09:02 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:09:14 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:09:14 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:09:14 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:09:14 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:09:14 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:09:14 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:09:31 - watchfiles.main - INFO - 3 changes detected
+2025-09-06 23:09:44 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:09:44 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:09:44 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:09:44 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:09:44 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:09:44 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:09:52 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:09:52 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:09:52 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:09:52 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:09:52 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:09:52 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:09:52 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:09:52 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:09:52 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:09:52 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:09:52 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:09:52 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:10:07 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:10:07 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:10:07 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:10:07 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:10:07 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:10:07 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:10:14 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:10:14 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:10:14 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:10:14 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:10:14 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:10:14 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:10:16 - watchfiles.main - INFO - 3 changes detected
+2025-09-06 23:10:17 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:10:18 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:10:19 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:10:19 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:10:20 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:10:37 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:10:37 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:10:37 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:10:37 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:10:37 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:10:37 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:10:44 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:10:44 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:10:44 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:10:44 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:10:44 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:10:44 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:11:07 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:11:07 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:11:07 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:11:07 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:11:07 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:11:07 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:11:14 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:11:14 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:11:14 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:11:14 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:11:14 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:11:14 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:11:16 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:11:16 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:11:16 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:11:16 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:11:16 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:11:16 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:11:16 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:11:16 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:11:16 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:11:16 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:11:16 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:11:16 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:11:22 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:11:22 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:11:22 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:11:22 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:11:22 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:11:22 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:11:33 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:11:33 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:11:33 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:11:33 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:11:33 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:11:33 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:11:33 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:11:33 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:11:33 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:11:33 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:11:33 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:11:33 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:11:44 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:11:44 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:11:44 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:11:44 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:11:44 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:11:44 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:12:42 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:12:42 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:12:42 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:12:42 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:12:42 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:12:42 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:12:59 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:12:59 - main - INFO - ReefShield Backend API shutting down...
+2025-09-06 23:12:59 - app.services.scheduler_service - INFO - SchedulerService stopped successfully
+2025-09-06 23:12:59 - main - INFO - ReefShield Backend API shutdown complete
+2025-09-06 23:12:59 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-09-06 23:12:59 - watchfiles.main - INFO - 3 changes detected
+2025-09-06 23:13:00 - app.utils.logging_config - INFO - Advanced logging system initialized
+2025-09-06 23:13:00 - main - INFO - ReefShield Backend API starting up...
+2025-09-06 23:13:00 - app.services.model_service - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 23:13:00 - app.services.scheduler_service - INFO - SchedulerService initialized
+2025-09-06 23:13:00 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-06 23:13:00 - apscheduler.scheduler - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 23:13:00 - app.services.scheduler_service - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 23:13:00 - app.services.scheduler_service - INFO - Next scheduled run: 2025-09-07 06:00:00+00:00
+2025-09-06 23:13:00 - app.services.scheduler_service - INFO - SchedulerService started successfully
+2025-09-06 23:13:00 - main - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 23:13:00 - main - INFO - ReefShield Backend API startup complete
+2025-09-06 23:13:00 - watchfiles.main - INFO - 6 changes detected
+2025-09-06 23:13:09 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:13:09 - app.services.data_service - INFO - Reading last 8 historical records from: C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 23:13:09 - app.utils.csv_reader - INFO - Extracted 8 readings from C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 23:13:09 - app.services.data_service - INFO - Retrieved 8 historical temperature readings
+2025-09-06 23:13:09 - app.services.data_service - INFO - Reading prediction data from: C:\Users\workspace\ReefShield\models\andaman_sst_next7_predictions.csv
+2025-09-06 23:13:09 - app.utils.csv_reader - INFO - Extracted 7 readings from C:\Users\workspace\ReefShield\models\andaman_sst_next7_predictions.csv
+2025-09-06 23:13:09 - app.services.data_service - INFO - Retrieved 7 prediction temperature readings
+2025-09-06 23:13:09 - app.services.data_service - INFO - Combined reef data created with 8 historical + 7 predicted readings
+2025-09-06 23:13:09 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:13:09 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:13:09 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:13:09 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:13:09 - app.services.data_service - INFO - Reading combined 14-day data from: C:\Users\workspace\ReefShield\models\andaman_sst_14day_combined.csv
+2025-09-06 23:13:09 - app.utils.csv_reader - INFO - Extracted 14 combined readings from C:\Users\workspace\ReefShield\models\andaman_sst_14day_combined.csv
+2025-09-06 23:13:09 - app.services.data_service - INFO - Retrieved 14 combined temperature readings
+2025-09-06 23:13:09 - app.services.data_service - INFO - Combined temperature data created with 14 readings
+2025-09-06 23:13:09 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:13:12 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:13:12 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:13:12 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:13:12 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:13:12 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:13:12 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:13:12 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:13:12 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:13:12 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:13:12 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:13:12 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:13:12 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:13:29 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:13:29 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:13:29 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:13:29 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:13:29 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:13:29 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:13:29 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:13:29 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:13:29 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:13:29 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:13:29 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:13:29 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:13:54 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:13:54 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:13:54 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:13:54 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:13:54 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:13:54 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:13:54 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:13:54 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:13:55 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:13:55 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:13:55 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:13:55 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:14:00 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:14:00 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:14:00 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:14:00 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:14:00 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:14:00 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:14:01 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:14:01 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:14:01 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:14:01 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:14:01 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:14:01 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:14:07 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:14:07 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:14:07 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:14:07 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:14:07 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:14:07 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:14:07 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:14:07 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:14:07 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:14:07 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:14:07 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:14:07 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:14:15 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:14:15 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:14:15 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:14:15 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:14:15 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:14:15 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:14:15 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:14:15 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:14:15 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:14:15 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:14:15 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:14:15 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:14:46 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:14:46 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:14:46 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:14:46 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:14:46 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:14:46 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:14:59 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:14:59 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:14:59 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:14:59 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:14:59 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:15:00 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:15:00 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:15:00 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:15:00 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:15:00 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:15:00 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:15:00 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:15:16 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:15:16 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:15:16 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:15:16 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:15:16 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:15:16 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:15:16 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:15:16 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:15:16 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:15:16 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:15:16 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:15:16 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:15:46 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:15:46 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:15:46 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:15:46 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:15:46 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:15:46 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:16:17 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:16:17 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:16:17 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:16:17 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:16:17 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:16:17 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:16:47 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:16:47 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:16:47 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:16:47 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:16:47 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:16:47 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:17:17 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:17:17 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:17:17 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:17:17 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:17:17 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:17:17 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:17:35 - watchfiles.main - INFO - 3 changes detected
+2025-09-06 23:17:40 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:17:47 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:17:47 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:17:47 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:17:47 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:17:47 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:17:47 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:18:17 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:18:17 - app.services.data_service - INFO - Reading last 8 historical records from: C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 23:18:17 - app.utils.csv_reader - INFO - Extracted 8 readings from C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 23:18:17 - app.services.data_service - INFO - Retrieved 8 historical temperature readings
+2025-09-06 23:18:17 - app.services.data_service - INFO - Combined reef data created with 8 historical + 7 predicted readings
+2025-09-06 23:18:17 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:18:17 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:18:17 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:18:17 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:18:17 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:18:47 - watchfiles.main - INFO - 3 changes detected
+2025-09-06 23:18:47 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:19:04 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:19:04 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:19:04 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:19:04 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:19:04 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:19:04 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:19:17 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:19:17 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:19:17 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:19:17 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:19:17 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:19:17 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:19:34 - watchfiles.main - INFO - 3 changes detected
+2025-09-06 23:19:45 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:19:45 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:19:45 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:19:45 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:19:45 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:19:45 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:19:45 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:19:45 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:19:45 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:19:45 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:19:45 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:19:45 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:19:47 - watchfiles.main - INFO - 3 changes detected
+2025-09-06 23:19:48 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:19:49 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:19:50 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:19:50 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:20:13 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:20:13 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:20:13 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:20:13 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:20:13 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:20:13 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:20:13 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:20:13 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:20:13 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:20:13 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:20:13 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:20:13 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:20:31 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:20:31 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:20:31 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:20:31 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:20:31 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:20:31 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:20:31 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:20:31 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:20:31 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:20:31 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:20:31 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:20:31 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:21:01 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:21:01 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:21:01 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:21:01 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:21:01 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:21:01 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:21:22 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:21:22 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:21:22 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:21:22 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:21:22 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:21:22 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:21:22 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:21:22 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:21:22 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:21:22 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:21:22 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:21:22 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:21:25 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:21:25 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:21:25 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:21:25 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:21:25 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:21:25 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:21:25 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:21:25 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:21:25 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:21:25 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:21:25 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:21:25 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:21:27 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:21:27 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:21:27 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:21:27 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:21:27 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:21:27 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:21:27 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:21:27 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:21:27 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:21:27 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:21:27 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:21:27 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:21:29 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:21:29 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:21:29 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:21:29 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:21:29 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:21:29 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:21:29 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:21:29 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:21:29 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:21:29 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:21:29 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:21:29 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:21:47 - watchfiles.main - INFO - 3 changes detected
+2025-09-06 23:21:48 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:21:48 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:21:48 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:21:48 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:21:48 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:21:48 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:21:48 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:21:48 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:21:48 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:21:48 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:21:48 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:21:48 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:22:18 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:22:18 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:22:18 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:22:18 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:22:18 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:22:18 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:22:48 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:22:48 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:22:48 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:22:48 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:22:48 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:22:48 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:22:52 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:22:52 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:22:52 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:22:52 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:22:52 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:22:52 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:22:52 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:22:52 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:22:52 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:22:52 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:22:52 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:22:52 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:22:56 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:22:56 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:22:56 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:22:56 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:22:56 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:22:56 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:22:56 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:22:56 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:22:56 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:22:56 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:22:56 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:22:56 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:23:27 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:23:27 - app.services.data_service - INFO - Reading last 8 historical records from: C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 23:23:27 - app.utils.csv_reader - INFO - Extracted 8 readings from C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 23:23:27 - app.services.data_service - INFO - Retrieved 8 historical temperature readings
+2025-09-06 23:23:27 - app.services.data_service - INFO - Combined reef data created with 8 historical + 7 predicted readings
+2025-09-06 23:23:27 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:23:27 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:23:27 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:23:27 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:23:27 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:23:57 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:23:57 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:23:57 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:23:57 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:23:57 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:23:57 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:24:25 - watchfiles.main - INFO - 3 changes detected
+2025-09-06 23:24:27 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:24:27 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:24:27 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:24:27 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:24:27 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:24:27 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:24:28 - watchfiles.main - INFO - 3 changes detected
+2025-09-06 23:24:46 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:24:46 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:24:46 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:24:46 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:24:46 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:24:46 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:24:55 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:24:55 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:24:55 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:24:55 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:24:55 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:24:55 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:25:03 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:25:03 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:25:03 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:25:03 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:25:03 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:25:03 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:25:05 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:25:05 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:25:05 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:25:05 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:25:05 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:25:05 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:25:05 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:25:05 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:25:05 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:25:05 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:25:05 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:25:05 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:25:12 - watchfiles.main - INFO - 3 changes detected
+2025-09-06 23:25:42 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:25:42 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:25:42 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:25:42 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:25:42 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:25:42 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:25:42 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:25:42 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:25:42 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:25:42 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:25:42 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:25:42 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:25:49 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:25:49 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:25:49 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:25:49 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:25:49 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:25:49 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:25:50 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:25:50 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:25:50 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:25:50 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:25:50 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:25:50 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:25:50 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:25:50 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:25:50 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:25:50 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:25:50 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:25:50 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:25:58 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:25:58 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:25:58 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:25:58 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:25:58 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:25:58 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:26:00 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:26:00 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:26:00 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:26:00 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:26:00 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:26:00 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:26:00 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:26:00 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:26:00 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:26:00 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:26:00 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:26:00 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:26:12 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:26:12 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:26:12 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:26:12 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:26:12 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:26:12 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:26:20 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:26:20 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:26:20 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:26:20 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:26:20 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:26:20 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:26:26 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:26:26 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:26:26 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:26:26 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:26:26 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:26:26 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:26:32 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:26:32 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:26:32 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:26:32 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:26:32 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:26:32 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:26:37 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:26:37 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:26:37 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:26:37 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:26:37 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:26:37 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:26:42 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:26:42 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:26:42 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:26:42 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:26:42 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:26:42 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:26:42 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:26:42 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:26:42 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:26:42 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:26:42 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:26:42 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:26:50 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:26:50 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:26:50 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:26:50 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:26:50 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:26:50 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:27:00 - watchfiles.main - INFO - 3 changes detected
+2025-09-06 23:27:01 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:27:07 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:27:08 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:27:08 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:27:08 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:27:08 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:27:08 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:27:08 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:27:08 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:27:08 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:27:08 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:27:08 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:27:08 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:27:08 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:27:08 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:27:08 - watchfiles.main - INFO - 3 changes detected
+2025-09-06 23:27:24 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:27:24 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:27:24 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:27:24 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:27:24 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:27:24 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:27:24 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:27:24 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:27:24 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:27:24 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:27:24 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:27:24 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:27:29 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:27:29 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:27:29 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:27:29 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:27:29 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:27:29 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:27:29 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:27:29 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:27:29 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:27:29 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:27:29 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:27:29 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:27:35 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:27:35 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:27:35 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:27:35 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:27:35 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:27:35 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:27:35 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:27:35 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:27:35 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:27:35 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:27:35 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:27:35 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:27:47 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:27:47 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:27:47 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:27:47 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:27:47 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:27:47 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:27:47 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:27:47 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:27:47 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:27:47 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:27:47 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:27:47 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:27:53 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:27:53 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:27:53 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:27:53 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:27:53 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:27:53 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:27:53 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:27:53 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:27:53 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:27:53 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:27:53 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:27:53 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:28:14 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:28:14 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:28:14 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:28:14 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:28:14 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:28:14 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:28:14 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:28:14 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:28:14 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:28:14 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:28:14 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:28:14 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:28:30 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:28:30 - app.services.data_service - INFO - Reading last 8 historical records from: C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 23:28:30 - app.utils.csv_reader - INFO - Extracted 8 readings from C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 23:28:30 - app.services.data_service - INFO - Retrieved 8 historical temperature readings
+2025-09-06 23:28:30 - app.services.data_service - INFO - Combined reef data created with 8 historical + 7 predicted readings
+2025-09-06 23:28:30 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:28:30 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:28:30 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:28:30 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:28:30 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:28:30 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:28:30 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:28:30 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:28:30 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:28:30 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:28:30 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:28:45 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:28:45 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:28:45 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:28:45 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:28:45 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:28:45 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:28:45 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:28:45 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:28:45 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:28:45 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:28:45 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:28:45 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:28:51 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:28:51 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:28:51 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:28:51 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:28:51 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:28:51 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:28:51 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:28:51 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:28:51 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:28:51 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:28:51 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:28:51 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:29:21 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:29:21 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:29:21 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:29:21 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:29:21 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:29:21 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:29:52 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:29:52 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:29:52 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:29:52 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:29:52 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:29:52 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:29:55 - watchfiles.main - INFO - 3 changes detected
+2025-09-06 23:30:20 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:30:20 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:30:20 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:30:20 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:30:20 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:30:20 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:30:20 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:30:20 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:30:20 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:30:20 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:30:20 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:30:20 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:30:32 - watchfiles.main - INFO - 3 changes detected
+2025-09-06 23:30:33 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:30:34 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:30:34 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:30:37 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:31:41 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:31:41 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:31:41 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:31:41 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:31:41 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:31:41 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:31:41 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:31:41 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:31:41 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:31:41 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:31:41 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:31:41 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:32:06 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:32:06 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:32:06 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:32:06 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:32:06 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:32:06 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:32:06 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:32:06 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:32:06 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:32:06 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:32:06 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:32:06 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:32:09 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:32:09 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:32:09 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:32:09 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:32:09 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:32:09 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:32:09 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:32:09 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:32:09 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:32:09 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:32:09 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:32:09 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:32:39 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:32:39 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:32:39 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:32:39 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:32:39 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:32:39 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:32:58 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:32:58 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:32:58 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:32:58 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:32:58 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:32:58 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:32:58 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:32:58 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:32:58 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:32:58 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:32:58 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:32:58 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:32:59 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:32:59 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:32:59 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:32:59 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:32:59 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:32:59 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:32:59 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:32:59 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:32:59 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:32:59 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:32:59 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:32:59 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:33:29 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:33:29 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:33:29 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:33:29 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:33:29 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:33:29 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:33:40 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:33:40 - app.services.data_service - INFO - Reading last 8 historical records from: C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 23:33:40 - app.utils.csv_reader - INFO - Extracted 8 readings from C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 23:33:40 - app.services.data_service - INFO - Retrieved 8 historical temperature readings
+2025-09-06 23:33:40 - app.services.data_service - INFO - Combined reef data created with 8 historical + 7 predicted readings
+2025-09-06 23:33:40 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:33:40 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:33:40 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:33:40 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:33:40 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:33:40 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:33:40 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:33:40 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:33:40 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:33:40 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:33:40 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:33:42 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:33:42 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:33:42 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:33:42 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:33:42 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:33:42 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:33:42 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:33:42 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:33:42 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:33:42 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:33:42 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:33:42 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:33:43 - watchfiles.main - INFO - 3 changes detected
+2025-09-06 23:33:44 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:33:44 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:33:44 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:33:44 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:33:44 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:33:44 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:33:44 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:33:44 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:33:44 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:33:44 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:33:44 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:33:44 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:33:47 - watchfiles.main - INFO - 3 changes detected
+2025-09-06 23:33:53 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:34:05 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:34:05 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:34:05 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:34:05 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:34:05 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:34:05 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:34:05 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:34:05 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:34:05 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:34:05 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:34:05 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:34:05 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:34:18 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:34:18 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:34:18 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:34:18 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:34:18 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:34:18 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:34:27 - watchfiles.main - INFO - 3 changes detected
+2025-09-06 23:34:33 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:34:48 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:34:48 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:34:48 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:34:48 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:34:48 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:34:48 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:34:57 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:34:57 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:34:57 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:34:57 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:34:57 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:34:57 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:34:57 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:34:57 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:34:57 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:34:57 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:34:57 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:34:57 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:34:58 - watchfiles.main - INFO - 3 changes detected
+2025-09-06 23:35:00 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:35:01 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:35:01 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:35:27 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:35:27 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:35:27 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:35:27 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:35:27 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:35:27 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:35:53 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:35:53 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:35:53 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:35:53 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:35:53 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:35:53 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:35:53 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:35:53 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:35:53 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:35:53 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:35:53 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:35:53 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:35:56 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:35:56 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:35:56 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:35:56 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:35:56 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:35:56 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:35:56 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:35:56 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:35:56 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:35:56 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:35:56 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:35:56 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:36:26 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:36:26 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:36:26 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:36:26 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:36:26 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:36:26 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:36:56 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:36:56 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:36:56 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:36:56 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:36:56 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:36:56 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:37:26 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:37:26 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:37:26 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:37:26 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:37:26 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:37:26 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:37:48 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:37:48 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:37:48 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:37:48 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:37:48 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:37:48 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:37:48 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:37:48 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:37:48 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:37:48 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:37:48 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:37:48 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:37:53 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:37:53 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:37:53 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:37:53 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:37:53 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:37:53 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:37:53 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:37:53 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:37:53 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:37:53 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:37:53 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:37:53 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:37:59 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:37:59 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:37:59 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:37:59 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:37:59 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:37:59 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:38:13 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:38:13 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:38:13 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:38:13 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:38:13 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:38:13 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:38:39 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:38:39 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:38:39 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:38:39 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:38:39 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:38:39 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:38:52 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:38:52 - app.services.data_service - INFO - Reading last 8 historical records from: C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 23:38:52 - app.utils.csv_reader - INFO - Extracted 8 readings from C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 23:38:52 - app.services.data_service - INFO - Retrieved 8 historical temperature readings
+2025-09-06 23:38:52 - app.services.data_service - INFO - Combined reef data created with 8 historical + 7 predicted readings
+2025-09-06 23:38:52 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:38:52 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:38:52 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:38:52 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:38:52 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:39:15 - app.utils.logging_config - INFO - Advanced logging system initialized
+2025-09-06 23:39:15 - watchfiles.main - INFO - 3 changes detected
+2025-09-06 23:39:16 - app.utils.logging_config - INFO - Advanced logging system initialized
+2025-09-06 23:39:16 - main - INFO - ReefShield Backend API starting up...
+2025-09-06 23:39:16 - app.services.model_service - INFO - ModelService initialized with script: C:\Users\workspace\ReefShield\models\finalig.py
+2025-09-06 23:39:16 - app.services.scheduler_service - INFO - SchedulerService initialized
+2025-09-06 23:39:16 - apscheduler.scheduler - INFO - Scheduler started
+2025-09-06 23:39:16 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:39:16 - apscheduler.scheduler - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-06 23:39:16 - app.services.scheduler_service - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-06 23:39:16 - app.services.scheduler_service - INFO - Next scheduled run: 2025-09-07 06:00:00+00:00
+2025-09-06 23:39:16 - app.services.scheduler_service - INFO - SchedulerService started successfully
+2025-09-06 23:39:16 - main - INFO - Models directory found: C:\Users\workspace\ReefShield\models
+2025-09-06 23:39:16 - main - INFO - ReefShield Backend API startup complete
+2025-09-06 23:39:16 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:39:22 - watchfiles.main - INFO - 3 changes detected
+2025-09-06 23:39:22 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:39:22 - app.services.data_service - INFO - Reading last 8 historical records from: C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 23:39:22 - app.utils.csv_reader - INFO - Extracted 8 readings from C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 23:39:22 - app.services.data_service - INFO - Retrieved 8 historical temperature readings
+2025-09-06 23:39:22 - app.services.data_service - INFO - Reading prediction data from: C:\Users\workspace\ReefShield\models\andaman_sst_next7_predictions.csv
+2025-09-06 23:39:22 - app.utils.csv_reader - INFO - Extracted 7 readings from C:\Users\workspace\ReefShield\models\andaman_sst_next7_predictions.csv
+2025-09-06 23:39:22 - app.services.data_service - INFO - Retrieved 7 prediction temperature readings
+2025-09-06 23:39:22 - app.services.data_service - INFO - Combined reef data created with 8 historical + 7 predicted readings
+2025-09-06 23:39:22 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:39:22 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:39:22 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:39:22 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:39:22 - app.services.data_service - INFO - Reading combined 14-day data from: C:\Users\workspace\ReefShield\models\andaman_sst_14day_combined.csv
+2025-09-06 23:39:22 - app.utils.csv_reader - INFO - Extracted 14 combined readings from C:\Users\workspace\ReefShield\models\andaman_sst_14day_combined.csv
+2025-09-06 23:39:22 - app.services.data_service - INFO - Retrieved 14 combined temperature readings
+2025-09-06 23:39:22 - app.services.data_service - INFO - Combined temperature data created with 14 readings
+2025-09-06 23:39:22 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:39:52 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:39:52 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:39:52 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:39:52 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:39:52 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:39:52 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:39:53 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:39:53 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:39:53 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:39:53 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:39:53 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:39:53 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:39:53 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:39:53 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:39:53 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:39:53 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:39:53 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:39:53 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:39:58 - watchfiles.main - INFO - 3 changes detected
+2025-09-06 23:40:00 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:40:00 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:40:08 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:40:08 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:40:08 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:40:08 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:40:08 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:40:08 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:40:15 - watchfiles.main - INFO - 3 changes detected
+2025-09-06 23:40:20 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:40:22 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:40:22 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:40:22 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:40:22 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:40:22 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:40:22 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:40:22 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:40:22 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:40:22 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:40:22 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:40:22 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:40:22 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:40:25 - watchfiles.main - INFO - 3 changes detected
+2025-09-06 23:40:26 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:40:27 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:40:39 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:40:39 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:40:39 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:40:39 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:40:39 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:40:39 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:40:39 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:40:39 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:40:39 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:40:39 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:40:39 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:40:39 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:40:39 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:40:39 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:40:39 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:40:39 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:40:39 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:40:39 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:41:07 - watchfiles.main - INFO - 3 changes detected
+2025-09-06 23:41:07 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:41:08 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:41:09 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:41:09 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:41:09 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:41:09 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:41:09 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:41:09 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:41:39 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:41:39 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:41:39 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:41:39 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:41:39 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:41:39 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:42:09 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:42:09 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:42:09 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:42:09 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:42:09 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:42:09 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:42:39 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:42:39 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:42:39 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:42:39 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:42:39 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:42:39 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:43:09 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:43:09 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:43:09 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:43:09 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:43:09 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:43:09 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:43:39 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:43:39 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:43:39 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:43:39 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:43:39 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:43:39 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:44:42 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:44:42 - app.services.data_service - INFO - Reading last 8 historical records from: C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 23:44:42 - app.utils.csv_reader - INFO - Extracted 8 readings from C:\Users\workspace\ReefShield\models\andaman_sst_recent_filled.csv
+2025-09-06 23:44:42 - app.services.data_service - INFO - Retrieved 8 historical temperature readings
+2025-09-06 23:44:42 - app.services.data_service - INFO - Combined reef data created with 8 historical + 7 predicted readings
+2025-09-06 23:44:42 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:44:42 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:44:42 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:44:42 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:44:42 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:45:25 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:45:25 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:45:25 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:45:25 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:45:25 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:45:25 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:45:39 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:45:39 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:45:39 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:45:39 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:45:39 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:45:39 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:46:09 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:46:09 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:46:09 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:46:09 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:46:09 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:46:09 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:46:39 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:46:39 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:46:39 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:46:39 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:46:39 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:46:39 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:47:09 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:47:09 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:47:09 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:47:09 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:47:09 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:47:09 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:47:42 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:47:42 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:47:42 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:47:42 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:47:42 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:47:42 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:48:10 - watchfiles.main - INFO - 3 changes detected
+2025-09-06 23:48:11 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:48:16 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:48:16 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:48:16 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:48:16 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:48:16 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:48:16 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:48:22 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:48:22 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:48:22 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:48:22 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:48:22 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:48:22 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:48:52 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:48:52 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:48:52 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:48:52 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:48:52 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:48:52 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:49:22 - app.api.routes - INFO - Fetching complete reef data
+2025-09-06 23:49:22 - app.api.routes - INFO - Retrieved reef data: 8 historical + 7 predictions, risk: RiskLevel.LOW
+2025-09-06 23:49:22 - app.api.routes - INFO - Fetching system status
+2025-09-06 23:49:22 - app.api.routes - INFO - System status: API=healthy, Model running=False
+2025-09-06 23:49:22 - app.api.routes - INFO - Fetching 14-day combined temperature data
+2025-09-06 23:49:22 - app.api.routes - INFO - Retrieved combined data: 14 readings
+2025-09-06 23:49:39 - watchfiles.main - INFO - 3 changes detected
+2025-09-06 23:49:40 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:49:40 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:49:41 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:49:42 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:49:42 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:49:44 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:49:45 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:49:46 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:49:46 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:49:47 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:49:47 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:49:48 - watchfiles.main - INFO - 1 change detected
+2025-09-06 23:49:48 - watchfiles.main - INFO - 1 change detected

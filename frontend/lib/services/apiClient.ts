@@ -141,7 +141,7 @@ export class ReefShieldAPIClient {
     options: RequestInit = {}
   ): Promise<T> {
     const url = `${this.config.baseUrl}${endpoint}`;
-    let lastError: Error;
+    let lastError: Error = new Error('Unknown error');
 
     for (let attempt = 1; attempt <= this.config.retryAttempts; attempt++) {
       try {

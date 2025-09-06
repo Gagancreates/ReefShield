@@ -8,23 +8,35 @@ import { Line, LineChart, XAxis, YAxis, CartesianGrid, ResponsiveContainer } fro
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { useState } from "react"
+import dynamic from "next/dynamic"
 import { ZoomIn, ZoomOut, RotateCcw, Layers, RefreshCw } from "lucide-react"
-import { GlobalMap } from "@/components/global-map"
-import { Map } from "@/components/map"
 import { ChlorophyllChart } from "@/components/chlorophyll-chart"
-import { useRealtimeLocations, useTemperatureAnalysis, useRealtimeAlerts, useSystemStatus } from "@/lib/hooks/useRealtimeData"
+import { BackendStatus } from "@/components/backend-status"
+import { useRealtimeLocations, useTemperatureAnalysis, useRealtimeAlerts, useSystemStatus, useBackendConnection } from "@/lib/hooks/useRealtimeData"
+
+// Dynamic imports for components that use window object (SSR safe)
+const GlobalMap = dynamic(() => import("@/components/global-map").then(mod => ({ default: mod.GlobalMap })), {
+  ssr: false,
+  loading: () => <div className="h-80 bg-gray-100 rounded-lg flex items-center justify-center">Loading map...</div>
+})
+
+const Map = dynamic(() => import("@/components/map").then(mod => ({ default: mod.Map })), {
+  ssr: false,
+  loading: () => <div className="h-64 bg-gray-100 rounded-lg flex items-center justify-center">Loading map...</div>
+})
 
 export default function DashboardPage() {
   const [selectedLocation, setSelectedLocation] = useState<string | null>(null)
   
   // Real-time data hooks
   const { locations: realtimeLocations, loading: locationsLoading, lastUpdated } = useRealtimeLocations()
-  const { data: temperatureAnalysisData } = useTemperatureAnalysis()
+  const { data: temperatureAnalysisData, loading: temperatureLoading } = useTemperatureAnalysis()
   const { alerts: realtimeAlerts } = useRealtimeAlerts()
   const { status: systemStatus } = useSystemStatus()
+  const { connectionStatus } = useBackendConnection()
 
   // Convert real-time data to component format
-  const locations = realtimeLocations.map(loc => ({
+  const locations = realtimeLocations.length > 0 ? realtimeLocations.map(loc => ({
     id: loc.id,
     name: loc.name,
     temperature: loc.currentTemperature,
@@ -39,11 +51,11 @@ export default function DashboardPage() {
       riskLevel: loc.riskLevel,
     },
     chlorophyll: loc.chlorophyll,
-  }))
+  })) : []
 
   const temperatureData = temperatureAnalysisData
 
-  const reefSites = realtimeLocations.map((loc, index) => ({
+  const reefSites = realtimeLocations.length > 0 ? realtimeLocations.map((loc, index) => ({
     id: index + 1,
     name: loc.name,
     health: loc.riskLevel === 'low' ? 90 : loc.riskLevel === 'moderate' ? 75 : 60,
@@ -51,7 +63,7 @@ export default function DashboardPage() {
     temperature: loc.currentTemperature,
     alerts: loc.riskLevel === 'high' ? 3 : loc.riskLevel === 'moderate' ? 1 : 0,
     coordinates: [loc.coordinates.lat, loc.coordinates.lng] as [number, number],
-  }))
+  })) : []
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -79,7 +91,7 @@ export default function DashboardPage() {
                     Real-time status of coral reef sites in Andaman Islands
                     {lastUpdated && (
                       <span className="ml-2 text-xs text-green-600">
-                        • Live (Updated {lastUpdated.toLocaleTimeString()})
+                        • Live (Updated {lastUpdated?.toLocaleTimeString() || 'Loading...'})
                       </span>
                     )}
                   </CardDescription>
@@ -120,42 +132,141 @@ export default function DashboardPage() {
             </CardContent>
           </Card>
 
+          {/* Temperature Analysis Chart */}
           <Card className="bg-gradient-to-br from-orange-50 to-red-50 border-2 border-gray-800 shadow-lg">
             <CardHeader className="pb-2">
-              <CardTitle className="font-serif text-2xl text-orange-900">14 Day Temperature Analysis</CardTitle>
-              <CardDescription>Recent temperature trends with bleaching threshold monitoring</CardDescription>
+              <CardTitle className="font-serif text-xl text-orange-900">Temperature Analysis</CardTitle>
+              <CardDescription>
+                14-day temperature trends with predictions
+                {connectionStatus === 'connected' && (
+                  <span className="ml-2 text-xs text-green-600">
+                    • Live Data Connected
+                  </span>
+                )}
+                {connectionStatus === 'disconnected' && (
+                  <span className="ml-2 text-xs text-orange-600">
+                    • Connecting to Backend...
+                  </span>
+                )}
+                {connectionStatus === 'error' && (
+                  <span className="ml-2 text-xs text-red-600">
+                    • Connection Error
+                  </span>
+                )}
+              </CardDescription>
             </CardHeader>
             <CardContent className="pt-0">
-              <ChartContainer
-                config={{
-                  temp: {
-                    label: "Temperature (°C)",
-                    color: "hsl(var(--chart-1))",
-                  },
-                  threshold: {
-                    label: "Bleaching Threshold",
-                    color: "hsl(var(--chart-5))",
-                  },
-                }}
-                className="h-64"
-              >
-                <ResponsiveContainer width="100%" height="100%">
-                  <LineChart data={temperatureData}>
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="day" />
-                    <YAxis domain={[26, 30]} />
-                    <ChartTooltip content={<ChartTooltipContent />} />
-                    <Line type="monotone" dataKey="temp" stroke="var(--color-temp)" strokeWidth={2} />
-                    <Line
-                      type="monotone"
-                      dataKey="threshold"
-                      stroke="var(--color-threshold)"
-                      strokeWidth={2}
-                      strokeDasharray="5 5"
-                    />
-                  </LineChart>
-                </ResponsiveContainer>
-              </ChartContainer>
+              {connectionStatus === 'connected' && !temperatureLoading && temperatureData.length > 0 ? (
+                <>
+                  <ChartContainer
+                    config={{
+                      temp: {
+                        label: "Temperature (°C)",
+                        color: "hsl(var(--chart-1))",
+                      },
+                      threshold: {
+                        label: "Threshold",
+                        color: "hsl(var(--chart-5))",
+                      },
+                    }}
+                    className="h-80"
+                  >
+                    <ResponsiveContainer width="100%" height="100%">
+                      <LineChart data={temperatureData}>
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis 
+                          dataKey="day" 
+                          angle={-45}
+                          textAnchor="end"
+                          height={80}
+                          fontSize={12}
+                        />
+                        <YAxis domain={[28.5, 29.5]} />
+                        <ChartTooltip content={<ChartTooltipContent />} />
+                        <Line 
+                          type="monotone" 
+                          dataKey="temp" 
+                          stroke="var(--color-temp)" 
+                          strokeWidth={3}
+                          dot={(props) => {
+                            const { payload } = props
+                            const isPredicted = payload?.source === 'Predicted'
+                            return (
+                              <circle
+                                cx={props.cx}
+                                cy={props.cy}
+                                r={isPredicted ? 6 : 4}
+                                fill={isPredicted ? '#ff6b35' : '#0066cc'}
+                                stroke={isPredicted ? '#ff8c00' : '#0066cc'}
+                                strokeWidth={2}
+                              />
+                            )
+                          }}
+                        />
+                        <Line 
+                          type="monotone" 
+                          dataKey="threshold" 
+                          stroke="var(--color-threshold)" 
+                          strokeWidth={2}
+                          strokeDasharray="5 5"
+                          dot={false}
+                        />
+                      </LineChart>
+                    </ResponsiveContainer>
+                  </ChartContainer>
+                  <div className="flex items-center justify-center gap-6 mt-4 text-xs">
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 rounded-full bg-blue-600"></div>
+                      <span>Historical Data</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 rounded-full bg-orange-500"></div>
+                      <span>Predictions</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-4 h-0.5 bg-gray-400 border-dashed"></div>
+                      <span>Threshold</span>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <div className="h-80 flex items-center justify-center">
+                  <div className="text-center space-y-4">
+                    {connectionStatus === 'disconnected' && (
+                      <>
+                        <RefreshCw className="h-8 w-8 mx-auto text-orange-500 animate-spin" />
+                        <div className="text-lg font-medium text-gray-700">Connecting to FastAPI Backend...</div>
+                        <div className="text-sm text-gray-500">Loading temperature analysis data</div>
+                      </>
+                    )}
+                    {connectionStatus === 'connected' && temperatureLoading && (
+                      <>
+                        <RefreshCw className="h-8 w-8 mx-auto text-blue-500 animate-spin" />
+                        <div className="text-lg font-medium text-gray-700">Loading Temperature Data...</div>
+                        <div className="text-sm text-gray-500">Fetching analysis from backend</div>
+                      </>
+                    )}
+                    {connectionStatus === 'connected' && !temperatureLoading && temperatureData.length === 0 && (
+                      <>
+                        <div className="h-8 w-8 mx-auto bg-blue-100 rounded-full flex items-center justify-center">
+                          <span className="text-blue-600">📊</span>
+                        </div>
+                        <div className="text-lg font-medium text-gray-700">No Temperature Data</div>
+                        <div className="text-sm text-gray-500">No analysis data available from backend</div>
+                      </>
+                    )}
+                    {connectionStatus === 'error' && (
+                      <>
+                        <div className="h-8 w-8 mx-auto bg-red-100 rounded-full flex items-center justify-center">
+                          <span className="text-red-600">!</span>
+                        </div>
+                        <div className="text-lg font-medium text-gray-700">Connection Failed</div>
+                        <div className="text-sm text-gray-500">Unable to load temperature data from backend</div>
+                      </>
+                    )}
+                  </div>
+                </div>
+              )}
             </CardContent>
           </Card>
 
@@ -215,13 +326,17 @@ export default function DashboardPage() {
         </div>
 
         <div className="lg:col-span-2 space-y-3">
+          {/* Backend Connection Status */}
+          <BackendStatus />
+          
           <Card className="bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-gray-800 shadow-lg">
             <CardHeader className="pb-2">
               <CardTitle className="font-serif text-xl text-blue-900">Monitoring Locations</CardTitle>
               <CardDescription>Current temperatures at key reef sites</CardDescription>
             </CardHeader>
             <CardContent className="pt-0 space-y-2">
-              {locations.map((location) => (
+              {realtimeLocations.length > 0 ? (
+                locations.map((location) => (
                 <Dialog key={location.id}>
                   <DialogTrigger asChild>
                     <Card className="cursor-pointer hover:shadow-md transition-shadow border-2 border-gray-700 bg-white">
@@ -312,7 +427,7 @@ export default function DashboardPage() {
                                 <LineChart data={location.temperatureData}>
                                   <CartesianGrid strokeDasharray="3 3" />
                                   <XAxis dataKey="day" />
-                                  <YAxis domain={[26, 30]} />
+                                  <YAxis domain={[24, 32]} />
                                   <ChartTooltip content={<ChartTooltipContent />} />
                                   <Line type="monotone" dataKey="temp" stroke="var(--color-temp)" strokeWidth={2} />
                                 </LineChart>
@@ -396,7 +511,14 @@ export default function DashboardPage() {
                     </div>
                   </DialogContent>
                 </Dialog>
-              ))}
+              ))
+              ) : (
+                <div className="text-center py-8 text-gray-500">
+                  <RefreshCw className="h-8 w-8 mx-auto text-blue-500 animate-spin mb-4" />
+                  <p className="text-sm font-medium">Loading monitoring locations...</p>
+                  <p className="text-xs">Connecting to backend data source</p>
+                </div>
+              )}
             </CardContent>
           </Card>
 

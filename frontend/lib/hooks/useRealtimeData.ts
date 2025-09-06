@@ -41,15 +41,86 @@ export function useTemperatureAnalysis() {
     threshold: number
     source: string
   }>>([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    // Function to update temperature data
+    const updateTemperatureData = () => {
+      const connectionStatus = backendRealtimeService.getConnectionStatus()
+      const analysisData = backendRealtimeService.getTemperatureAnalysis()
+      
+      setData(analysisData)
+      
+      // Only set loading to false when we have a successful connection and data
+      if (connectionStatus === 'connected' && analysisData.length > 0) {
+        setLoading(false)
+      } else if (connectionStatus === 'error') {
+        setLoading(false) // Stop loading on error too
+      }
+    }
+
+    // Initial fetch
+    updateTemperatureData()
+    
+    // Set up rapid polling for initial connection
+    const fastInterval = setInterval(updateTemperatureData, 3000) // Check every 3 seconds
+
+    // After 30 seconds, switch to normal polling aligned with backend updates
+    const transitionTimeout = setTimeout(() => {
+      clearInterval(fastInterval)
+      
+      // Now sync with backend update cycle (every 30 seconds)
+      const normalInterval = setInterval(updateTemperatureData, 30000)
+      
+      return () => clearInterval(normalInterval)
+    }, 30000)
+
+    return () => {
+      clearInterval(fastInterval)
+      clearTimeout(transitionTimeout)
+    }
+  }, [])
+
+  return { data, loading }
+}
+
+// Hook for temperature page specific data format
+export function useTemperaturePageData() {
+  const [data, setData] = useState<Array<{
+    date: string;
+    temp: number;
+    threshold: number;
+    site: string;
+  }>>([])
 
   useEffect(() => {
     const analysisData = backendRealtimeService.getTemperatureAnalysis()
-    setData(analysisData)
+    if (analysisData.length > 0) {
+      const formattedData = analysisData.map((item, index) => ({
+        date: `2025-03-${String(index + 1).padStart(2, '0')}`,
+        temp: item.temp,
+        threshold: item.threshold,
+        site: "Andaman Islands"
+      }))
+      setData(formattedData)
+    } else {
+      setData([])
+    }
     
     // Update temperature analysis every minute
     const interval = setInterval(() => {
       const newAnalysisData = backendRealtimeService.getTemperatureAnalysis()
-      setData(newAnalysisData)
+      if (newAnalysisData.length > 0) {
+        const newFormattedData = newAnalysisData.map((item, index) => ({
+          date: `2025-03-${String(index + 1).padStart(2, '0')}`,
+          temp: item.temp,
+          threshold: item.threshold,
+          site: "Andaman Islands"
+        }))
+        setData(newFormattedData)
+      } else {
+        setData([])
+      }
     }, 60000)
 
     return () => clearInterval(interval)
@@ -140,10 +211,20 @@ export function useBackendConnection() {
     // Initial check
     checkConnection()
 
-    // Check every 30 seconds
-    const interval = setInterval(checkConnection, 30 * 1000)
+    // Check every 10 seconds initially, then every 30 seconds
+    const initialInterval = setInterval(checkConnection, 10 * 1000)
+    
+    // After 1 minute, switch to 30-second intervals
+    setTimeout(() => {
+      clearInterval(initialInterval)
+      const regularInterval = setInterval(checkConnection, 30 * 1000)
+      
+      return () => clearInterval(regularInterval)
+    }, 60 * 1000)
 
-    return () => clearInterval(interval)
+    return () => {
+      clearInterval(initialInterval)
+    }
   }, [])
 
   return { connectionStatus, lastChecked }

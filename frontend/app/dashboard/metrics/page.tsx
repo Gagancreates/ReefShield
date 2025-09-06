@@ -232,7 +232,7 @@ export default function MetricsPage() {
                 <LineChart data={healthScoreData}>
                   <CartesianGrid strokeDasharray="3 3" className="opacity-30" />
                   <XAxis dataKey="month" className="text-xs" />
-                  <YAxis domain={[80, 95]} className="text-xs" />
+                  <YAxis domain={[75, 100]} className="text-xs" />
                   <Tooltip formatter={(value: number) => [`${value}%`, "Health Score"]} />
                   <Line
                     type="monotone"
@@ -292,7 +292,7 @@ export default function MetricsPage() {
                 <AreaChart data={coralCoverageData}>
                   <CartesianGrid strokeDasharray="3 3" />
                   <XAxis dataKey="month" />
-                  <YAxis domain={[75, 80]} tickFormatter={(value) => `${value}%`} />
+                  <YAxis domain={[70, 85]} tickFormatter={(value) => `${value}%`} />
                   <Tooltip formatter={(value: number) => [`${value}%`, "Coverage"]} />
                   <Area type="monotone" dataKey="coverage" stroke="#06b6d4" fill="#06b6d4" fillOpacity={0.3} />
                 </AreaChart>
@@ -312,7 +312,7 @@ export default function MetricsPage() {
                 <LineChart data={waterQualityTrendData}>
                   <CartesianGrid strokeDasharray="3 3" />
                   <XAxis dataKey="week" />
-                  <YAxis />
+                  <YAxis domain={[0, 15]} />
                   <Tooltip />
                   <Line type="monotone" dataKey="ph" stroke="#8b5cf6" strokeWidth={2} name="pH Level" />
                   <Line type="monotone" dataKey="oxygen" stroke="#10b981" strokeWidth={2} name="Oxygen (mg/L)" />
@@ -336,7 +336,7 @@ export default function MetricsPage() {
               <BarChart data={speciesCountData}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="site" />
-                <YAxis />
+                <YAxis domain={[0, 50]} />
                 <Tooltip />
                 <Bar dataKey="fish" fill="#3b82f6" name="Fish Species" />
                 <Bar dataKey="coral" fill="#10b981" name="Coral Species" />

@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
@@ -54,6 +54,19 @@ export default function DashboardLayout({
 }) {
   const pathname = usePathname()
   const [sidebarOpen, setSidebarOpen] = useState(false)
+  const [currentTime, setCurrentTime] = useState<string | null>(null)
+
+  // Update time every second to avoid hydration mismatch
+  useEffect(() => {
+    const updateTime = () => {
+      setCurrentTime(new Date().toLocaleTimeString())
+    }
+    
+    updateTime() // Initial call
+    const interval = setInterval(updateTime, 1000)
+    
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -185,7 +198,7 @@ export default function DashboardLayout({
               <Button variant="ghost" size="sm" className="text-gray-700 hover:text-gray-900">
                 <User className="h-5 w-5" />
               </Button>
-              <div className="text-xs text-gray-500">Last updated: {new Date().toLocaleTimeString()}</div>
+              <div className="text-xs text-gray-500">Last updated: {currentTime || '--:--:--'}</div>
             </div>
           </div>
         </div>
