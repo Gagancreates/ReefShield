@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Badge } from "@/components/ui/badge"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
-import { BarChart3, Thermometer, Map, AlertTriangle, Menu, Bell, User, Home, X, Droplet } from "lucide-react"
+import { BarChart3, Thermometer, Map, AlertTriangle, Menu, Bell, User, Home, X, Droplet, FishSymbol } from "lucide-react"
 
 const navigation = [
   { name: "Overview", href: "/dashboard", icon: Home },
@@ -19,6 +19,7 @@ const navigation = [
   { name: "Map View", href: "/dashboard/map", icon: Map },
   { name: "Alerts", href: "/dashboard/alerts", icon: AlertTriangle },
   { name: "Oil Spill Trajectory", href: "/dashboard/oilspill", icon: Droplet },
+  { name: "Optimal Coral Growth", href: "/dashboard/coral", icon: FishSymbol }
 ]
 
 const recentAlerts = [
