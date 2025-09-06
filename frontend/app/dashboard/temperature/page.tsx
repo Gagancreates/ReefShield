@@ -223,7 +223,7 @@ export default function TemperaturePage() {
                   className="text-xs"
                 />
                 <YAxis
-                  domain={["dataMin - 1", "dataMax + 1"]}
+                  domain={['dataMin - 0.3', 'dataMax + 0.3']}
                   tickFormatter={(value) => `${value}°C`}
                   className="text-xs"
                 />

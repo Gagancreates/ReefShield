@@ -229,7 +229,7 @@ export default function DashboardPage() {
                     <LineChart data={temperatureData}>
                       <CartesianGrid strokeDasharray="3 3" />
                       <XAxis dataKey="day" />
-                      <YAxis domain={[26, 31]} />
+                      <YAxis domain={['dataMin - 0.2', 'dataMax + 0.2']} />
                       <ChartTooltip content={<ChartTooltipContent />} />
                       <Line 
                         type="monotone" 
