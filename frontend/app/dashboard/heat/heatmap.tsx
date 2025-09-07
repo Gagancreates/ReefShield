@@ -7,7 +7,7 @@ const CoralMap: React.FC = () => {
         src="/appmap.html"
         title="Heat Wave Simulation"
         className="w-full h-full min-h-[60vh] rounded-lg border border-[#0e2533] bg-[#071225]"
-        style={{ minHeight: '70vh', height: '100%' }}
+        style={{ minHeight: '80vh', height: '100%' }}
       />
     </div>
   );

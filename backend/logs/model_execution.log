@@ -1210,3 +1210,33 @@ odels\finalig.py
 2025-09-07 04:50:55 - INFO - Extracted 14 combined readings from G:\JusticeGang\models\andaman_sst_14day_combined.csv
 2025-09-07 06:30:44 - INFO - Reading combined 14-day data from: G:\JusticeGang\models\andaman_sst_14day_combined.csv
 2025-09-07 06:30:44 - INFO - Extracted 14 combined readings from G:\JusticeGang\models\andaman_sst_14day_combined.csv
+2025-09-07 06:38:23 - INFO - Reading combined 14-day data from: G:\JusticeGang\models\andaman_sst_14day_combined.csv
+2025-09-07 06:38:23 - INFO - Extracted 14 combined readings from G:\JusticeGang\models\andaman_sst_14day_combined.csv
+2025-09-07 06:45:59 - INFO - Reading combined 14-day data from: G:\JusticeGang\models\andaman_sst_14day_combined.csv
+2025-09-07 06:45:59 - INFO - Extracted 14 combined readings from G:\JusticeGang\models\andaman_sst_14day_combined.csv
+2025-09-07 10:35:55 - INFO - Reading combined 14-day data from: G:\JusticeGang\models\andaman_sst_14day_combined.csv
+2025-09-07 10:35:55 - INFO - Extracted 14 combined readings from G:\JusticeGang\models\andaman_sst_14day_combined.csv
+2025-09-07 10:41:10 - INFO - Reading combined 14-day data from: G:\JusticeGang\models\andaman_sst_14day_combined.csv
+2025-09-07 10:41:10 - INFO - Extracted 14 combined readings from G:\JusticeGang\models\andaman_sst_14day_combined.csv
+2025-09-07 10:47:49 - INFO - Reading combined 14-day data from: G:\JusticeGang\models\andaman_sst_14day_combined.csv
+2025-09-07 10:47:49 - INFO - Extracted 14 combined readings from G:\JusticeGang\models\andaman_sst_14day_combined.csv
+2025-09-07 10:55:07 - INFO - Reading combined 14-day data from: G:\JusticeGang\models\andaman_sst_14day_combined.csv
+2025-09-07 10:55:07 - INFO - Extracted 14 combined readings from G:\JusticeGang\models\andaman_sst_14day_combined.csv
+2025-09-07 11:30:00 - INFO - Running job "Daily Coral Reef Model Execution (trigger: cron[hour='6', minute='0', second='0'], next run at: 2025-09-08 06:00:00 UTC)" (scheduled at 2025-09-07 06:00:00+00:00)
+2025-09-07 11:30:00 - INFO - Starting scheduled model execution (Job ID: daily_run_20250907_113000)
+2025-09-07 11:30:00 - INFO - Starting model execution (ID: 6c8cff74-c7d0-48b8-997b-02d3d81f5830)
+2025-09-07 11:30:00 - ERROR - Unexpected exception during model execution: 
+2025-09-07 11:30:00 - WARNING - Attempt 1 failed for run_model: Unexpected error during script execution: . Retrying in 0.66s
+2025-09-07 11:30:00 - INFO - Retrying run_model (attempt 2/3)
+2025-09-07 11:30:00 - INFO - Starting model execution (ID: 5cd7238c-c148-456d-b212-c22fb5159fc9)
+2025-09-07 11:30:00 - ERROR - Unexpected exception during model execution: 
+2025-09-07 11:30:00 - WARNING - Attempt 2 failed for run_model: Unexpected error during script execution: . Retrying in 1.99s
+2025-09-07 11:30:02 - INFO - Retrying run_model (attempt 3/3)
+2025-09-07 11:30:02 - INFO - Starting model execution (ID: 76067995-e82e-4835-a211-47dbb1556dce)
+2025-09-07 11:30:02 - ERROR - Unexpected exception during model execution: 
+2025-09-07 11:30:02 - ERROR - Circuit breaker for run_model transitioning to OPEN after 3 failures
+2025-09-07 11:30:02 - ERROR - All retry attempts failed for run_model: Unexpected error during script execution: 
+2025-09-07 11:30:02 - WARNING - Safe execution of _safe_model_execution failed: Unexpected error during script execution: 
+2025-09-07 11:30:02 - ERROR - Scheduled model execution failed (Job ID: daily_run_20250907_113000): Safe execution failed
+2025-09-07 11:30:02 - ERROR - Error ERR_20250907_113002_789063 in scheduled_model_execution: Scheduled execution failed: Safe execution failed
+2025-09-07 11:30:02 - INFO - Job "Daily Coral Reef Model Execution (trigger: cron[hour='6', minute='0', second='0'], next run at: 2025-09-08 06:00:00 UTC)" executed successfully

@@ -9,3 +9,10 @@
 2025-09-06 23:05:22 - app.utils.error_handling - ERROR - Circuit breaker for run_model transitioning to OPEN after 3 failures - C:\Users\workspace\ReefShield\backend\app\utils\error_handling.py:294
 2025-09-06 23:05:22 - app.utils.error_handling - ERROR - All retry attempts failed for run_model: Unexpected error during script execution:  - C:\Users\workspace\ReefShield\backend\app\utils\error_handling.py:213
 2025-09-06 23:05:50 - app.utils.error_handling - ERROR - All retry attempts failed for run_model: Circuit breaker is OPEN for run_model. Too many recent failures. - C:\Users\workspace\ReefShield\backend\app\utils\error_handling.py:213
+2025-09-07 11:30:00 - app.services.model_service - ERROR - Unexpected exception during model execution:  - G:\JusticeGang\backend\app\services\model_service.py:310
+2025-09-07 11:30:00 - app.services.model_service - ERROR - Unexpected exception during model execution:  - G:\JusticeGang\backend\app\services\model_service.py:310
+2025-09-07 11:30:02 - app.services.model_service - ERROR - Unexpected exception during model execution:  - G:\JusticeGang\backend\app\services\model_service.py:310
+2025-09-07 11:30:02 - app.utils.error_handling - ERROR - Circuit breaker for run_model transitioning to OPEN after 3 failures - G:\JusticeGang\backend\app\utils\error_handling.py:294
+2025-09-07 11:30:02 - app.utils.error_handling - ERROR - All retry attempts failed for run_model: Unexpected error during script execution:  - G:\JusticeGang\backend\app\utils\error_handling.py:213
+2025-09-07 11:30:02 - app.services.scheduler_service - ERROR - Scheduled model execution failed (Job ID: daily_run_20250907_113000): Safe execution failed - G:\JusticeGang\backend\app\services\scheduler_service.py:162
+2025-09-07 11:30:02 - app.utils.error_handling - ERROR - Error ERR_20250907_113002_789063 in scheduled_model_execution: Scheduled execution failed: Safe execution failed - G:\JusticeGang\backend\app\utils\error_handling.py:106
