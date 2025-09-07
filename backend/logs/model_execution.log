@@ -1202,3 +1202,11 @@ odels\finalig.py
 2025-09-07 04:22:58 - INFO - Extracted 14 combined readings from G:\JusticeGang\models\andaman_sst_14day_combined.csv
 2025-09-07 04:33:49 - INFO - Reading combined 14-day data from: G:\JusticeGang\models\andaman_sst_14day_combined.csv
 2025-09-07 04:33:49 - INFO - Extracted 14 combined readings from G:\JusticeGang\models\andaman_sst_14day_combined.csv
+2025-09-07 04:50:44 - INFO - ModelService initialized with script: G:\JusticeGang\models\finalig.py
+2025-09-07 04:50:44 - INFO - Added job "Daily Coral Reef Model Execution" to job store "default"
+2025-09-07 04:50:44 - INFO - Daily model execution scheduled for 06:00 UTC
+2025-09-07 04:50:44 - INFO - Models directory found: G:\JusticeGang\models
+2025-09-07 04:50:55 - INFO - Reading combined 14-day data from: G:\JusticeGang\models\andaman_sst_14day_combined.csv
+2025-09-07 04:50:55 - INFO - Extracted 14 combined readings from G:\JusticeGang\models\andaman_sst_14day_combined.csv
+2025-09-07 06:30:44 - INFO - Reading combined 14-day data from: G:\JusticeGang\models\andaman_sst_14day_combined.csv
+2025-09-07 06:30:44 - INFO - Extracted 14 combined readings from G:\JusticeGang\models\andaman_sst_14day_combined.csv
